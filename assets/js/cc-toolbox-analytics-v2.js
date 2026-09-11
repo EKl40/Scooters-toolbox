@@ -21,6 +21,7 @@
     }
     try {
       var h = String(location.hostname || '').toLowerCase();
+      if (h === 'scooterstoolbox.com' || h === 'www.scooterstoolbox.com') return true;
       if (h === 'scooters-toolbox.netlify.app') return true;
       /* GitHub Pages mirror: allow POST when meta points at a real HTTPS API (patch sets save-editor track.php). */
       if (h === 'github.io' || h.slice(-10) === '.github.io') {

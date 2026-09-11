@@ -7,7 +7,7 @@ window.ENEMY_DROPS_DATA = {
   "rows": [
     {
       "name": "Badass",
-      "guns_probability": 0.33,
+      "guns_probability": 0.66,
       "guns_howmany_dist": {
         "defaultValue": 2,
         "defaultChance": null,
@@ -108,7 +108,7 @@ window.ENEMY_DROPS_DATA = {
     },
     {
       "name": "BadassSuper",
-      "guns_probability": 0.5,
+      "guns_probability": 0.66,
       "guns_howmany_dist": {
         "defaultValue": 2,
         "defaultChance": null,
@@ -680,7 +680,7 @@ window.ENEMY_DROPS_DATA = {
   "byName": {
     "Badass": {
       "name": "Badass",
-      "guns_probability": 0.33,
+      "guns_probability": 0.66,
       "guns_howmany_dist": {
         "defaultValue": 2,
         "defaultChance": null,
@@ -781,7 +781,7 @@ window.ENEMY_DROPS_DATA = {
     },
     "BadassSuper": {
       "name": "BadassSuper",
-      "guns_probability": 0.5,
+      "guns_probability": 0.66,
       "guns_howmany_dist": {
         "defaultValue": 2,
         "defaultChance": null,

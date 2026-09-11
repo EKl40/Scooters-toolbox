@@ -1,6 +1,744 @@
 window.PROFILE_PROGRESSION_CATALOG = {
-  "generated": "2026-07-07T14:08:31.786Z",
+  "generated": "2026-09-10T23:06:23.136Z",
   "account_unlocks": [
+    {
+      "id": "SharedProgress_Cello",
+      "bucket": "SharedProgress_Cello",
+      "family": "dlc_collectibles",
+      "label": "SharedProgress Cello"
+    },
+    {
+      "id": "SharedProgress_Cello.Collectible_EchoLog1",
+      "bucket": "SharedProgress_Cello",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog1"
+    },
+    {
+      "id": "SharedProgress_Cello.Collectible_EchoLog2",
+      "bucket": "SharedProgress_Cello",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog2"
+    },
+    {
+      "id": "SharedProgress_Cello.Collectible_EchoLog3",
+      "bucket": "SharedProgress_Cello",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog3"
+    },
+    {
+      "id": "SharedProgress_Cello.Collectible_EchoLog4",
+      "bucket": "SharedProgress_Cello",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog4"
+    },
+    {
+      "id": "SharedProgress_Cello.Collectible_EchoLog5",
+      "bucket": "SharedProgress_Cello",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog5"
+    },
+    {
+      "id": "SharedProgress_Cello.Collectible_EchoLog6",
+      "bucket": "SharedProgress_Cello",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog6"
+    },
+    {
+      "id": "SharedProgress_Cello.Collectible_EchoLog7",
+      "bucket": "SharedProgress_Cello",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog7"
+    },
+    {
+      "id": "SharedProgress_Cello.Collectible_EchoLog8",
+      "bucket": "SharedProgress_Cello",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog8"
+    },
+    {
+      "id": "SharedProgress_Cello.Collectible_EchoLog9",
+      "bucket": "SharedProgress_Cello",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog9"
+    },
+    {
+      "id": "SharedProgress_Cowbell",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "SharedProgress Cowbell"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_DahlCaches1",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible DahlCaches1"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_DahlCaches2",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible DahlCaches2"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_DahlCaches3",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible DahlCaches3"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_DahlCaches4",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible DahlCaches4"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_DahlCaches5",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible DahlCaches5"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog1",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog1"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog10",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog10"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog11",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog11"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog12",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog12"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog13",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog13"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog14",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog14"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog15",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog15"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog16",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog16"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog17",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog17"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog18",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog18"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog19",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog19"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog2",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog2"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog20",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog20"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog21",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog21"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog26",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog26"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog27",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog27"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog28",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog28"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog3",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog3"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog4",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog4"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog5",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog5"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog6",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog6"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog7",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog7"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog8",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog8"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_EchoLog9",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog9"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_RecordPlayer1",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible RecordPlayer1"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_RecordPlayer2",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible RecordPlayer2"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_RecordPlayer3",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible RecordPlayer3"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_RecordPlayer4",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible RecordPlayer4"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_RecordPlayer5",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible RecordPlayer5"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_VaultSymbols1",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible VaultSymbols1"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_VaultSymbols2",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible VaultSymbols2"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_VaultSymbols3",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible VaultSymbols3"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_VaultSymbols4",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible VaultSymbols4"
+    },
+    {
+      "id": "SharedProgress_Cowbell.Collectible_VaultSymbols5",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "Collectible VaultSymbols5"
+    },
+    {
+      "id": "SharedProgress_Cowbell.ZoneActivity_Bunker",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "ZoneActivity Bunker"
+    },
+    {
+      "id": "SharedProgress_Cowbell.ZoneActivity_FuelSiphon1",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "ZoneActivity FuelSiphon1"
+    },
+    {
+      "id": "SharedProgress_Cowbell.ZoneActivity_FuelSiphon2",
+      "bucket": "SharedProgress_Cowbell",
+      "family": "dlc_collectibles",
+      "label": "ZoneActivity FuelSiphon2"
+    },
+    {
+      "id": "SharedProgress_Harmonica",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "SharedProgress Harmonica"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog1",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog1"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog10",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog10"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog11",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog11"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog12",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog12"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog13",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog13"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog14",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog14"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog15",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog15"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog16",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog16"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog17",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog17"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog18",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog18"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog19",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog19"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog2",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog2"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog20",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog20"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog21",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog21"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog22",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog22"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog23",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog23"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog24",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog24"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog25",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog25"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog26",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog26"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog27",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog27"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog28",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog28"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog29",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog29"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog3",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog3"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog30",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog30"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog31",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog31"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog32",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog32"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog33",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog33"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog34",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog34"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog35",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog35"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog36",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog36"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog37",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog37"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog38",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog38"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog39",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog39"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog4",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog4"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog40",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog40"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog41",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog41"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog42",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog42"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog5",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog5"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog6",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog6"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog7",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog7"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog8",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog8"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_EchoLog9",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog9"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_IslandSafe1",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible IslandSafe1"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_IslandSafe2",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible IslandSafe2"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_IslandSafe3",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible IslandSafe3"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_IslandSafe4",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible IslandSafe4"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_IslandSafe5",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible IslandSafe5"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_TreasureHunt_DoorOpened",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible TreasureHunt DoorOpened"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_TreasureHunt_Switch1",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible TreasureHunt Switch1"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_TreasureHunt_Switch2",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible TreasureHunt Switch2"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_TreasureHunt_Switch3",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible TreasureHunt Switch3"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_TreasureHunt_Switch4",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible TreasureHunt Switch4"
+    },
+    {
+      "id": "SharedProgress_Harmonica.Collectible_TreasureHunt_Switch5",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "Collectible TreasureHunt Switch5"
+    },
+    {
+      "id": "SharedProgress_Harmonica.ZoneActivity_TedioreGrotto1",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "ZoneActivity TedioreGrotto1"
+    },
+    {
+      "id": "SharedProgress_Harmonica.ZoneActivity_TedioreGrotto2",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "ZoneActivity TedioreGrotto2"
+    },
+    {
+      "id": "SharedProgress_Harmonica.ZoneActivity_TedioreLockdown1",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "ZoneActivity TedioreLockdown1"
+    },
+    {
+      "id": "SharedProgress_Harmonica.ZoneActivity_TedioreLockdown2",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "ZoneActivity TedioreLockdown2"
+    },
+    {
+      "id": "SharedProgress_Harmonica.ZoneActivity_TikiBar1",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "ZoneActivity TikiBar1"
+    },
+    {
+      "id": "SharedProgress_Harmonica.ZoneActivity_TikiBar2",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "ZoneActivity TikiBar2"
+    },
+    {
+      "id": "SharedProgress_Harmonica.ZoneActivity_TikiBar3",
+      "bucket": "SharedProgress_Harmonica",
+      "family": "dlc_collectibles",
+      "label": "ZoneActivity TikiBar3"
+    },
+    {
+      "id": "SharedProgress_Tuba",
+      "bucket": "SharedProgress_Tuba",
+      "family": "dlc_collectibles",
+      "label": "SharedProgress Tuba"
+    },
+    {
+      "id": "SharedProgress_Tuba.Collectible_EchoLog1",
+      "bucket": "SharedProgress_Tuba",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog1"
+    },
+    {
+      "id": "SharedProgress_Tuba.Collectible_EchoLog2",
+      "bucket": "SharedProgress_Tuba",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog2"
+    },
+    {
+      "id": "SharedProgress_Tuba.Collectible_EchoLog3",
+      "bucket": "SharedProgress_Tuba",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog3"
+    },
+    {
+      "id": "SharedProgress_Tuba.Collectible_EchoLog4",
+      "bucket": "SharedProgress_Tuba",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog4"
+    },
+    {
+      "id": "SharedProgress_Tuba.Collectible_EchoLog5",
+      "bucket": "SharedProgress_Tuba",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog5"
+    },
+    {
+      "id": "SharedProgress_Tuba.Collectible_EchoLog6",
+      "bucket": "SharedProgress_Tuba",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog6"
+    },
+    {
+      "id": "SharedProgress_Tuba.Collectible_EchoLog7",
+      "bucket": "SharedProgress_Tuba",
+      "family": "dlc_collectibles",
+      "label": "Collectible EchoLog7"
+    },
+    {
+      "id": "SharedProgress_Viola",
+      "bucket": "SharedProgress_Viola",
+      "family": "dlc_collectibles",
+      "label": "SharedProgress Viola"
+    },
     {
       "id": "echo_log_challenges.Collect_EchoLog_ARJ_CITY_01",
       "bucket": "echo_log_challenges",
@@ -1482,12 +2220,6 @@ window.PROFILE_PROGRESSION_CATALOG = {
       "bucket": "echo_upgrade_challenges",
       "family": "activities",
       "label": "Activity Crawlers Shatteredlands #3"
-    },
-    {
-      "id": "echo_upgrade_challenges.Activity_Crawlers_Shatteredlands_4",
-      "bucket": "echo_upgrade_challenges",
-      "family": "activities",
-      "label": "Activity Crawlers Shatteredlands #4"
     },
     {
       "id": "echo_upgrade_challenges.Activity_DrillSites_Grasslands_1",

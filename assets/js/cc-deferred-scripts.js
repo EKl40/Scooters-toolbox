@@ -12,7 +12,8 @@
     /* DLC/raid legendary classmod bodies (Phlebotomist, etc.) — needed before Simple Builder paints. */
     './assets/data/stx_editor_extract.js',
     './assets/data/legacy_classmod_names.js',
-    './assets/js/stx-simple-builder-core.js?v=77m',
+    './assets/data/stx_new_item_codes.js',
+    './assets/js/stx-simple-builder-core.js?v=77o',
     './assets/js/cc-custom-select-rebuild.js'
   ];
 
@@ -45,7 +46,7 @@
   var GUIDED_SCRIPTS = [
     './legacy/ncs_slot_map.js',
     './assets/js/cc-item-slug.js?v=77j',
-    './assets/js/cc-guided-builder-rebuild.js?v=77n',
+    './assets/js/cc-guided-builder-rebuild.js?v=77o',
     './assets/js/stx-editor-smoke-guards.js'
   ];
 
@@ -62,8 +63,8 @@
     './assets/js/cc-serial-nicnl-rebuild.js',
     './assets/js/stx-decode-bridge-shared.js',
     './assets/js/cc-sav-crypto-rebuild.js',
-    './assets/js/cc-yaml-save-rebuild.js',
-    './assets/js/cc-stx-decoder-bridge.js',
+    './assets/js/cc-yaml-save-rebuild.js?v=77r',
+    './assets/js/cc-stx-decoder-bridge.js?v=77r',
     /* Prefix/Godroll search must load before lazy-bundles so bootstrap hooks exist when open panels arm. */
     './assets/js/cc-prefix-item-search-rebuild.js',
     './assets/js/cc-lazy-bundles-rebuild.js',
@@ -77,9 +78,9 @@
     './assets/js/rebuild-presets-random.js?v=77m',
     './assets/js/cc-tool-nav-buttons.js',
     './assets/js/rebuild-credits-eggs.js',
-    './assets/js/cc-toolbox-analytics.js',
+    './assets/js/cc-toolbox-analytics.js?v=77p',
     './assets/js/cc-toolbox-items-made.js',
-    './assets/js/cc-toolbox-public-counter.js',
+    './assets/js/cc-toolbox-public-counter.js?v=77p',
     './assets/js/cc-yaml-extras-rebuild.js',
     './assets/js/cc-missions-rebuild.js',
     './assets/js/cc-profile-progression-tools-rebuild.js',

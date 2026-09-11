@@ -1,12 +1,12 @@
 /**
  * Legacy Class Mod name parts (Name+Skin) for the Guided Class Mod Builder.
- * Used when __LEGACY_CLASSMOD_PARTS_BY_KEY is not provided by the main toolbox.
+ * Merges into __LEGACY_CLASSMOD_PARTS_BY_KEY (safe if skills_full already seeded the object).
  * Format: [id, name, kind] where kind is "Name+Skin" (normal) or "Name+Skin+Leg Effect" (legendary).
  */
 (function () {
   'use strict';
-  if (typeof window.__LEGACY_CLASSMOD_PARTS_BY_KEY !== 'undefined') return;
-  window.__LEGACY_CLASSMOD_PARTS_BY_KEY = {
+  var root = window.__LEGACY_CLASSMOD_PARTS_BY_KEY = window.__LEGACY_CLASSMOD_PARTS_BY_KEY || {};
+  var extras = {
     vex: [
       [1, "Transistor", "Name+Skin"], [2, "Firedancer", "Name+Skin"], [3, "Naturalist", "Name+Skin"],
       [4, "Weaver", "Name+Skin"], [5, "Radiance", "Name+Skin"], [6, "Ritualist", "Name+Skin"],
@@ -161,6 +161,37 @@
       [531, "Kill Button", "Skill"], [532, "Payout", "Skill"], [533, "Boom or Bust", "Skill"], [534, "Tender Hearts", "Skill"],
       [535, "Card Sharp", "Skill"], [536, "Hot Streak", "Skill"], [538, "Hooligan", "Name+Skin+Leg Effect"],
       [543, "Prestidigitator", "Name+Skin+Leg Effect"], [545, "Trainer", "Name+Skin+Leg Effect"]
+    ],
+    /* Loveless (Corpohacker / family 402): names from Nexus inv_name_part np_cm_corpo_*. */
+    loveless: [
+      [51, "Keylogger", "Name+Skin"], [15, "Hacktivist", "Name+Skin"], [14, "Researcher", "Name+Skin"],
+      [13, "Assimilator", "Name+Skin"], [12, "Royal We", "Name+Skin"], [11, "Wyrmkind", "Name+Skin"],
+      [10, "Defragger", "Name+Skin"], [9, "Corrupter", "Name+Skin"], [8, "Eminence", "Name+Skin"],
+      [7, "System", "Name+Skin"],
+      [6, "Devourer", "Name+Skin+Leg Effect"], [5, "Virophile", "Name+Skin+Leg Effect"],
+      [4, "Montage Maker", "Name+Skin+Leg Effect"], [3, "Memory Hoarder", "Name+Skin+Leg Effect"],
+      [2, "Trackstar", "Name+Skin+Leg Effect"], [1, "Functional Human", "Name+Skin+Leg Effect"],
+      [540, "Martyr", "Name+Skin+Leg Effect"], [545, "Programmer", "Name+Skin+Leg Effect"],
+      [539, "Boomer", "Name+Skin+Leg Effect"], [538, "Plague Engineer", "Name+Skin+Leg Effect"],
+      [222, "Puppetmaster", "Name+Skin+Leg Effect"]
     ]
   };
+  Object.keys(extras).forEach(function (key) {
+    var target = Array.isArray(root[key]) ? root[key].slice() : [];
+    var seen = new Set(target.map(function (row) { return JSON.stringify(row); }));
+    var seenIdKind = new Set(target.map(function (row) {
+      return Array.isArray(row) ? String(row[0]) + '|' + String(row[2] || '') : '';
+    }));
+    (extras[key] || []).forEach(function (row) {
+      if (!Array.isArray(row) || row.length < 2) return;
+      var sig = JSON.stringify(row);
+      if (seen.has(sig)) return;
+      var idKind = String(row[0]) + '|' + String(row[2] || '');
+      if (seenIdKind.has(idKind)) return;
+      seen.add(sig);
+      seenIdKind.add(idKind);
+      target.push(row);
+    });
+    root[key] = target;
+  });
 })();

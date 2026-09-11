@@ -2,6 +2,22 @@
   'use strict';
   var add = [
   {
+    "source": "nexus_inv_deps_verified",
+    "effects": "Active Fire",
+    "raid2Key": "firmware_active_fire_Enhancement",
+    "category": "Enhancement",
+    "manufacturer": "gadgets",
+    "itemType": "Enhancement",
+    "weaponType": "",
+    "partType": "Firmware",
+    "code": "\"enhancement.part_firmware_active_fire\"",
+    "name": "Active Fire",
+    "searchAlias": "Active Fire firmware",
+    "stats": "",
+    "dropHint": "Drops from Raid Boss 2: Subjugator and Thol the Invincible. Class mods require Silver-tier-or-better UVHM Raid Boss 2 rewards.",
+    "dataNote": "Raid 2 overlay row; numeric IDs are verified, exact stat roll tables depend on future Nexus parser coverage."
+  },
+  {
     "source": "nexus_coverage_alias",
     "effects": "Radiation Nova",
     "raid2Key": "nexus_alias_repair_kit_part_aug_ele_nova_radiation",
@@ -466,8 +482,6 @@
       try{ if (typeof window.ensurePartPools === 'function') window.ensurePartPools(); }catch(_e){}
       try{ window.__ccStablePartRenderStateV1 = null; }catch(_e){}
       try{ if (typeof window.refreshPartSections === 'function') window.refreshPartSections(); }catch(_e){}
-      try{ if (typeof window.stxInvalidateSimpleBuilderPartCaches === 'function') window.stxInvalidateSimpleBuilderPartCaches(); }catch(_e){}
-      try{ window.dispatchEvent(new CustomEvent('stx:dataset-growth', { detail: { source: 'stx_raid2_supplement', added: addedCount, patched: patchedCount } })); }catch(_e){}
     }
   }catch(_e){} }
   merge();

@@ -661,7 +661,11 @@
         statusDiv.style.color = '#4caf50';
       }
       if (typeof window.scheduleParseYAMLBackpack === 'function') window.scheduleParseYAMLBackpack(350);
-      if (typeof window.syncYamlToFields === 'function') window.syncYamlToFields();
+      /* Full YAML object parse is heavy — never block decrypt on syncYamlToFields. */
+      if (typeof window.scheduleSyncYamlToFields === 'function') window.scheduleSyncYamlToFields();
+      else if (typeof window.syncYamlToFields === 'function') {
+        setTimeout(function () { try { window.syncYamlToFields(); } catch (_) {} }, 400);
+      }
       if (typeof window.__updatePresetButtonsAvailability === 'function') window.__updatePresetButtonsAvailability();
       if (typeof window.__ccRenderRuntimeStatus === 'function') window.__ccRenderRuntimeStatus();
       try {

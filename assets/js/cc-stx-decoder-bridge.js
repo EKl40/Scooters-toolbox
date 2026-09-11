@@ -140,9 +140,15 @@
     function postWhenReady() {
       var id = 'stx-' + (++nextId);
       return new Promise(function (resolve) {
-        pending[id] = function (results) {
+        function finish(results) {
+          results = Array.isArray(results) ? results : [];
           resolve(results);
-          if (typeof callback === 'function') callback(results);
+          if (typeof callback === 'function') {
+            try { callback(results); } catch (_) {}
+          }
+        }
+        pending[id] = function (results) {
+          finish(results);
         };
         try {
           f.contentWindow.postMessage({
@@ -153,12 +159,14 @@
           }, '*');
         } catch (e) {
           delete pending[id];
-          resolve([]);
+          finish([]);
+          return;
         }
+        /* Must invoke callback on timeout — YAML page decode otherwise hangs forever on "Decoding…". */
         setTimeout(function () {
           if (pending[id]) {
             delete pending[id];
-            resolve([]);
+            finish([]);
           }
         }, 15000);
       });

@@ -8839,9 +8839,2085 @@
         "Wasted",
         "Skill"
       ]
+    ],
+    "loveless": [
+      [
+        16,
+        "Pure Fusion",
+        "Skill"
+      ],
+      [
+        17,
+        "Pure Fusion",
+        "Skill"
+      ],
+      [
+        18,
+        "Pure Fusion",
+        "Skill"
+      ],
+      [
+        19,
+        "Pure Fusion",
+        "Skill"
+      ],
+      [
+        20,
+        "Pure Fusion",
+        "Skill"
+      ],
+      [
+        26,
+        "Footwork",
+        "Skill"
+      ],
+      [
+        27,
+        "Footwork",
+        "Skill"
+      ],
+      [
+        28,
+        "Footwork",
+        "Skill"
+      ],
+      [
+        29,
+        "Footwork",
+        "Skill"
+      ],
+      [
+        30,
+        "Footwork",
+        "Skill"
+      ],
+      [
+        36,
+        "Flurry",
+        "Skill"
+      ],
+      [
+        37,
+        "Flurry",
+        "Skill"
+      ],
+      [
+        38,
+        "Flurry",
+        "Skill"
+      ],
+      [
+        39,
+        "Flurry",
+        "Skill"
+      ],
+      [
+        40,
+        "Flurry",
+        "Skill"
+      ],
+      [
+        41,
+        "Established Gameplay Loop",
+        "Skill"
+      ],
+      [
+        42,
+        "Established Gameplay Loop",
+        "Skill"
+      ],
+      [
+        43,
+        "Established Gameplay Loop",
+        "Skill"
+      ],
+      [
+        44,
+        "Established Gameplay Loop",
+        "Skill"
+      ],
+      [
+        45,
+        "Established Gameplay Loop",
+        "Skill"
+      ],
+      [
+        46,
+        "Kaleidoscontaminant",
+        "Skill"
+      ],
+      [
+        47,
+        "Kaleidoscontaminant",
+        "Skill"
+      ],
+      [
+        48,
+        "Kaleidoscontaminant",
+        "Skill"
+      ],
+      [
+        49,
+        "Kaleidoscontaminant",
+        "Skill"
+      ],
+      [
+        50,
+        "Kaleidoscontaminant",
+        "Skill"
+      ],
+      [
+        57,
+        "Target Practice",
+        "Skill"
+      ],
+      [
+        58,
+        "Neutral Special",
+        "Skill"
+      ],
+      [
+        59,
+        "Initialize",
+        "Skill"
+      ],
+      [
+        60,
+        "Going Ghost",
+        "Skill"
+      ],
+      [
+        61,
+        "Death Begets Death",
+        "Skill"
+      ],
+      [
+        62,
+        "Odium",
+        "Skill"
+      ],
+      [
+        63,
+        "Ratio Technique",
+        "Skill"
+      ],
+      [
+        64,
+        "Plugged In",
+        "Skill"
+      ],
+      [
+        65,
+        "Gotta Go Fast",
+        "Skill"
+      ],
+      [
+        66,
+        "Disdain",
+        "Skill"
+      ],
+      [
+        67,
+        "Cat 5",
+        "Skill"
+      ],
+      [
+        68,
+        "Transmission Vector",
+        "Skill"
+      ],
+      [
+        69,
+        "E2 Pulse",
+        "Skill"
+      ],
+      [
+        71,
+        "Central Processing Unit",
+        "Skill"
+      ],
+      [
+        72,
+        "Contaminant",
+        "Skill"
+      ],
+      [
+        73,
+        "Nootropic Energy Drink",
+        "Skill"
+      ],
+      [
+        74,
+        "Toxic Chat",
+        "Skill"
+      ],
+      [
+        75,
+        "Heat Sink",
+        "Skill"
+      ],
+      [
+        77,
+        "High Data Rate",
+        "Skill"
+      ],
+      [
+        78,
+        "Critically Acclaimed",
+        "Skill"
+      ],
+      [
+        79,
+        "Optimization",
+        "Skill"
+      ],
+      [
+        81,
+        "Sharing the Pain",
+        "Skill"
+      ],
+      [
+        82,
+        "Peak Performance",
+        "Skill"
+      ],
+      [
+        83,
+        "Overclocking",
+        "Skill"
+      ],
+      [
+        84,
+        "Antivirus",
+        "Skill"
+      ],
+      [
+        85,
+        "Irradiated",
+        "Skill"
+      ],
+      [
+        86,
+        "Hiding the Pain",
+        "Skill"
+      ],
+      [
+        88,
+        "Sharing Tactics",
+        "Skill"
+      ],
+      [
+        89,
+        "Target Practice",
+        "Skill"
+      ],
+      [
+        90,
+        "Neutral Special",
+        "Skill"
+      ],
+      [
+        91,
+        "Initialize",
+        "Skill"
+      ],
+      [
+        92,
+        "Going Ghost",
+        "Skill"
+      ],
+      [
+        93,
+        "Death Begets Death",
+        "Skill"
+      ],
+      [
+        94,
+        "Odium",
+        "Skill"
+      ],
+      [
+        95,
+        "Ratio Technique",
+        "Skill"
+      ],
+      [
+        96,
+        "Plugged In",
+        "Skill"
+      ],
+      [
+        97,
+        "Gotta Go Fast",
+        "Skill"
+      ],
+      [
+        98,
+        "Disdain",
+        "Skill"
+      ],
+      [
+        99,
+        "Cat 5",
+        "Skill"
+      ],
+      [
+        100,
+        "Transmission Vector",
+        "Skill"
+      ],
+      [
+        101,
+        "E2 Pulse",
+        "Skill"
+      ],
+      [
+        103,
+        "Central Processing Unit",
+        "Skill"
+      ],
+      [
+        104,
+        "Contaminant",
+        "Skill"
+      ],
+      [
+        105,
+        "Nootropic Energy Drink",
+        "Skill"
+      ],
+      [
+        106,
+        "Toxic Chat",
+        "Skill"
+      ],
+      [
+        107,
+        "Heat Sink",
+        "Skill"
+      ],
+      [
+        109,
+        "High Data Rate",
+        "Skill"
+      ],
+      [
+        110,
+        "Critically Acclaimed",
+        "Skill"
+      ],
+      [
+        111,
+        "Optimization",
+        "Skill"
+      ],
+      [
+        113,
+        "Sharing the Pain",
+        "Skill"
+      ],
+      [
+        114,
+        "Peak Performance",
+        "Skill"
+      ],
+      [
+        115,
+        "Overclocking",
+        "Skill"
+      ],
+      [
+        116,
+        "Antivirus",
+        "Skill"
+      ],
+      [
+        117,
+        "Irradiated",
+        "Skill"
+      ],
+      [
+        118,
+        "Hiding the Pain",
+        "Skill"
+      ],
+      [
+        120,
+        "Sharing Tactics",
+        "Skill"
+      ],
+      [
+        121,
+        "Target Practice",
+        "Skill"
+      ],
+      [
+        122,
+        "Neutral Special",
+        "Skill"
+      ],
+      [
+        123,
+        "Initialize",
+        "Skill"
+      ],
+      [
+        124,
+        "Going Ghost",
+        "Skill"
+      ],
+      [
+        125,
+        "Death Begets Death",
+        "Skill"
+      ],
+      [
+        126,
+        "Odium",
+        "Skill"
+      ],
+      [
+        127,
+        "Ratio Technique",
+        "Skill"
+      ],
+      [
+        128,
+        "Plugged In",
+        "Skill"
+      ],
+      [
+        129,
+        "Gotta Go Fast",
+        "Skill"
+      ],
+      [
+        130,
+        "Disdain",
+        "Skill"
+      ],
+      [
+        131,
+        "Cat 5",
+        "Skill"
+      ],
+      [
+        132,
+        "Transmission Vector",
+        "Skill"
+      ],
+      [
+        133,
+        "E2 Pulse",
+        "Skill"
+      ],
+      [
+        135,
+        "Central Processing Unit",
+        "Skill"
+      ],
+      [
+        136,
+        "Contaminant",
+        "Skill"
+      ],
+      [
+        137,
+        "Nootropic Energy Drink",
+        "Skill"
+      ],
+      [
+        138,
+        "Toxic Chat",
+        "Skill"
+      ],
+      [
+        139,
+        "Heat Sink",
+        "Skill"
+      ],
+      [
+        141,
+        "High Data Rate",
+        "Skill"
+      ],
+      [
+        142,
+        "Critically Acclaimed",
+        "Skill"
+      ],
+      [
+        143,
+        "Optimization",
+        "Skill"
+      ],
+      [
+        145,
+        "Sharing the Pain",
+        "Skill"
+      ],
+      [
+        146,
+        "Peak Performance",
+        "Skill"
+      ],
+      [
+        147,
+        "Overclocking",
+        "Skill"
+      ],
+      [
+        148,
+        "Antivirus",
+        "Skill"
+      ],
+      [
+        149,
+        "Irradiated",
+        "Skill"
+      ],
+      [
+        150,
+        "Hiding the Pain",
+        "Skill"
+      ],
+      [
+        152,
+        "Sharing Tactics",
+        "Skill"
+      ],
+      [
+        153,
+        "Target Practice",
+        "Skill"
+      ],
+      [
+        154,
+        "Neutral Special",
+        "Skill"
+      ],
+      [
+        155,
+        "Initialize",
+        "Skill"
+      ],
+      [
+        156,
+        "Going Ghost",
+        "Skill"
+      ],
+      [
+        157,
+        "Death Begets Death",
+        "Skill"
+      ],
+      [
+        158,
+        "Odium",
+        "Skill"
+      ],
+      [
+        159,
+        "Ratio Technique",
+        "Skill"
+      ],
+      [
+        160,
+        "Plugged In",
+        "Skill"
+      ],
+      [
+        161,
+        "Gotta Go Fast",
+        "Skill"
+      ],
+      [
+        162,
+        "Disdain",
+        "Skill"
+      ],
+      [
+        163,
+        "Cat 5",
+        "Skill"
+      ],
+      [
+        164,
+        "Transmission Vector",
+        "Skill"
+      ],
+      [
+        165,
+        "E2 Pulse",
+        "Skill"
+      ],
+      [
+        167,
+        "Central Processing Unit",
+        "Skill"
+      ],
+      [
+        168,
+        "Contaminant",
+        "Skill"
+      ],
+      [
+        169,
+        "Nootropic Energy Drink",
+        "Skill"
+      ],
+      [
+        170,
+        "Toxic Chat",
+        "Skill"
+      ],
+      [
+        171,
+        "Heat Sink",
+        "Skill"
+      ],
+      [
+        173,
+        "High Data Rate",
+        "Skill"
+      ],
+      [
+        174,
+        "Critically Acclaimed",
+        "Skill"
+      ],
+      [
+        175,
+        "Optimization",
+        "Skill"
+      ],
+      [
+        177,
+        "Sharing the Pain",
+        "Skill"
+      ],
+      [
+        178,
+        "Peak Performance",
+        "Skill"
+      ],
+      [
+        179,
+        "Overclocking",
+        "Skill"
+      ],
+      [
+        180,
+        "Antivirus",
+        "Skill"
+      ],
+      [
+        181,
+        "Irradiated",
+        "Skill"
+      ],
+      [
+        182,
+        "Hiding the Pain",
+        "Skill"
+      ],
+      [
+        184,
+        "Sharing Tactics",
+        "Skill"
+      ],
+      [
+        185,
+        "Target Practice",
+        "Skill"
+      ],
+      [
+        186,
+        "Neutral Special",
+        "Skill"
+      ],
+      [
+        187,
+        "Initialize",
+        "Skill"
+      ],
+      [
+        188,
+        "Going Ghost",
+        "Skill"
+      ],
+      [
+        189,
+        "Death Begets Death",
+        "Skill"
+      ],
+      [
+        190,
+        "Odium",
+        "Skill"
+      ],
+      [
+        191,
+        "Ratio Technique",
+        "Skill"
+      ],
+      [
+        192,
+        "Plugged In",
+        "Skill"
+      ],
+      [
+        193,
+        "Gotta Go Fast",
+        "Skill"
+      ],
+      [
+        194,
+        "Disdain",
+        "Skill"
+      ],
+      [
+        195,
+        "Cat 5",
+        "Skill"
+      ],
+      [
+        196,
+        "Transmission Vector",
+        "Skill"
+      ],
+      [
+        197,
+        "E2 Pulse",
+        "Skill"
+      ],
+      [
+        199,
+        "Central Processing Unit",
+        "Skill"
+      ],
+      [
+        200,
+        "Contaminant",
+        "Skill"
+      ],
+      [
+        201,
+        "Nootropic Energy Drink",
+        "Skill"
+      ],
+      [
+        202,
+        "Toxic Chat",
+        "Skill"
+      ],
+      [
+        203,
+        "Heat Sink",
+        "Skill"
+      ],
+      [
+        205,
+        "High Data Rate",
+        "Skill"
+      ],
+      [
+        206,
+        "Critically Acclaimed",
+        "Skill"
+      ],
+      [
+        207,
+        "Optimization",
+        "Skill"
+      ],
+      [
+        209,
+        "Sharing the Pain",
+        "Skill"
+      ],
+      [
+        210,
+        "Peak Performance",
+        "Skill"
+      ],
+      [
+        211,
+        "Overclocking",
+        "Skill"
+      ],
+      [
+        212,
+        "Antivirus",
+        "Skill"
+      ],
+      [
+        213,
+        "Hiding the Pain",
+        "Skill"
+      ],
+      [
+        214,
+        "Irradiated",
+        "Skill"
+      ],
+      [
+        216,
+        "Sharing Tactics",
+        "Skill"
+      ],
+      [
+        223,
+        "Immunoppressant",
+        "Skill"
+      ],
+      [
+        224,
+        "Depletion Load",
+        "Skill"
+      ],
+      [
+        225,
+        "Conservation of Life",
+        "Skill"
+      ],
+      [
+        226,
+        "Turbo Button",
+        "Skill"
+      ],
+      [
+        227,
+        "Circular Logic",
+        "Skill"
+      ],
+      [
+        228,
+        "Unsupported Peripheral",
+        "Skill"
+      ],
+      [
+        230,
+        "System Restore",
+        "Skill"
+      ],
+      [
+        231,
+        "Wide Net",
+        "Skill"
+      ],
+      [
+        232,
+        "Viral Payload",
+        "Skill"
+      ],
+      [
+        233,
+        "Malware",
+        "Skill"
+      ],
+      [
+        234,
+        "Conservation of Volatility",
+        "Skill"
+      ],
+      [
+        236,
+        "Kernel Panic",
+        "Skill"
+      ],
+      [
+        237,
+        "It's Super Effective",
+        "Skill"
+      ],
+      [
+        238,
+        "Conservation of Malice",
+        "Skill"
+      ],
+      [
+        239,
+        "When it Rains",
+        "Skill"
+      ],
+      [
+        240,
+        "Blackhat",
+        "Skill"
+      ],
+      [
+        241,
+        "Feedback",
+        "Skill"
+      ],
+      [
+        242,
+        "It Pours",
+        "Skill"
+      ],
+      [
+        243,
+        "Memory Leak",
+        "Skill"
+      ],
+      [
+        244,
+        "Storage Upgrade",
+        "Skill"
+      ],
+      [
+        245,
+        "No Time to Think",
+        "Skill"
+      ],
+      [
+        246,
+        "Power Overwhelming",
+        "Skill"
+      ],
+      [
+        247,
+        "Manipulating RNG",
+        "Skill"
+      ],
+      [
+        249,
+        "Everchanging",
+        "Skill"
+      ],
+      [
+        251,
+        "Deeper Connection",
+        "Skill"
+      ],
+      [
+        252,
+        "Empowered Wyrm",
+        "Skill"
+      ],
+      [
+        253,
+        "In Memoriam",
+        "Skill"
+      ],
+      [
+        256,
+        "Symbiosis Overflow",
+        "Skill"
+      ],
+      [
+        257,
+        "FNX.bat",
+        "Skill"
+      ],
+      [
+        258,
+        "What's Your Status",
+        "Skill"
+      ],
+      [
+        259,
+        "Explosive Mindset",
+        "Skill"
+      ],
+      [
+        260,
+        "I HATE YOU",
+        "Skill"
+      ],
+      [
+        262,
+        "Irradiate 'Em All",
+        "Skill"
+      ],
+      [
+        263,
+        "Second Impact",
+        "Skill"
+      ],
+      [
+        265,
+        "Methodical",
+        "Skill"
+      ],
+      [
+        266,
+        "Marathon",
+        "Skill"
+      ],
+      [
+        268,
+        "Retribution",
+        "Skill"
+      ],
+      [
+        269,
+        "Infinite Murder Hack",
+        "Skill"
+      ],
+      [
+        270,
+        "Killing Machine",
+        "Skill"
+      ],
+      [
+        271,
+        "Refactored",
+        "Skill"
+      ],
+      [
+        272,
+        "Third Party",
+        "Skill"
+      ],
+      [
+        273,
+        "The Sweet Science",
+        "Skill"
+      ],
+      [
+        274,
+        "Chip Surplus",
+        "Skill"
+      ],
+      [
+        275,
+        "The Gang's All Here",
+        "Skill"
+      ],
+      [
+        277,
+        "Overclocked",
+        "Skill"
+      ],
+      [
+        279,
+        "Flow State",
+        "Skill"
+      ],
+      [
+        280,
+        "Violent Outburst",
+        "Skill"
+      ],
+      [
+        281,
+        "Watch Your Step",
+        "Skill"
+      ],
+      [
+        283,
+        "Assault Vest",
+        "Skill"
+      ],
+      [
+        284,
+        "Upload",
+        "Skill"
+      ],
+      [
+        286,
+        "Immunoppressant",
+        "Skill"
+      ],
+      [
+        287,
+        "Depletion Load",
+        "Skill"
+      ],
+      [
+        288,
+        "Conservation of Life",
+        "Skill"
+      ],
+      [
+        289,
+        "Turbo Button",
+        "Skill"
+      ],
+      [
+        290,
+        "Circular Logic",
+        "Skill"
+      ],
+      [
+        291,
+        "Unsupported Peripheral",
+        "Skill"
+      ],
+      [
+        293,
+        "System Restore",
+        "Skill"
+      ],
+      [
+        294,
+        "Wide Net",
+        "Skill"
+      ],
+      [
+        295,
+        "Viral Payload",
+        "Skill"
+      ],
+      [
+        296,
+        "Malware",
+        "Skill"
+      ],
+      [
+        297,
+        "Conservation of Volatility",
+        "Skill"
+      ],
+      [
+        299,
+        "Kernel Panic",
+        "Skill"
+      ],
+      [
+        300,
+        "It's Super Effective",
+        "Skill"
+      ],
+      [
+        301,
+        "Conservation of Malice",
+        "Skill"
+      ],
+      [
+        302,
+        "When it Rains",
+        "Skill"
+      ],
+      [
+        303,
+        "Blackhat",
+        "Skill"
+      ],
+      [
+        304,
+        "Feedback",
+        "Skill"
+      ],
+      [
+        305,
+        "It Pours",
+        "Skill"
+      ],
+      [
+        306,
+        "Memory Leak",
+        "Skill"
+      ],
+      [
+        307,
+        "Storage Upgrade",
+        "Skill"
+      ],
+      [
+        308,
+        "No Time to Think",
+        "Skill"
+      ],
+      [
+        309,
+        "Power Overwhelming",
+        "Skill"
+      ],
+      [
+        310,
+        "Manipulating RNG",
+        "Skill"
+      ],
+      [
+        312,
+        "Everchanging",
+        "Skill"
+      ],
+      [
+        314,
+        "Deeper Connection",
+        "Skill"
+      ],
+      [
+        315,
+        "Empowered Wyrm",
+        "Skill"
+      ],
+      [
+        316,
+        "In Memoriam",
+        "Skill"
+      ],
+      [
+        319,
+        "Symbiosis Overflow",
+        "Skill"
+      ],
+      [
+        320,
+        "FNX.bat",
+        "Skill"
+      ],
+      [
+        321,
+        "What's Your Status",
+        "Skill"
+      ],
+      [
+        322,
+        "Explosive Mindset",
+        "Skill"
+      ],
+      [
+        323,
+        "I HATE YOU",
+        "Skill"
+      ],
+      [
+        325,
+        "Irradiate 'Em All",
+        "Skill"
+      ],
+      [
+        326,
+        "Second Impact",
+        "Skill"
+      ],
+      [
+        328,
+        "Methodical",
+        "Skill"
+      ],
+      [
+        329,
+        "Marathon",
+        "Skill"
+      ],
+      [
+        331,
+        "Retribution",
+        "Skill"
+      ],
+      [
+        332,
+        "Infinite Murder Hack",
+        "Skill"
+      ],
+      [
+        333,
+        "Killing Machine",
+        "Skill"
+      ],
+      [
+        334,
+        "Refactored",
+        "Skill"
+      ],
+      [
+        335,
+        "Third Party",
+        "Skill"
+      ],
+      [
+        336,
+        "The Sweet Science",
+        "Skill"
+      ],
+      [
+        337,
+        "Chip Surplus",
+        "Skill"
+      ],
+      [
+        338,
+        "The Gang's All Here",
+        "Skill"
+      ],
+      [
+        340,
+        "Overclocked",
+        "Skill"
+      ],
+      [
+        342,
+        "Flow State",
+        "Skill"
+      ],
+      [
+        343,
+        "Violent Outburst",
+        "Skill"
+      ],
+      [
+        344,
+        "Watch Your Step",
+        "Skill"
+      ],
+      [
+        346,
+        "Assault Vest",
+        "Skill"
+      ],
+      [
+        347,
+        "Upload",
+        "Skill"
+      ],
+      [
+        349,
+        "Immunoppressant",
+        "Skill"
+      ],
+      [
+        350,
+        "Depletion Load",
+        "Skill"
+      ],
+      [
+        351,
+        "Conservation of Life",
+        "Skill"
+      ],
+      [
+        352,
+        "Turbo Button",
+        "Skill"
+      ],
+      [
+        353,
+        "Circular Logic",
+        "Skill"
+      ],
+      [
+        354,
+        "Unsupported Peripheral",
+        "Skill"
+      ],
+      [
+        356,
+        "System Restore",
+        "Skill"
+      ],
+      [
+        357,
+        "Wide Net",
+        "Skill"
+      ],
+      [
+        358,
+        "Viral Payload",
+        "Skill"
+      ],
+      [
+        359,
+        "Malware",
+        "Skill"
+      ],
+      [
+        360,
+        "Conservation of Volatility",
+        "Skill"
+      ],
+      [
+        362,
+        "Kernel Panic",
+        "Skill"
+      ],
+      [
+        363,
+        "It's Super Effective",
+        "Skill"
+      ],
+      [
+        364,
+        "Conservation of Malice",
+        "Skill"
+      ],
+      [
+        365,
+        "When it Rains",
+        "Skill"
+      ],
+      [
+        366,
+        "Blackhat",
+        "Skill"
+      ],
+      [
+        367,
+        "Feedback",
+        "Skill"
+      ],
+      [
+        368,
+        "It Pours",
+        "Skill"
+      ],
+      [
+        369,
+        "Memory Leak",
+        "Skill"
+      ],
+      [
+        370,
+        "Storage Upgrade",
+        "Skill"
+      ],
+      [
+        371,
+        "No Time to Think",
+        "Skill"
+      ],
+      [
+        372,
+        "Power Overwhelming",
+        "Skill"
+      ],
+      [
+        373,
+        "Manipulating RNG",
+        "Skill"
+      ],
+      [
+        375,
+        "Everchanging",
+        "Skill"
+      ],
+      [
+        377,
+        "Deeper Connection",
+        "Skill"
+      ],
+      [
+        378,
+        "Empowered Wyrm",
+        "Skill"
+      ],
+      [
+        379,
+        "In Memoriam",
+        "Skill"
+      ],
+      [
+        382,
+        "Symbiosis Overflow",
+        "Skill"
+      ],
+      [
+        383,
+        "FNX.bat",
+        "Skill"
+      ],
+      [
+        384,
+        "What's Your Status",
+        "Skill"
+      ],
+      [
+        385,
+        "Explosive Mindset",
+        "Skill"
+      ],
+      [
+        386,
+        "I HATE YOU",
+        "Skill"
+      ],
+      [
+        388,
+        "Irradiate 'Em All",
+        "Skill"
+      ],
+      [
+        389,
+        "Second Impact",
+        "Skill"
+      ],
+      [
+        391,
+        "Methodical",
+        "Skill"
+      ],
+      [
+        392,
+        "Marathon",
+        "Skill"
+      ],
+      [
+        394,
+        "Retribution",
+        "Skill"
+      ],
+      [
+        395,
+        "Infinite Murder Hack",
+        "Skill"
+      ],
+      [
+        396,
+        "Killing Machine",
+        "Skill"
+      ],
+      [
+        397,
+        "Refactored",
+        "Skill"
+      ],
+      [
+        398,
+        "Third Party",
+        "Skill"
+      ],
+      [
+        399,
+        "The Sweet Science",
+        "Skill"
+      ],
+      [
+        400,
+        "Chip Surplus",
+        "Skill"
+      ],
+      [
+        401,
+        "The Gang's All Here",
+        "Skill"
+      ],
+      [
+        403,
+        "Overclocked",
+        "Skill"
+      ],
+      [
+        405,
+        "Flow State",
+        "Skill"
+      ],
+      [
+        406,
+        "Violent Outburst",
+        "Skill"
+      ],
+      [
+        407,
+        "Watch Your Step",
+        "Skill"
+      ],
+      [
+        409,
+        "Assault Vest",
+        "Skill"
+      ],
+      [
+        410,
+        "Upload",
+        "Skill"
+      ],
+      [
+        412,
+        "Immunoppressant",
+        "Skill"
+      ],
+      [
+        413,
+        "Depletion Load",
+        "Skill"
+      ],
+      [
+        414,
+        "Conservation of Life",
+        "Skill"
+      ],
+      [
+        415,
+        "Turbo Button",
+        "Skill"
+      ],
+      [
+        416,
+        "Circular Logic",
+        "Skill"
+      ],
+      [
+        417,
+        "Unsupported Peripheral",
+        "Skill"
+      ],
+      [
+        419,
+        "System Restore",
+        "Skill"
+      ],
+      [
+        420,
+        "Wide Net",
+        "Skill"
+      ],
+      [
+        421,
+        "Viral Payload",
+        "Skill"
+      ],
+      [
+        422,
+        "Malware",
+        "Skill"
+      ],
+      [
+        423,
+        "Conservation of Volatility",
+        "Skill"
+      ],
+      [
+        425,
+        "Kernel Panic",
+        "Skill"
+      ],
+      [
+        426,
+        "It's Super Effective",
+        "Skill"
+      ],
+      [
+        427,
+        "Conservation of Malice",
+        "Skill"
+      ],
+      [
+        428,
+        "When it Rains",
+        "Skill"
+      ],
+      [
+        429,
+        "Blackhat",
+        "Skill"
+      ],
+      [
+        430,
+        "Feedback",
+        "Skill"
+      ],
+      [
+        431,
+        "It Pours",
+        "Skill"
+      ],
+      [
+        432,
+        "Memory Leak",
+        "Skill"
+      ],
+      [
+        433,
+        "Storage Upgrade",
+        "Skill"
+      ],
+      [
+        434,
+        "No Time to Think",
+        "Skill"
+      ],
+      [
+        435,
+        "Power Overwhelming",
+        "Skill"
+      ],
+      [
+        436,
+        "Manipulating RNG",
+        "Skill"
+      ],
+      [
+        438,
+        "Everchanging",
+        "Skill"
+      ],
+      [
+        440,
+        "Deeper Connection",
+        "Skill"
+      ],
+      [
+        441,
+        "Empowered Wyrm",
+        "Skill"
+      ],
+      [
+        442,
+        "In Memoriam",
+        "Skill"
+      ],
+      [
+        445,
+        "Symbiosis Overflow",
+        "Skill"
+      ],
+      [
+        446,
+        "FNX.bat",
+        "Skill"
+      ],
+      [
+        447,
+        "What's Your Status",
+        "Skill"
+      ],
+      [
+        448,
+        "Explosive Mindset",
+        "Skill"
+      ],
+      [
+        449,
+        "I HATE YOU",
+        "Skill"
+      ],
+      [
+        451,
+        "Irradiate 'Em All",
+        "Skill"
+      ],
+      [
+        452,
+        "Second Impact",
+        "Skill"
+      ],
+      [
+        454,
+        "Methodical",
+        "Skill"
+      ],
+      [
+        455,
+        "Marathon",
+        "Skill"
+      ],
+      [
+        457,
+        "Retribution",
+        "Skill"
+      ],
+      [
+        458,
+        "Infinite Murder Hack",
+        "Skill"
+      ],
+      [
+        459,
+        "Killing Machine",
+        "Skill"
+      ],
+      [
+        460,
+        "Refactored",
+        "Skill"
+      ],
+      [
+        461,
+        "Third Party",
+        "Skill"
+      ],
+      [
+        462,
+        "The Sweet Science",
+        "Skill"
+      ],
+      [
+        463,
+        "Chip Surplus",
+        "Skill"
+      ],
+      [
+        464,
+        "The Gang's All Here",
+        "Skill"
+      ],
+      [
+        466,
+        "Overclocked",
+        "Skill"
+      ],
+      [
+        468,
+        "Flow State",
+        "Skill"
+      ],
+      [
+        469,
+        "Violent Outburst",
+        "Skill"
+      ],
+      [
+        470,
+        "Watch Your Step",
+        "Skill"
+      ],
+      [
+        472,
+        "Assault Vest",
+        "Skill"
+      ],
+      [
+        473,
+        "Upload",
+        "Skill"
+      ],
+      [
+        475,
+        "Immunoppressant",
+        "Skill"
+      ],
+      [
+        476,
+        "Depletion Load",
+        "Skill"
+      ],
+      [
+        477,
+        "Conservation of Life",
+        "Skill"
+      ],
+      [
+        478,
+        "Turbo Button",
+        "Skill"
+      ],
+      [
+        479,
+        "Circular Logic",
+        "Skill"
+      ],
+      [
+        480,
+        "Unsupported Peripheral",
+        "Skill"
+      ],
+      [
+        482,
+        "System Restore",
+        "Skill"
+      ],
+      [
+        483,
+        "Wide Net",
+        "Skill"
+      ],
+      [
+        484,
+        "Viral Payload",
+        "Skill"
+      ],
+      [
+        485,
+        "Malware",
+        "Skill"
+      ],
+      [
+        486,
+        "Conservation of Volatility",
+        "Skill"
+      ],
+      [
+        488,
+        "Kernel Panic",
+        "Skill"
+      ],
+      [
+        489,
+        "It's Super Effective",
+        "Skill"
+      ],
+      [
+        490,
+        "Conservation of Malice",
+        "Skill"
+      ],
+      [
+        491,
+        "When it Rains",
+        "Skill"
+      ],
+      [
+        492,
+        "Blackhat",
+        "Skill"
+      ],
+      [
+        493,
+        "Feedback",
+        "Skill"
+      ],
+      [
+        494,
+        "It Pours",
+        "Skill"
+      ],
+      [
+        495,
+        "Memory Leak",
+        "Skill"
+      ],
+      [
+        496,
+        "Storage Upgrade",
+        "Skill"
+      ],
+      [
+        497,
+        "No Time to Think",
+        "Skill"
+      ],
+      [
+        498,
+        "Power Overwhelming",
+        "Skill"
+      ],
+      [
+        499,
+        "Manipulating RNG",
+        "Skill"
+      ],
+      [
+        501,
+        "Everchanging",
+        "Skill"
+      ],
+      [
+        503,
+        "Deeper Connection",
+        "Skill"
+      ],
+      [
+        504,
+        "Empowered Wyrm",
+        "Skill"
+      ],
+      [
+        505,
+        "In Memoriam",
+        "Skill"
+      ],
+      [
+        508,
+        "Symbiosis Overflow",
+        "Skill"
+      ],
+      [
+        509,
+        "FNX.bat",
+        "Skill"
+      ],
+      [
+        510,
+        "What's Your Status",
+        "Skill"
+      ],
+      [
+        511,
+        "Explosive Mindset",
+        "Skill"
+      ],
+      [
+        512,
+        "I HATE YOU",
+        "Skill"
+      ],
+      [
+        514,
+        "Irradiate 'Em All",
+        "Skill"
+      ],
+      [
+        515,
+        "Second Impact",
+        "Skill"
+      ],
+      [
+        517,
+        "Methodical",
+        "Skill"
+      ],
+      [
+        518,
+        "Marathon",
+        "Skill"
+      ],
+      [
+        520,
+        "Retribution",
+        "Skill"
+      ],
+      [
+        521,
+        "Infinite Murder Hack",
+        "Skill"
+      ],
+      [
+        522,
+        "Killing Machine",
+        "Skill"
+      ],
+      [
+        523,
+        "Refactored",
+        "Skill"
+      ],
+      [
+        524,
+        "Third Party",
+        "Skill"
+      ],
+      [
+        525,
+        "The Sweet Science",
+        "Skill"
+      ],
+      [
+        526,
+        "Chip Surplus",
+        "Skill"
+      ],
+      [
+        527,
+        "The Gang's All Here",
+        "Skill"
+      ],
+      [
+        529,
+        "Overclocked",
+        "Skill"
+      ],
+      [
+        531,
+        "Flow State",
+        "Skill"
+      ],
+      [
+        532,
+        "Violent Outburst",
+        "Skill"
+      ],
+      [
+        533,
+        "Watch Your Step",
+        "Skill"
+      ],
+      [
+        535,
+        "Assault Vest",
+        "Skill"
+      ],
+      [
+        536,
+        "Upload",
+        "Skill"
+      ]
     ]
-  };
-  Object.keys(extras).forEach(function (key) {
+  };  Object.keys(extras).forEach(function (key) {
     var target = Array.isArray(root[key]) ? root[key].slice() : [];
     var seen = new Set(target.map(function (row) { return JSON.stringify(row); }));
     (extras[key] || []).forEach(function (row) {

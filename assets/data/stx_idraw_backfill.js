@@ -2,6 +2,24 @@
   'use strict';
   var patches = [
   {
+    "code": "enhancement.part_firmware_active_fire",
+    "idRaw": "247:249",
+    "id": 249,
+    "family": 247
+  },
+  {
+    "code": "enhancement.part_firmware_bruiser",
+    "idRaw": "247:250",
+    "id": 250,
+    "family": 247
+  },
+  {
+    "code": "grenade_gadget.part_normal",
+    "idRaw": "245:23",
+    "id": 23,
+    "family": 245
+  },
+  {
     "code": "repair_kit.part_aug_ele_nova_radiation",
     "idRaw": "243:40",
     "id": 40,

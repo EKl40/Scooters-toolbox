@@ -507,7 +507,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 </header>
 <div class="stx-vc4-update-banner" id="stxVc4UpdateBanner" role="status">
 <img alt="" decoding="async" height="24" loading="lazy" src="./img/ui/ico_ui_art_currency_vc4.png" width="24"/>
-<span>Updated for Vault card 4</span>
+<span>Updated for Loveless</span>
 </div>
 <script>
 (function () {
@@ -658,6 +658,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 <button class="btn btn-Firmware stx-vh-btn" data-action="set-character" data-requires="character" data-value="Gravitar" style="flex: 1; min-width: 160px;" type="button"><img alt="" class="stx-vh-btn__icon" decoding="async" loading="lazy" src="./img/vault-hunters/player_class_gravitar.png"/><span>Set Harlowe (Gravitar)</span></button>
 <button class="btn btn-Firmware stx-vh-btn" data-action="set-character" data-requires="character" data-value="ExoSoldier" style="flex: 1; min-width: 160px;" type="button"><img alt="" class="stx-vh-btn__icon" decoding="async" loading="lazy" src="./img/vault-hunters/player_class_exo_soldier.png"/><span>Set Rafa (Exo-Soldier)</span></button>
 <button class="btn btn-Firmware stx-vh-btn" data-action="set-character" data-requires="character" data-value="RoboDealer" style="flex: 1; min-width: 160px;" title="YAML class: Char_RoboDealer (internal Robodealer)" type="button"><img alt="" class="stx-vh-btn__icon" decoding="async" loading="lazy" src="./img/vault-hunters/player_robodealer.png"/><span>C4sh</span></button>
+<button class="btn btn-Firmware stx-vh-btn" data-action="set-character" data-requires="character" data-value="CorpoHacker" style="flex: 1; min-width: 160px;" title="YAML class: Char_CorpoHacker (Loveless / The Hacker)" type="button"><img alt="" class="stx-vh-btn__icon" decoding="async" loading="lazy" src="./img/vault-hunters/player_corpohacker.png"/><span>Set Loveless (The Hacker)</span></button>
 </div>
 <div style="margin-top: 10px;">
 <div style="color: #00c8ff; font-size: 0.9em; display: block; margin-bottom: 5px;">Difficulty:</div>
@@ -724,6 +725,13 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 <input id="yaml-profile-vaultcard04-tokens" min="0" name="yaml-profile-vaultcard04-tokens" placeholder="vaultcard04_tokens" style="width:100%;padding:8px 10px;background:#1f1f1f;border:1px solid rgba(0,243,255,0.5);border-radius:8px;color:#00f3ff;" type="number"/>
 <label class="yaml-profile-vc-label" for="yaml-profile-vc04-level" title="VaultCard04_Experience"><span>Level</span></label>
 <input id="yaml-profile-vc04-level" min="0" name="yaml-profile-vc04-level" style="width:100%;padding:8px 10px;background:#1f1f1f;border:1px solid rgba(0,243,255,0.5);border-radius:8px;color:#00f3ff;" type="number"/>
+</div>
+<div class="yaml-profile-vc-card">
+<div class="yaml-profile-vc-card-head"><img alt="" decoding="async" height="24" loading="lazy" src="./img/ui/ico_ui_art_currency_vc4.png" width="24"/><span>Vault Card 5</span></div>
+<label class="yaml-profile-vc-label" for="yaml-profile-vaultcard05-tokens" title="domains.local.shared.currencies.vaultcard05_tokens"><span>Tokens</span></label>
+<input id="yaml-profile-vaultcard05-tokens" min="0" name="yaml-profile-vaultcard05-tokens" placeholder="vaultcard05_tokens" style="width:100%;padding:8px 10px;background:#1f1f1f;border:1px solid rgba(0,243,255,0.5);border-radius:8px;color:#00f3ff;" type="number"/>
+<label class="yaml-profile-vc-label" for="yaml-profile-vc05-level" title="VaultCard05_Experience"><span>Level</span></label>
+<input id="yaml-profile-vc05-level" min="0" name="yaml-profile-vc05-level" style="width:100%;padding:8px 10px;background:#1f1f1f;border:1px solid rgba(0,243,255,0.5);border-radius:8px;color:#00f3ff;" type="number"/>
 </div>
 </div>
 </div>
@@ -838,7 +846,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 </div>
 <div style="font-weight:700;margin:14px 0 8px;">Character / Progression</div>
 <div class="btnRow" style="display:flex;flex-wrap:wrap;gap:8px;">
-<button class="btn btn-Firmware" data-action="call" data-fn="setCharacterToMaxLevel" data-requires="character" title="Sets character level to 60 with matching XP" type="button">Max Level (60)</button>
+<button class="btn btn-Firmware" data-action="call" data-fn="setCharacterToMaxLevel" data-requires="character" title="Sets character level to 70 with matching XP" type="button">Max Level (70)</button>
 <button class="btn btn-Firmware" data-action="call" data-fn="setMaxSDU" data-requires="character" title="Maxes SDU upgrades" type="button">Max SDU</button>
 <button class="btn btn-Firmware" data-action="call" data-fn="unlockVaultPowers" data-requires="character" title="Unlocks all vault powers" type="button">Unlock All Vault Powers</button>
 <button class="btn btn-Firmware" data-action="call" data-fn="unlockAllHoverDrives" data-requires="character" title="Unlocks all hover drives" type="button">Unlock All Hover Drives</button>
@@ -856,7 +864,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 <div style="font-weight:700;margin:14px 0 8px;">Items</div>
 <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:10px;">
 <label style="color:#00c8ff;font-size:0.88em;display:flex;align-items:center;gap:8px;margin:0;">Target item level
-                      <input aria-label="Target item level for all serials" id="yaml-items-target-level" max="60" min="1" name="yaml-items-target-level" style="width:4.2rem;padding:6px 8px;background:#2a2a2a;border:2px solid #00f3ff;border-radius:8px;color:#00f3ff;font-size:1em;" type="number" value="60"/>
+                      <input aria-label="Target item level for all serials" id="yaml-items-target-level" max="70" min="1" name="yaml-items-target-level" style="width:4.2rem;padding:6px 8px;background:#2a2a2a;border:2px solid #00f3ff;border-radius:8px;color:#00f3ff;font-size:1em;" type="number" value="70"/>
 </label>
 </div>
 <div class="btnRow" style="display:flex;flex-wrap:wrap;gap:8px;">
@@ -871,11 +879,11 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 </div>
 <div>
 <label for="yaml-char-level" style="color: #00c8ff; font-size: 0.9em; display: block; margin-bottom: 5px;">Character Level:</label>
-<input aria-label="YAML character level" id="yaml-char-level" max="60" min="1" name="yaml-char-level" placeholder="60" style="width: 100%; padding: 8px; background: #2a2a2a; border: 2px solid #00f3ff; border-radius: 8px; color: #00f3ff; font-size: 1em;" type="number"/>
+<input aria-label="YAML character level" id="yaml-char-level" max="70" min="1" name="yaml-char-level" placeholder="70" style="width: 100%; padding: 8px; background: #2a2a2a; border: 2px solid #00f3ff; border-radius: 8px; color: #00f3ff; font-size: 1em;" type="number"/>
 </div>
 <div>
 <label for="yaml-char-xp" style="color: #00c8ff; font-size: 0.9em; display: flex; align-items: center; gap: 8px; margin-bottom: 5px;"><img alt="" decoding="async" height="22" loading="lazy" src="./img/reward-icons/ico_reward_exp.png" width="22"/>Experience Points:</label>
-<input aria-label="YAML character experience" id="yaml-char-xp" min="0" name="yaml-char-xp" placeholder="6352462" style="width: 100%; padding: 8px; background: #2a2a2a; border: 2px solid #00f3ff; border-radius: 8px; color: #00f3ff; font-size: 1em;" title="Cumulative character XP; max level 60" type="number"/>
+<input aria-label="YAML character experience" id="yaml-char-xp" min="0" name="yaml-char-xp" placeholder="6352462" style="width: 100%; padding: 8px; background: #2a2a2a; border: 2px solid #00f3ff; border-radius: 8px; color: #00f3ff; font-size: 1em;" title="Cumulative character XP; max level 70" type="number"/>
 </div>
 <div>
 <label for="yaml-spec-level" style="color: #00c8ff; font-size: 0.9em; display: block; margin-bottom: 5px;">Specialization Level:</label>
@@ -997,7 +1005,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 <div aria-level="3" role="heading" style="color: #00c8ff; font-size: 0.9em; margin-bottom: 8px;">Duplicate backpack or bank</div>
 <p style="color: rgba(255,255,255,0.78); font-size: 0.84em; margin: 0 0 10px 0; line-height: 1.45;">Copies every filled slot into new slots. Set a level first if you use the “at level” buttons.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 10px;">
-<label for="yamlDupTargetLevel" style="color: #00c8ff; font-size: 0.85em; display: flex; align-items: center; gap: 8px;">Level for copies <input id="yamlDupTargetLevel" inputmode="numeric" max="999" min="1" placeholder="e.g. 60" style="width: 76px; padding: 6px 8px; border-radius: 8px; border: 1px solid rgba(0,255,200,0.45); background: #1a2332; color: #b8e6f0; box-sizing: border-box;" type="number"/></label>
+<label for="yamlDupTargetLevel" style="color: #00c8ff; font-size: 0.85em; display: flex; align-items: center; gap: 8px;">Level for copies <input id="yamlDupTargetLevel" inputmode="numeric" max="999" min="1" placeholder="e.g. 70" style="width: 76px; padding: 6px 8px; border-radius: 8px; border: 1px solid rgba(0,255,200,0.45); background: #1a2332; color: #b8e6f0; box-sizing: border-box;" type="number"/></label>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
 <button class="btn btn-Firmware" disabled="" id="yamlDupBackpackBtn" title="Load a character save YAML (root state:) first." type="button">Duplicate backpack (as-is)</button>
@@ -1018,14 +1026,14 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 <p style="color: rgba(255,255,255,0.78); font-size: 0.84em; margin: 0 0 10px 0; line-height: 1.45;">Appends items from another YAML into this save (character → backpack, profile → bank). Your current editor text stays the base.</p>
 <input accept=".yaml,.yml" aria-label="YAML file to merge items from" id="yamlMergeFileInput" name="yamlMergeFileInput" style="display: none;" type="file"/>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 10px;">
-<label for="yamlMergeTargetLevel" style="color: #00c8ff; font-size: 0.85em; display: flex; align-items: center; gap: 8px;">Level for imports <input id="yamlMergeTargetLevel" inputmode="numeric" max="999" min="1" placeholder="e.g. 60" style="width: 76px; padding: 6px 8px; border-radius: 8px; border: 1px solid rgba(0,200,255,0.45); background: #1a2332; color: #b8e6f0; box-sizing: border-box;" type="number"/></label>
+<label for="yamlMergeTargetLevel" style="color: #00c8ff; font-size: 0.85em; display: flex; align-items: center; gap: 8px;">Level for imports <input id="yamlMergeTargetLevel" inputmode="numeric" max="999" min="1" placeholder="e.g. 70" style="width: 76px; padding: 6px 8px; border-radius: 8px; border: 1px solid rgba(0,200,255,0.45); background: #1a2332; color: #b8e6f0; box-sizing: border-box;" type="number"/></label>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
 <button class="btn btn-Firmware" disabled="" id="yamlMergeAsIsBtn" title="Load a character or profile YAML in the editor first." type="button">Merge from YAML (as-is)</button>
 <button class="btn btn-Firmware" disabled="" id="yamlMergeLevelBtn" title="Load a character or profile YAML in the editor first." type="button">Merge from YAML at level</button>
 </div>
 </div>
-<p id="yaml-serials-bulk-hint" style="display:none;margin:0 0 10px 0;font-size:0.78em;line-height:1.35;color:rgba(0,243,255,0.65);max-width:900px;">Huge lists? Use <strong>Open serials in bulk decoder</strong>, then optionally <strong>Load decoded results</strong> for names.</p>
+<p id="yaml-serials-bulk-hint" style="display:none;margin:0 0 10px 0;font-size:0.78em;line-height:1.35;color:rgba(0,243,255,0.65);max-width:900px;">Huge lists? Only the visible page is decoded for names. Use <strong>Open serials in bulk decoder</strong>, then optionally <strong>Load decoded results</strong> if you need every name at once.</p>
 <div id="yaml-serials-container" style="display: flex; flex-direction: column; gap: 8px;"></div>
 <div class="yaml-serials-pagination-row" id="yaml-serials-pagination-bottom" style="display:none;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;">
 <button class="btn yaml-serials-page-btn" data-yaml-serials-dir="prev" style="padding:6px 12px;font-size:0.85em;" type="button">Previous 50</button>
@@ -1138,9 +1146,9 @@ window.STX_DECODER_IFRAME_URL = '../legacy/bl4-bulk-decoder.html';
 <script src="js/cc-base85-rebuild.js"></script>
 <script src="js/stx-nicnl-serial-pack.js"></script>
 <script src="js/cc-sav-crypto-rebuild.js"></script>
-<script src="js/cc-yaml-save-rebuild.js"></script>
+<script src="js/cc-yaml-save-rebuild.js?v=77r"></script>
 <script src="js/cc-preset-rebuild.js"></script>
-<script src="js/cc-stx-decoder-bridge.js"></script>
+<script src="js/cc-stx-decoder-bridge.js?v=77r"></script>
 <script src="js/cc-yaml-extras-rebuild.js"></script>
 <script src="js/cc-missions-rebuild.js"></script>
 <script src="js/cc-profile-progression-tools-rebuild.js"></script>

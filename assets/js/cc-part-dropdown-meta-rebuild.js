@@ -285,8 +285,14 @@
     if (isRarity && typeof window.stxStripRarityIdSkinDisplaySuffix === 'function') {
       name = window.stxStripRarityIdSkinDisplaySuffix(name) || name;
     }
-    /* Rarity ID: prefer human title over raw spawn · name · stats dumps. */
-    if (isRarity && typeof window.stxRarityIdHumanTitleForPart === 'function') {
+    /* Rarity ID: prefer human title over raw spawn · name · stats dumps.
+       Class-mod stubs must not regain "Raid3" via effects/humanize. */
+    var cmStub = false;
+    try {
+      cmStub = isClassMod && typeof window.stxIsClassModUnnamedLegendaryStub === 'function'
+        && window.stxIsClassModUnnamedLegendaryStub(p);
+    } catch (_) { cmStub = false; }
+    if (isRarity && !cmStub && typeof window.stxRarityIdHumanTitleForPart === 'function') {
       try {
         var human = q(window.stxRarityIdHumanTitleForPart(p));
         if (human) name = human;
@@ -297,16 +303,10 @@
     var ef = q(p.effects || p.effect).replace(/\s+/g, ' ').trim();
 
     var bits = [];
-    if (isClassMod && !isRarity) {
-      try {
-        if (typeof window.stxIsClassModUnnamedLegendaryStub === 'function'
-          && window.stxIsClassModUnnamedLegendaryStub(p)) {
-          return idTok || '-';
-        }
-      } catch (_) {}
+    if (isClassMod) {
+      if (cmStub) return idTok || '-';
       /* Compact Class Mod rows: in-game name + id. Spawn stays on hover. */
       if (name && !/^(raid\s*\d+|harmonica|cowbell|tuba|leg body\b)/i.test(name)) bits.push(name);
-      else if (spawn && !/^(leg body|raid\s*\d+|harmonica)\b/i.test(spawn)) bits.push(spawn);
       if (idTok) bits.push(idTok);
       if (!bits.length && raw && !/raid[34]|harmonica/i.test(raw)) bits.push(raw);
     } else if (isRarity) {
@@ -328,7 +328,7 @@
 
     var line = bits.filter(Boolean).join(' · ');
     if (line.length > maxLen) line = line.slice(0, maxLen - 1) + '…';
-    return line || spawn || raw || '-';
+    return line || (isClassMod ? (idTok || '-') : (spawn || raw || '-'));
   }
 
   window.partRedTextForDropdown = partRedTextForDropdown;

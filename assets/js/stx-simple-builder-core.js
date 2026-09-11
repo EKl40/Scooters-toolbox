@@ -38,6 +38,62 @@
   }
   try { window.stxStripRarityIdSkinDisplaySuffix = stxStripRarityIdSkinDisplaySuffix; } catch (_e) {}
 
+  function stxNormalizeNewItemCodeKey(raw){
+    return String(raw || '')
+      .toLowerCase()
+      .replace(/["']/g, '')
+      .replace(/^inv['"]?/i, '')
+      .trim();
+  }
+
+  function stxCollectNewItemCodeCandidates(partOrCode){
+    const out = [];
+    const push = (v)=>{
+      const n = stxNormalizeNewItemCodeKey(v);
+      if (n) out.push(n);
+    };
+    if (partOrCode == null) return out;
+    if (typeof partOrCode === 'string' || typeof partOrCode === 'number') {
+      push(partOrCode);
+      return out;
+    }
+    if (typeof partOrCode !== 'object') return out;
+    push(partOrCode.code);
+    push(partOrCode.spawnCode);
+    push(partOrCode.importCode);
+    push(partOrCode.itemTypeString);
+    push(partOrCode.matchCode);
+    push(partOrCode.value);
+    try {
+      if (typeof normCode === 'function') {
+        push(normCode(partOrCode.code || partOrCode.spawnCode || partOrCode.importCode || ''));
+      }
+    } catch (_e) {}
+    return out;
+  }
+
+  function stxIsNewEditorItem(partOrCode){
+    const set = (typeof window !== 'undefined') ? window.STX_NEW_EDITOR_ITEM_CODES : null;
+    if (!set || typeof set.has !== 'function') return false;
+    const cands = stxCollectNewItemCodeCandidates(partOrCode);
+    for (let i = 0; i < cands.length; i++){
+      if (set.has(cands[i])) return true;
+    }
+    return false;
+  }
+
+  function stxMarkNewDropdownLabel(label, partOrCode){
+    const L = String(label == null ? '' : label);
+    if (!L || !stxIsNewEditorItem(partOrCode)) return L;
+    if (/^🆕/.test(L) || L.indexOf('🆕') !== -1) return L;
+    return `🆕 ${L}`;
+  }
+
+  try {
+    window.stxIsNewEditorItem = stxIsNewEditorItem;
+    window.stxMarkNewDropdownLabel = stxMarkNewDropdownLabel;
+  } catch (_e) {}
+
   
   // Bridge parent datasets into this srcdoc iframe (host page keeps canonical copies).
   try{
@@ -50,7 +106,7 @@
     itemType: '',
     manufacturer: '',
     weaponType: '',
-    level: 60,
+    level: 70,
     rarity: '',
     idMode: true,
     allParts: false,
@@ -1415,12 +1471,30 @@
 
   function stxRarityIdHumanTitleForPart(p){
     if (!p) return '';
+    /* Class-mod: prefer mapped DLC/raid names; never surface Raid3/Harmonica stubs. */
+    try {
+      const code0 = String(normCode(p.code || '') || '').toLowerCase();
+      const isCm = /classmod_/.test(code0)
+        || /class\s*mod/i.test(String(p.category || ''))
+        || /class\s*mod/i.test(String(p.itemType || ''));
+      if (isCm) {
+        if (typeof stxIsClassModUnnamedLegendaryStub === 'function' && stxIsClassModUnnamedLegendaryStub(p)) return '';
+        const mapped = typeof stxResolveClassModPartDisplayName === 'function'
+          ? String(stxResolveClassModPartDisplayName(p) || '').trim()
+          : '';
+        if (mapped) return mapped;
+      }
+    } catch (_e) {}
     const map = window.STX_PEARL_RARITY_DISPLAY_BY_NORM;
     const eff0 = String(p.effects || p.effect || '').split(/\s*-\s*/)[0].trim();
     if (eff0 && eff0.length <= 64 && !/^(use |\+|reload|damage|\d)/i.test(eff0)){
       const ek = stxNormPearlAllowKey(eff0);
       if (map && map[ek]) return stxStripRarityIdSkinDisplaySuffix(map[ek]);
-      if (eff0.length <= 40) return stxStripRarityIdSkinDisplaySuffix(eff0);
+      if (/^(raid\s*[34]|raid[34]|harmonica)$/i.test(eff0.replace(/[\s_-]+/g, ' ').trim())) {
+        /* fall through — do not use stub effect text as title */
+      } else if (eff0.length <= 40) {
+        return stxStripRarityIdSkinDisplaySuffix(eff0);
+      }
     }
     const nameHead = stxStripLegendaryRarityDisplayPrefix(String(p.name || '').split(/\s*-\s*/)[0]);
     const tryKeys = [
@@ -1433,11 +1507,14 @@
       if (k && map && map[k]) return stxStripRarityIdSkinDisplaySuffix(map[k]);
     }
     if (nameHead && !/^comp_0[56]_/i.test(nameHead) && nameHead.length <= 72) {
+      if (/^(raid\s*[34]|raid[34]|harmonica)$/i.test(nameHead.replace(/[\s_-]+/g, ' ').trim())) return '';
       return stxStripRarityIdSkinDisplaySuffix(nameHead);
     }
     const hum = stxHumanizeLegendToken(stxRarityLegendTokenFromPart(p));
-    if (hum) return stxStripRarityIdSkinDisplaySuffix(hum);
-    return stxStripRarityIdSkinDisplaySuffix(spawnSegmentFromNormCode(normCode(p.code || '')) || '');
+    if (hum && !/^(raid\s*[34]|harmonica)$/i.test(hum)) return stxStripRarityIdSkinDisplaySuffix(hum);
+    const spawnFallback = spawnSegmentFromNormCode(normCode(p.code || '')) || '';
+    if (/raid\s*[34]|harmonica/i.test(spawnFallback)) return '';
+    return stxStripRarityIdSkinDisplaySuffix(spawnFallback);
   }
   try { window.stxRarityIdHumanTitleForPart = stxRarityIdHumanTitleForPart; } catch (_e) {}
 
@@ -1814,7 +1891,8 @@
           amon:255, paladin:255,
           rafa:256, exosoldier:256, exo:256,
           harlowe:259, gravitar:259,
-          c4sh:404, robodealer:404
+          c4sh:404, robodealer:404,
+          loveless:402, corpohacker:402, hacker:402
         };
         const fam1 = Number(byPrefix[k]);
         if (Number.isFinite(fam1)) return fam1;
@@ -2232,13 +2310,15 @@
     const rawCode = normCode(p.code);
     const spawnSeg = spawnSegmentFromNormCode(rawCode);
     let datasetName = (p.name && String(p.name).trim()) ? String(p.name).trim() : '';
+    let isCm = false;
     try {
       const catLo = String(p.category || p.itemType || '').toLowerCase();
-      const isCm = /class\s*mod/.test(catLo) || /classmod_/.test(String(rawCode || '').toLowerCase());
+      isCm = /class\s*mod/.test(catLo) || /classmod_/.test(String(rawCode || '').toLowerCase());
       if (isCm) {
+        if (stxIsClassModUnnamedLegendaryStub(p)) return '-';
         const resolved = String(stxResolveClassModPartDisplayName(p) || '').trim();
         if (resolved) datasetName = resolved;
-        else if (stxIsClassModUnnamedLegendaryStub(p)) datasetName = '';
+        else datasetName = '';
       }
     } catch (_e) {}
 
@@ -2266,6 +2346,16 @@
     if (!tok && id){
       const idM = id.match(/^(\d+)\s*:\s*(\d+)\s*$/);
       if (idM) tok = `{${Number(idM[1])}:${Number(idM[2])}}`;
+    }
+
+    /* Class Mod: in-game name + numeric id only (never spawn-derived "Raid 3"). */
+    if (isCm) {
+      let line = datasetName || '';
+      const tail = tok || (id && line.indexOf(id) === -1 ? id : '');
+      if (tail && line.indexOf(tail) === -1) line = line ? `${line} · ${tail}` : tail;
+      if (!line) line = tok || id || '-';
+      if (line.length > 140) line = line.slice(0, 137) + '…';
+      return line;
     }
 
     let primary = spawnSeg || (rawCode ? (rawCode.length <= 80 ? rawCode : rawCode.slice(0, 77) + '…') : '');
@@ -2418,6 +2508,7 @@ function getAllParts(){
     if (lo === 'rafa' || lo === 'exo soldier' || lo === 'exo-soldier' || lo === 'exosoldier') return 'exo soldier';
     if (lo === 'harlowe' || lo === 'gravitar') return 'gravitar';
     if (lo === 'c4sh' || lo === 'robodealer' || lo === 'robo dealer') return 'robodealer';
+    if (lo === 'loveless' || lo === 'corpohacker' || lo === 'corpo hacker' || lo === 'hacker' || lo === 'the hacker') return 'corpohacker';
     if (lo === 'universal') return 'universal';
     return lo;
   }
@@ -2447,6 +2538,7 @@ function getAllParts(){
     if (cmKey === 'exo soldier') return 'Exo Soldier';
     if (cmKey === 'gravitar') return 'Gravitar';
     if (cmKey === 'robodealer') return 'Robodealer';
+    if (cmKey === 'corpohacker') return 'Corpohacker';
     if (cmKey === 'universal') return 'Universal';
     return s;
   }
@@ -2770,6 +2862,7 @@ function getAllParts(){
       if (key === 'exo soldier') return base + 'player_class_exo_soldier.png';
       if (key === 'gravitar') return base + 'player_class_gravitar.png';
       if (key === 'robodealer') return base + 'player_robodealer.png';
+      if (key === 'corpohacker') return base + 'player_corpohacker.png';
       return '';
     }
     const m = String(rawMfr || '').trim().toLowerCase();
@@ -2886,7 +2979,7 @@ function getAllParts(){
   function stxStripVaultHunterPrefixFromClassmodPerkStem(pk){
     const x = String(pk || '').toLowerCase().trim();
     if (!x) return x;
-    const prefs = ['robodealer', 'exosoldier', 'harlowe', 'gravitar', 'c4sh', 'paladin', 'siren', 'amon', 'rafa', 'vex'];
+    const prefs = ['corpohacker', 'loveless', 'robodealer', 'exosoldier', 'harlowe', 'gravitar', 'c4sh', 'paladin', 'siren', 'amon', 'rafa', 'vex'];
     for (let pi = 0; pi < prefs.length; pi++){
       const pref = prefs[pi];
       /* Keep short stems like c4shgame intact (stripping would leave "game"). */
@@ -3548,6 +3641,7 @@ function getAllParts(){
       if (mfrKey === 'exo soldier') return './assets/img/vault-hunters/player_class_exo_soldier.png';
       if (mfrKey === 'gravitar') return './assets/img/vault-hunters/player_class_gravitar.png';
       if (mfrKey === 'robodealer') return './assets/img/vault-hunters/player_robodealer.png';
+      if (mfrKey === 'corpohacker') return './assets/img/vault-hunters/player_corpohacker.png';
     }
 
     // 5. Legendary Augments (true legendaries only — not pearlescent comp_05 allowlist rows)
@@ -4110,6 +4204,21 @@ function getAllParts(){
 
   function setSelectOptions(sel, options, {placeholder='Select...', getLabel=(x)=>x, getValue=(x)=>x, groupBy=null, getTitle=null, decorateOption=null, appendIdRawToLabel=true, onComplete=null, chunked=null}={}){
     if (!sel) { if (typeof onComplete === 'function') onComplete(); return; }
+    const baseGetLabel = getLabel;
+    const baseDecorate = decorateOption;
+    getLabel = (o) => stxMarkNewDropdownLabel(baseGetLabel(o), o);
+    decorateOption = (opt, o) => {
+      try {
+        if (stxIsNewEditorItem(o)) {
+          opt.setAttribute('data-stx-new', '1');
+          const tip = String(opt.title || '').trim();
+          if (!/\bnew\b/i.test(tip)) opt.title = tip ? `${tip} · New this update` : 'New this update';
+        }
+      } catch (_e) {}
+      if (typeof baseDecorate === 'function') {
+        try { baseDecorate(opt, o); } catch (_e2) {}
+      }
+    };
     sel.innerHTML = '';
     const ph = document.createElement('option');
     ph.value = '';
@@ -4368,7 +4477,7 @@ function getAllParts(){
 
       // Accept either internal family names (Siren/Paladin/Exo Soldier/Gravitar/Robodealer)
       // or displayed BL4 character names (Vex/Amon/Rafa/Harlowe) / Nexus "Dark Siren".
-      const aliasByLower = { 'vex':'Siren', 'siren':'Siren', 'dark siren':'Siren', 'darksiren':'Siren', 'amon':'Paladin', 'paladin':'Paladin', 'rafa':'Exo Soldier', 'exo soldier':'Exo Soldier', 'harlowe':'Gravitar', 'gravitar':'Gravitar', 'c4sh':'Robodealer', 'robodealer':'Robodealer' };
+      const aliasByLower = { 'vex':'Siren', 'siren':'Siren', 'dark siren':'Siren', 'darksiren':'Siren', 'amon':'Paladin', 'paladin':'Paladin', 'rafa':'Exo Soldier', 'exo soldier':'Exo Soldier', 'harlowe':'Gravitar', 'gravitar':'Gravitar', 'c4sh':'Robodealer', 'robodealer':'Robodealer', 'loveless':'Corpohacker', 'corpohacker':'Corpohacker', 'corpo hacker':'Corpohacker', 'hacker':'Corpohacker', 'the hacker':'Corpohacker' };
       const lc = raw.toLowerCase();
       const name = aliasByLower[lc] || stxCanonicalizeManufacturerDisplayName(raw) || raw;
       const wantCmKey = stxCanonicalClassModManufacturerKey(name);
@@ -4399,7 +4508,8 @@ function getAllParts(){
         amon: 255, paladin: 255,
         rafa: 256, 'exo soldier': 256, 'exo-soldier': 256, exosoldier: 256,
         harlowe: 259, gravitar: 259,
-        c4sh: 404, robodealer: 404
+        c4sh: 404, robodealer: 404,
+        loveless: 402, corpohacker: 402, 'corpo hacker': 402, hacker: 402, 'the hacker': 402
       };
       const fam = famFallbackByLower[lc] ?? famFallbackByLower[String(name || '').toLowerCase()];
       return Number.isFinite(Number(fam)) ? Number(fam) : null;
@@ -4422,7 +4532,8 @@ function getAllParts(){
           amon: 255, paladin: 255,
           rafa: 256, exosoldier: 256, exo: 256,
           harlowe: 259, gravitar: 259,
-          c4sh: 404, robodealer: 404
+          c4sh: 404, robodealer: 404,
+          loveless: 402, corpohacker: 402, hacker: 402
         };
         const fam = Number(byPrefix[k]);
         if (Number.isFinite(fam)) return fam;
@@ -4447,7 +4558,8 @@ function getAllParts(){
       amon: 'amon', paladin: 'amon',
       rafa: 'rafa', 'exo soldier': 'rafa', 'exo-soldier': 'rafa', exosoldier: 'rafa',
       harlowe: 'harlowe', gravitar: 'harlowe',
-      c4sh: 'c4sh', robodealer: 'c4sh'
+      c4sh: 'c4sh', robodealer: 'c4sh',
+      loveless: 'loveless', corpohacker: 'loveless', 'corpo hacker': 'loveless', hacker: 'loveless', 'the hacker': 'loveless'
     };
     return byLower[raw] || null;
   }
@@ -4490,14 +4602,20 @@ function getAllParts(){
     if (!p) return false;
     const code = String(normCode(p.code || p.spawnCode || '') || '').toLowerCase();
     if (/classmod_/.test(code) && /\.(?:leg_body_|comp_05_legendary_)(raid3|raid4|harmonica)(?:["']|$)/.test(code)) return true;
-    const nm = String((p.name || p.legendaryName || p.displayName || '') || '')
+    const nm = String((p.name || p.legendaryName || p.displayName || p.effects || p.effect || '') || '')
       .trim()
       .toLowerCase()
       .replace(/[\s_-]+/g, '');
+    /* Only unreleased stubs — raid1 has real names (Misericorde / Overdriver / …). */
     if (!/^(raid3|raid4|harmonica)$/.test(nm)) return false;
     /* Name-only stubs: hide when spawn is missing/token-only or also unnamed. */
     if (!code || /\{/.test(code)) return true;
     if (/(raid3|raid4|harmonica)/.test(code)) return true;
+    /* Class-mod category with stub label and no mapped spawn → hide. */
+    try {
+      const catLo = String(p.category || p.itemType || '').toLowerCase().replace(/\s+/g, '');
+      if (catLo === 'classmod' || catLo === 'character') return true;
+    } catch (_e) {}
     return false;
   }
   try { window.stxIsClassModUnnamedLegendaryStub = stxIsClassModUnnamedLegendaryStub; } catch (_) {}
@@ -4506,32 +4624,64 @@ function getAllParts(){
   const STX_CLASSMOD_DLC_DISPLAY_BY_SPAWN = {
     'classmod_dark_siren.leg_body_cowbell': 'Configuration',
     'classmod_dark_siren.comp_05_legendary_cowbell': 'Configuration',
+    'classmod_dark_siren.leg_body_raid1': 'Misericorde',
+    'classmod_dark_siren.comp_05_legendary_raid1': 'Misericorde',
     'classmod_dark_siren.leg_body_raid2': 'Grim Sister',
     'classmod_dark_siren.comp_05_legendary_raid2': 'Grim Sister',
     'classmod_dark_siren.leg_body_tuba': 'Living Weapon',
     'classmod_dark_siren.comp_05_legendary_tuba': 'Living Weapon',
     'classmod_exo_soldier.leg_body_cowbell': 'Reaparición',
     'classmod_exo_soldier.comp_05_legendary_cowbell': 'Reaparición',
+    'classmod_exo_soldier.leg_body_raid1': 'Overdriver',
+    'classmod_exo_soldier.comp_05_legendary_raid1': 'Overdriver',
     'classmod_exo_soldier.leg_body_raid2': 'Bombastic',
     'classmod_exo_soldier.comp_05_legendary_raid2': 'Bombastic',
     'classmod_exo_soldier.leg_body_tuba': 'Power-Puncher',
     'classmod_exo_soldier.comp_05_legendary_tuba': 'Power-Puncher',
     'classmod_gravitar.leg_body_cowbell': 'Phlebotomist',
     'classmod_gravitar.comp_05_legendary_cowbell': 'Phlebotomist',
+    'classmod_gravitar.leg_body_raid1': 'Trooper',
+    'classmod_gravitar.comp_05_legendary_raid1': 'Trooper',
     'classmod_gravitar.leg_body_raid2': 'Plasmaphile',
     'classmod_gravitar.comp_05_legendary_raid2': 'Plasmaphile',
     'classmod_gravitar.leg_body_tuba': 'Chirurgeon',
     'classmod_gravitar.comp_05_legendary_tuba': 'Chirurgeon',
     'classmod_paladin.leg_body_cowbell': 'Tempest',
     'classmod_paladin.comp_05_legendary_cowbell': 'Tempest',
+    'classmod_paladin.leg_body_raid1': 'Lamplighter',
+    'classmod_paladin.comp_05_legendary_raid1': 'Lamplighter',
     'classmod_paladin.leg_body_raid2': 'Artificer',
     'classmod_paladin.comp_05_legendary_raid2': 'Artificer',
     'classmod_paladin.leg_body_tuba': 'Damned',
     'classmod_paladin.comp_05_legendary_tuba': 'Damned',
+    'classmod_robodealer.leg_body_raid1': 'Hooligan',
+    'classmod_robodealer.comp_05_legendary_raid1': 'Hooligan',
     'classmod_robodealer.leg_body_raid2': 'Prestidigitator',
     'classmod_robodealer.comp_05_legendary_raid2': 'Prestidigitator',
     'classmod_robodealer.leg_body_tuba': 'Trainer',
-    'classmod_robodealer.comp_05_legendary_tuba': 'Trainer'
+    'classmod_robodealer.comp_05_legendary_tuba': 'Trainer',
+    'classmod_corpohacker.leg_body_01': 'Devourer',
+    'classmod_corpohacker.comp_05_legendary_01': 'Devourer',
+    'classmod_corpohacker.leg_body_02': 'Virophile',
+    'classmod_corpohacker.comp_05_legendary_02': 'Virophile',
+    'classmod_corpohacker.leg_body_03': 'Montage Maker',
+    'classmod_corpohacker.comp_05_legendary_03': 'Montage Maker',
+    'classmod_corpohacker.leg_body_04': 'Memory Hoarder',
+    'classmod_corpohacker.comp_05_legendary_04': 'Memory Hoarder',
+    'classmod_corpohacker.leg_body_05': 'Trackstar',
+    'classmod_corpohacker.comp_05_legendary_05': 'Trackstar',
+    'classmod_corpohacker.leg_body_06': 'Functional Human',
+    'classmod_corpohacker.comp_05_legendary_06': 'Functional Human',
+    'classmod_corpohacker.leg_body_dlc1': 'Martyr',
+    'classmod_corpohacker.comp_05_legendary_dlc1': 'Martyr',
+    'classmod_corpohacker.leg_body_dlc2': 'Programmer',
+    'classmod_corpohacker.comp_05_legendary_dlc2': 'Programmer',
+    'classmod_corpohacker.leg_body_raid1': 'Boomer',
+    'classmod_corpohacker.comp_05_legendary_raid1': 'Boomer',
+    'classmod_corpohacker.leg_body_raid2': 'Plague Engineer',
+    'classmod_corpohacker.comp_05_legendary_raid2': 'Plague Engineer',
+    'classmod_corpohacker.leg_body_tuba': 'Puppetmaster',
+    'classmod_corpohacker.comp_05_legendary_tuba': 'Puppetmaster'
   };
 
   /** Resolve player-facing class-mod part name (never Raid3 / Harmonica stubs). */
@@ -4542,7 +4692,7 @@ function getAllParts(){
     let nm = String((p.name || p.legendaryName || p.displayName || '') || '').trim();
     nm = nm.replace(/^part_|^comp_/i, '').replace(/_/g, ' ').trim();
     const nmKey = nm.toLowerCase().replace(/[\s_-]+/g, '');
-    if (/^(raid\d+|harmonica|cowbell|tuba|dlc\d+|legbody.*)$/i.test(nmKey) || /^raid\s*\d+$/i.test(nm)) {
+    if (/^(raid\d+|harmonica|cowbell|tuba|dlc\d+)$/i.test(nmKey) || /^raid\s*\d+$/i.test(nm) || /^leg\s*body\s*\d+$/i.test(nm)) {
       /* Mapped spawn already checked; leave blank rather than show internal slug. */
       return '';
     }
@@ -5096,6 +5246,23 @@ function getAllParts(){
           // Legendary main/prefix uses partType '' (leg_body_*) — still class-scoped.
           const classScoped = (want === 'Body' || want === '' || want === 'Name+Skin' || want === 'Rarity' || want === 'Skill');
           if (classScoped && Number.isFinite(pfam) && pfam !== Number(fam)) return false;
+          /* Reject cross-VH classmod spawn codes even when family is missing on the row. */
+          if (classScoped) {
+            const codeL = String(code || '').toLowerCase();
+            if (/classmod_/.test(codeL)) {
+              const cmKey = stxCanonicalClassModManufacturerKey(manufacturer);
+              const slugByKey = {
+                siren: 'classmod_dark_siren',
+                paladin: 'classmod_paladin',
+                'exo soldier': 'classmod_exo_soldier',
+                gravitar: 'classmod_gravitar',
+                robodealer: 'classmod_robodealer',
+                corpohacker: 'classmod_corpohacker'
+              };
+              const wantSlug = slugByKey[cmKey] || '';
+              if (wantSlug && !codeL.includes(wantSlug)) return false;
+            }
+          }
         }
       }
 
@@ -5595,6 +5762,7 @@ function getAllParts(){
     'exo soldier', 'exosoldier', 'exo-soldier', 'rafa',
     'gravitar', 'harlowe',
     'robodealer', 'robo dealer', 'c4sh',
+    'corpohacker', 'corpo hacker', 'loveless', 'hacker', 'the hacker',
     'universal', 'class mod', 'classmod', 'characters'
   ]);
 
@@ -5664,7 +5832,7 @@ function getAllParts(){
             .filter(r => String(r && r.itemType || '') === 'Class Mod' || /class\s*mod|classmod/i.test(String(r && r.itemTypeString || '')))
             .map(r => stxCanonicalizeManufacturerDisplayName(String(r && r.manufacturer || '').trim()))
             .filter(Boolean)
-        ).map(m => (/^c4sh$/i.test(m) || /^robodealer$/i.test(m)) ? 'Robodealer' : m);
+        ).map(m => (/^c4sh$/i.test(m) || /^robodealer$/i.test(m)) ? 'Robodealer' : (/^loveless$/i.test(m) || /^corpohacker$/i.test(m) || /^hacker$/i.test(m)) ? 'Corpohacker' : m);
         mans = unique(mans).sort((a,b)=>String(a).localeCompare(String(b), undefined, {numeric:true}));
       
       // Guard against mis-tagged / pseudo manufacturer values (characters, Class Mod, etc.)
@@ -5672,12 +5840,12 @@ function getAllParts(){
         const lo = String(x || '').trim().toLowerCase();
         return lo && lo !== 'characters' && lo !== 'class mod' && lo !== 'classmod' && lo !== 'universal';
       });
-      const __cmFallback = ['Siren','Paladin','Exo Soldier','Gravitar','Robodealer'];
+      const __cmFallback = ['Siren','Paladin','Exo Soldier','Gravitar','Robodealer','Corpohacker'];
       // If the sheet/dataset ever fails to expose the classmod families, use the known set.
       if (!mans.length || !__cmFallback.some(v => mans.includes(v))) {
         mans = __cmFallback.slice();
       } else {
-        // Ensure the five vault hunters are always present even when extract only ships aliases.
+        // Ensure all vault hunters are always present even when extract only ships aliases.
         for (let i = 0; i < __cmFallback.length; i++) {
           if (!mans.includes(__cmFallback[i])) mans.push(__cmFallback[i]);
         }
@@ -5839,7 +6007,7 @@ function getAllParts(){
 
     if (isClassMod){
       // Display BL4 character names while keeping internal STX mapping (familyId) intact.
-      const DISP = {'Siren':'Vex','Dark Siren':'Vex','Paladin':'Amon','Exo Soldier':'Rafa','Gravitar':'Harlowe','Robodealer':'C4sh','C4sh':'C4sh'};
+      const DISP = {'Siren':'Vex','Dark Siren':'Vex','Paladin':'Amon','Exo Soldier':'Rafa','Gravitar':'Harlowe','Robodealer':'C4sh','C4sh':'C4sh','Corpohacker':'Loveless','Loveless':'Loveless'};
       // Normalize any leftover Dark Siren / display-name selection onto the canonical internal value.
       try {
         const canonMan = stxCanonicalizeManufacturerDisplayName(state.manufacturer);
@@ -6202,6 +6370,7 @@ function refreshMainPartSync(){
       }
       const seenMain = new Set();
       partsList = partsList.filter(p => {
+        if (stxIsBrokenClassmodDatasetPlaceholderPart(p)) return false;
         const iid = Number(partItemIdOf(p));
         const key = [
           Number.isFinite(iid) ? String(iid) : '',
@@ -6252,6 +6421,7 @@ if (cat === 'Class Mod' && !isAllPartsEnabled()){
         else if (key === 'rafa') slugPrefix = 'classmod_exo_soldier.';
         else if (key === 'harlowe') slugPrefix = 'classmod_gravitar.';
         else if (key === 'c4sh') slugPrefix = 'classmod_robodealer.';
+        else if (key === 'loveless') slugPrefix = 'classmod_corpohacker.';
       } catch (_e) {}
       if (fam != null || slugPrefix){
         partsList = partsList.filter(p => {
@@ -11538,6 +11708,7 @@ function computeFullDeserializedCode(){
   function getSharedDeserialized(){
     let gv = '';
     let ov = '';
+    let fv = '';
     try {
       const gDes = document.getElementById('guidedOutputDeserialized');
       gv = gDes ? String(gDes.value || '').trim() : '';
@@ -11546,17 +11717,28 @@ function computeFullDeserializedCode(){
       const out = $('outCode');
       ov = out ? String(out.value || '').trim() : '';
     } catch (_) {}
+    try {
+      const fl = document.getElementById('floating-output-code');
+      fv = fl ? String(fl.value || '').trim() : '';
+    } catch (_) {}
     const gLive = gv.indexOf('||') >= 0;
     const oLive = ov.indexOf('||') >= 0;
+    const fLive = fv.indexOf('||') >= 0;
     const last = String(window.__CC_LAST_CODE_TARGET || '').trim();
     const simpleActive = typeof stxSimpleBuilderHasActiveBuild === 'function' && stxSimpleBuilderHasActiveBuild();
+    /* Prefer the longest live serial when floating was manually edited for import/handoff. */
+    if (fLive && (!oLive || fv.length >= ov.length) && (!gLive || fv.length >= gv.length)) {
+      if (last === 'floating' || (!simpleActive && last !== 'guided' && last !== 'simple')) return fv;
+      if (fv.length > Math.max(ov.length, gv.length) + 5) return fv;
+    }
     if (oLive && last !== 'guided' && (simpleActive || last === 'simple')) {
       if (!gLive || ov.length >= gv.length) return ov;
     }
     if (gLive && last === 'guided') return gv;
     if (gLive && (!oLive || gv.length >= ov.length)) return gv;
     if (oLive) return ov;
-    return gv || ov || '';
+    if (fLive) return fv;
+    return gv || ov || fv || '';
   }
   try { window.getSharedDeserialized = getSharedDeserialized; } catch (_) {}
 
@@ -12196,7 +12378,18 @@ function resetAll(){
         }catch(_e3){}
       } else if (targetBuilder === 'simple') {
         window.__CC_LAST_CODE_TARGET = 'simple';
+        /* Mirror into Guided so mode-switch handoff / shared panel stay consistent. */
+        if (guidedDeserEl && deser && deser.indexOf('||') >= 0) {
+          guidedDeserEl.value = deser;
+          guidedDeserEl.__ccImportedValue = deser;
+          guidedDeserEl.__ccUserTailEdit = false;
+        }
         refreshOutputs(true);
+        try {
+          if (typeof window.__ccHydrateGuidedSlotSelectsFromSerial === 'function') {
+            window.__ccHydrateGuidedSlotSelectsFromSerial(deser);
+          }
+        } catch (_) {}
       } else if (targetBuilder === 'both') {
         window.__CC_LAST_CODE_TARGET = 'guided';
         refreshOutputs(true);

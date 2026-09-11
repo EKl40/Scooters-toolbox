@@ -9,6 +9,10 @@ const NCS_PARTS = {
       "index": 1
     },
     {
+      "name": "part_body_digishotgun",
+      "index": 1
+    },
+    {
       "name": "part_body_ele_rainbowvomit_cryo_fire_shock",
       "index": 1
     },
@@ -1447,11 +1451,19 @@ const NCS_PARTS = {
       "index": 8
     },
     {
+      "name": "part_augment_unique_font",
+      "index": 8
+    },
+    {
       "name": "part_augment_unique_healthraiser",
       "index": 8
     },
     {
       "name": "part_augment_unique_hugger",
+      "index": 8
+    },
+    {
+      "name": "part_augment_unique_outburst",
       "index": 8
     },
     {
@@ -2003,7 +2015,15 @@ const NCS_PARTS = {
       "index": 8
     },
     {
+      "name": "part_augment_unique_font",
+      "index": 8
+    },
+    {
       "name": "part_augment_unique_hugger",
+      "index": 8
+    },
+    {
+      "name": "part_augment_unique_outburst",
       "index": 8
     },
     {
@@ -3227,6 +3247,10 @@ const NCS_PARTS = {
     {
       "name": "part_unique_barrel_02_convergence",
       "index": 64
+    },
+    {
+      "name": "part_unique_barrel_02_relay",
+      "index": 84
     }
   ],
   "magazine_borg": [
@@ -3857,6 +3881,26 @@ const NCS_PARTS = {
       "index": 1
     },
     {
+      "name": "comp_tediorearmy_framesprayerl",
+      "index": 1
+    },
+    {
+      "name": "comp_tediorearmy_framesprayerr",
+      "index": 1
+    },
+    {
+      "name": "comp_tediorearmy_sprayer",
+      "index": 1
+    },
+    {
+      "name": "comp_tedioregliderarm_rocketlauncher",
+      "index": 1
+    },
+    {
+      "name": "comp_tedioreglidercore_rocketlauncher",
+      "index": 1
+    },
+    {
       "name": "comp_turret_dahlchaingun",
       "index": 1
     },
@@ -3881,7 +3925,39 @@ const NCS_PARTS = {
       "index": 2
     },
     {
+      "name": "comp_digishotgun",
+      "index": 2
+    },
+    {
       "name": "comp_soldier_sprayer",
+      "index": 2
+    },
+    {
+      "name": "comp_tedioreglider_flamethrower",
+      "index": 2
+    },
+    {
+      "name": "comp_tedioreglider_rapidlaser",
+      "index": 2
+    },
+    {
+      "name": "comp_tedioreturret_gatemission4",
+      "index": 2
+    },
+    {
+      "name": "comp_tedioreturret_mg",
+      "index": 2
+    },
+    {
+      "name": "comp_tedioreturret_microplasticsmg",
+      "index": 2
+    },
+    {
+      "name": "comp_tedioreturret_rapidlaser",
+      "index": 2
+    },
+    {
+      "name": "comp_tedioreturret_rocketlauncher",
       "index": 2
     },
     {
@@ -4057,6 +4133,10 @@ const NCS_PARTS = {
       "index": 9
     },
     {
+      "name": "comp_05_legendary_font",
+      "index": 9
+    },
+    {
       "name": "comp_05_legendary_fuse",
       "index": 9
     },
@@ -4074,6 +4154,10 @@ const NCS_PARTS = {
     },
     {
       "name": "comp_05_legendary_onionlayeredguard",
+      "index": 9
+    },
+    {
+      "name": "comp_05_legendary_outburst",
       "index": 9
     },
     {
@@ -4127,6 +4211,10 @@ const NCS_PARTS = {
     {
       "name": "comp_05_supernova",
       "index": 10
+    },
+    {
+      "name": "comp_05_legendary_exfoliatrix",
+      "index": 11
     },
     {
       "name": "comp_05_legendary_honeybadger",
@@ -4201,6 +4289,10 @@ const NCS_PARTS = {
       "index": 14
     },
     {
+      "name": "comp_05_legendary_alignment",
+      "index": 15
+    },
+    {
       "name": "comp_05_legendary_transmission",
       "index": 15
     },
@@ -4233,6 +4325,10 @@ const NCS_PARTS = {
       "index": 20
     },
     {
+      "name": "comp_05_legendary_brudder",
+      "index": 22
+    },
+    {
       "name": "comp_05_legendary_gammavoid",
       "index": 25
     },
@@ -4259,6 +4355,10 @@ const NCS_PARTS = {
     {
       "name": "comp_05_legendary_streamer",
       "index": 32
+    },
+    {
+      "name": "comp_05_legendary_quattro",
+      "index": 33
     },
     {
       "name": "comp_05_legendary_javelin",
@@ -4549,6 +4649,10 @@ const NCS_PARTS = {
       "index": 73
     },
     {
+      "name": "comp_05_legendary_handfrag",
+      "index": 74
+    },
+    {
       "name": "comp_05_legendary_rowan",
       "index": 74
     },
@@ -4649,6 +4753,10 @@ const NCS_PARTS = {
       "index": 79
     },
     {
+      "name": "comp_flak_weapon",
+      "index": 79
+    },
+    {
       "name": "comp_05_legendary_asher",
       "index": 80
     },
@@ -4717,6 +4825,14 @@ const NCS_PARTS = {
       "index": 83
     },
     {
+      "name": "comp_05_legendary_devourer",
+      "index": 83
+    },
+    {
+      "name": "comp_05_legendary_enumeration",
+      "index": 83
+    },
+    {
       "name": "comp_05_legendary_firework",
       "index": 83
     },
@@ -4749,6 +4865,14 @@ const NCS_PARTS = {
       "index": 83
     },
     {
+      "name": "comp_05_legendary_avarice",
+      "index": 84
+    },
+    {
+      "name": "comp_05_legendary_pragmate",
+      "index": 84
+    },
+    {
       "name": "comp_05_legendary_silversliver",
       "index": 84
     },
@@ -4773,6 +4897,10 @@ const NCS_PARTS = {
       "index": 85
     },
     {
+      "name": "comp_05_legendary_relay",
+      "index": 85
+    },
+    {
       "name": "comp_05_legendary_roulette",
       "index": 85
     },
@@ -4785,8 +4913,24 @@ const NCS_PARTS = {
       "index": 85
     },
     {
+      "name": "comp_05_legendary_aerodramatic",
+      "index": 86
+    },
+    {
+      "name": "comp_05_legendary_assembler",
+      "index": 86
+    },
+    {
       "name": "comp_05_legendary_inscriber",
       "index": 86
+    },
+    {
+      "name": "comp_05_legendary_petanque",
+      "index": 86
+    },
+    {
+      "name": "comp_05_legendary_blackout",
+      "index": 87
     },
     {
       "name": "comp_05_legendary_harddark",
@@ -4797,7 +4941,15 @@ const NCS_PARTS = {
       "index": 87
     },
     {
+      "name": "comp_05_legendary_outback",
+      "index": 87
+    },
+    {
       "name": "comp_05_legendary_rhythm",
+      "index": 87
+    },
+    {
+      "name": "comp_harmony_weapon",
       "index": 87
     },
     {
@@ -4813,8 +4965,28 @@ const NCS_PARTS = {
       "index": 88
     },
     {
+      "name": "comp_05_legendary_sledge",
+      "index": 88
+    },
+    {
+      "name": "comp_05_legendary_flashfuel",
+      "index": 89
+    },
+    {
+      "name": "comp_05_legendary_patience",
+      "index": 89
+    },
+    {
       "name": "comp_05_legendary_shammy",
       "index": 89
+    },
+    {
+      "name": "comp_fl4k_weapon",
+      "index": 89
+    },
+    {
+      "name": "comp_05_legendary_ripple",
+      "index": 90
     },
     {
       "name": "comp_06_pearl_juliet",
@@ -4823,6 +4995,14 @@ const NCS_PARTS = {
     {
       "name": "comp_06_pearl_sharkbait",
       "index": 90
+    },
+    {
+      "name": "comp_03_tradingup",
+      "index": 91
+    },
+    {
+      "name": "comp_05_legendary_infection",
+      "index": 91
     },
     {
       "name": "comp_05_legendary_kaos",
@@ -4837,8 +5017,32 @@ const NCS_PARTS = {
       "index": 91
     },
     {
+      "name": "comp_05_legendary_clarity",
+      "index": 92
+    },
+    {
+      "name": "comp_05_legendary_fourier",
+      "index": 92
+    },
+    {
       "name": "comp_05_legendary_mercury",
       "index": 92
+    },
+    {
+      "name": "comp_05_legendary_accretion",
+      "index": 93
+    },
+    {
+      "name": "comp_05_legendary_exhibition",
+      "index": 93
+    },
+    {
+      "name": "comp_05_legendary_hotmod",
+      "index": 93
+    },
+    {
+      "name": "comp_05_legendary_shardenfreude",
+      "index": 93
     },
     {
       "name": "comp_05_legendary_wf",
@@ -4873,6 +5077,10 @@ const NCS_PARTS = {
       "index": 100
     },
     {
+      "name": "comp_03_relievingguard",
+      "index": 101
+    },
+    {
       "name": "comp_06_pearl_constable",
       "index": 101
     },
@@ -4889,8 +5097,20 @@ const NCS_PARTS = {
       "index": 104
     },
     {
+      "name": "comp_05_legendary_aura",
+      "index": 105
+    },
+    {
       "name": "comp_05_legendary_extinction",
       "index": 105
+    },
+    {
+      "name": "comp_05_legendary_hippogun",
+      "index": 106
+    },
+    {
+      "name": "comp_05_legendary_triplicate",
+      "index": 107
     },
     {
       "name": "comp_05_legendary_raid1",
@@ -4905,8 +5125,16 @@ const NCS_PARTS = {
       "index": 540
     },
     {
+      "name": "comp_05_legendary_harmonica",
+      "index": 542
+    },
+    {
       "name": "comp_05_legendary_raid2",
       "index": 544
+    },
+    {
+      "name": "comp_05_legendary_dlc2",
+      "index": 546
     },
     {
       "name": "comp_05_legendary_tuba",
@@ -5143,6 +5371,10 @@ const NCS_PARTS = {
       "index": 30
     },
     {
+      "name": "part_barrel_02_quattro",
+      "index": 32
+    },
+    {
       "name": "part_barrel_02_chuck",
       "index": 34
     },
@@ -5371,6 +5603,10 @@ const NCS_PARTS = {
       "index": 73
     },
     {
+      "name": "part_barrel_02_handfrag",
+      "index": 73
+    },
+    {
       "name": "part_barrel_02_boomslang",
       "index": 74
     },
@@ -5523,6 +5759,10 @@ const NCS_PARTS = {
       "index": 81
     },
     {
+      "name": "part_barrel_02_hotmod",
+      "index": 81
+    },
+    {
       "name": "part_barrel_02_ishmael",
       "index": 81
     },
@@ -5535,6 +5775,10 @@ const NCS_PARTS = {
       "index": 82
     },
     {
+      "name": "part_barrel_01_enumeration",
+      "index": 82
+    },
+    {
       "name": "part_barrel_01_hellwalker",
       "index": 82
     },
@@ -5544,6 +5788,10 @@ const NCS_PARTS = {
     },
     {
       "name": "part_barrel_02_burrow",
+      "index": 82
+    },
+    {
+      "name": "part_barrel_02_devourer",
       "index": 82
     },
     {
@@ -5575,7 +5823,15 @@ const NCS_PARTS = {
       "index": 83
     },
     {
+      "name": "part_barrel_02_avarice",
+      "index": 83
+    },
+    {
       "name": "part_barrel_02_temper",
+      "index": 83
+    },
+    {
+      "name": "part_barrel_pragmate",
       "index": 83
     },
     {
@@ -5607,6 +5863,14 @@ const NCS_PARTS = {
       "index": 84
     },
     {
+      "name": "part_barrel_01_aerodramatic",
+      "index": 85
+    },
+    {
+      "name": "part_barrel_01_assembler",
+      "index": 85
+    },
+    {
       "name": "part_barrel_01_manifest",
       "index": 85
     },
@@ -5615,11 +5879,27 @@ const NCS_PARTS = {
       "index": 85
     },
     {
+      "name": "part_barrel_02_petanque",
+      "index": 85
+    },
+    {
+      "name": "part_barrel_01_blackout",
+      "index": 86
+    },
+    {
       "name": "part_barrel_01_herald",
       "index": 86
     },
     {
       "name": "part_barrel_02_harddark",
+      "index": 86
+    },
+    {
+      "name": "part_barrel_02_outback",
+      "index": 86
+    },
+    {
+      "name": "part_barrel_infection_shock",
       "index": 86
     },
     {
@@ -5635,8 +5915,20 @@ const NCS_PARTS = {
       "index": 87
     },
     {
+      "name": "part_barrel_02_sledge",
+      "index": 87
+    },
+    {
       "name": "part_barrel_beegun",
       "index": 87
+    },
+    {
+      "name": "part_barrel_infection_radiation",
+      "index": 87
+    },
+    {
+      "name": "part_barrel_01_flashfuel",
+      "index": 88
     },
     {
       "name": "part_barrel_01_shammy",
@@ -5644,6 +5936,14 @@ const NCS_PARTS = {
     },
     {
       "name": "part_barrel_02_kaos",
+      "index": 88
+    },
+    {
+      "name": "part_barrel_infection_fire",
+      "index": 88
+    },
+    {
+      "name": "part_barrel_patience",
       "index": 88
     },
     {
@@ -5655,7 +5955,23 @@ const NCS_PARTS = {
       "index": 89
     },
     {
+      "name": "part_barrel_infection_cryo",
+      "index": 89
+    },
+    {
+      "name": "part_barrel_ripple",
+      "index": 89
+    },
+    {
       "name": "part_barrel_01_lightgun",
+      "index": 90
+    },
+    {
+      "name": "part_barrel_02_tradingup",
+      "index": 90
+    },
+    {
+      "name": "part_barrel_infection_corrosive",
       "index": 90
     },
     {
@@ -5663,12 +5979,36 @@ const NCS_PARTS = {
       "index": 90
     },
     {
+      "name": "part_barrel_01_fourier",
+      "index": 91
+    },
+    {
+      "name": "part_barrel_02_clarity",
+      "index": 91
+    },
+    {
       "name": "part_barrel_mercury",
       "index": 91
     },
     {
+      "name": "part_barrel_02_accretion",
+      "index": 92
+    },
+    {
+      "name": "part_barrel_02_exhibition",
+      "index": 92
+    },
+    {
+      "name": "part_barrel_02_shardenfreude",
+      "index": 92
+    },
+    {
       "name": "part_barrel_brickhouse",
       "index": 93
+    },
+    {
+      "name": "part_barrel_01_fl4k",
+      "index": 94
     },
     {
       "name": "part_barrel_02_earlyexcess",
@@ -5685,6 +6025,10 @@ const NCS_PARTS = {
     {
       "name": "part_barrel_doeshot",
       "index": 99
+    },
+    {
+      "name": "part_barrel_relievingguard",
+      "index": 100
     },
     {
       "name": "part_barrel_01_constable",
@@ -5705,6 +6049,18 @@ const NCS_PARTS = {
     {
       "name": "part_barrel_01_extinction",
       "index": 104
+    },
+    {
+      "name": "part_barrel_aura",
+      "index": 104
+    },
+    {
+      "name": "part_barrel_hippogun",
+      "index": 105
+    },
+    {
+      "name": "part_barrel_01_triplicate",
+      "index": 106
     }
   ],
   "foregrip": [
@@ -5801,11 +6157,23 @@ const NCS_PARTS = {
       "index": 86
     },
     {
+      "name": "part_foregrip_03_ripple",
+      "index": 86
+    },
+    {
       "name": "part_foregrip_02_flashcyclone",
       "index": 87
     },
     {
+      "name": "part_foregrip_02_ripple",
+      "index": 87
+    },
+    {
       "name": "part_foregrip_01_flashcyclone",
+      "index": 88
+    },
+    {
+      "name": "part_foregrip_01_ripple",
       "index": 88
     }
   ],
@@ -6013,8 +6381,16 @@ const NCS_PARTS = {
       "index": 83
     },
     {
+      "name": "part_mag_torgue_sticky_assembler",
+      "index": 83
+    },
+    {
       "name": "part_mag_torgue_sticky_sharkbait",
       "index": 83
+    },
+    {
+      "name": "part_mag_torgue_normal_assembler",
+      "index": 84
     },
     {
       "name": "part_mag_torgue_normal_inscriber",
@@ -6025,12 +6401,24 @@ const NCS_PARTS = {
       "index": 84
     },
     {
+      "name": "part_mag_torgue_sticky_outback",
+      "index": 84
+    },
+    {
+      "name": "part_mag_torgue_normal_outback",
+      "index": 85
+    },
+    {
       "name": "part_mag_05_borg_acc_manifest",
       "index": 86
     },
     {
       "name": "part_mag_torgue_normal_beegun",
       "index": 86
+    },
+    {
+      "name": "part_mag_04_cov_flashfuel",
+      "index": 87
     },
     {
       "name": "part_mag_rainbowvomit",
@@ -6049,8 +6437,16 @@ const NCS_PARTS = {
       "index": 89
     },
     {
+      "name": "part_mag_05_borg_clarity",
+      "index": 90
+    },
+    {
       "name": "part_mag_torgue_normal_mercury",
       "index": 90
+    },
+    {
+      "name": "part_mag_torgue_normal_accretion",
+      "index": 91
     },
     {
       "name": "part_mag_02_b02",
@@ -6058,6 +6454,10 @@ const NCS_PARTS = {
     },
     {
       "name": "part_mag_01_b01",
+      "index": 93
+    },
+    {
+      "name": "part_mag_05_borg_fourier",
       "index": 93
     },
     {
@@ -6145,6 +6545,10 @@ const NCS_PARTS = {
     {
       "name": "part_scope_02_lens_02_b02",
       "index": 71
+    },
+    {
+      "name": "part_scope_02_lens_01_tradingup",
+      "index": 102
     }
   ],
   "shield": [
@@ -6163,6 +6567,10 @@ const NCS_PARTS = {
     {
       "name": "part_shield_amp",
       "index": 12
+    },
+    {
+      "name": "part_shield_ricochet_testament",
+      "index": 85
     }
   ],
   "underbarrel": [
@@ -6531,6 +6939,10 @@ const NCS_PARTS = {
       "index": 80
     },
     {
+      "name": "part_underbarrel_01_hotmod",
+      "index": 80
+    },
+    {
       "name": "part_underbarrel_02_tether_snare_ishmael",
       "index": 80
     },
@@ -6547,8 +6959,20 @@ const NCS_PARTS = {
       "index": 84
     },
     {
+      "name": "part_underbarrel_02_knifelauncher_blackout",
+      "index": 85
+    },
+    {
+      "name": "part_underbarrel_02_crank_flashfuel",
+      "index": 86
+    },
+    {
       "name": "part_underbarrel_07_secondbarrel",
       "index": 86
+    },
+    {
+      "name": "part_underbarrel_02_tether_snare_ishmael_0",
+      "index": 87
     },
     {
       "name": "part_underbarrel_04_atlas_ball_mercredi",
@@ -6625,8 +7049,16 @@ const NCS_PARTS = {
       "index": 539
     },
     {
+      "name": "leg_body_harmonica",
+      "index": 541
+    },
+    {
       "name": "leg_body_raid2",
       "index": 543
+    },
+    {
+      "name": "leg_body_dlc2",
+      "index": 545
     },
     {
       "name": "leg_body_tuba",
@@ -6687,6 +7119,10 @@ const NCS_PARTS = {
     {
       "name": "part_body_armor_undershield",
       "index": 11
+    },
+    {
+      "name": "part_body_armor_exfoliatrix",
+      "index": 12
     }
   ]
 };

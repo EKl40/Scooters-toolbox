@@ -174,6 +174,7 @@
         else if (c === 'rafa') img.src = './assets/img/vault-hunters/player_class_exo_soldier.png';
         else if (c === 'harlowe') img.src = './assets/img/vault-hunters/player_class_gravitar.png';
         else if (c === 'c4sh') img.src = './assets/img/vault-hunters/player_robodealer.png';
+        else if (c === 'loveless' || c === 'corpohacker') img.src = './assets/img/vault-hunters/player_corpohacker.png';
       }
     } catch (_) {}
   }
@@ -1549,8 +1550,11 @@
 
     var line = bits.filter(Boolean).join(' · ');
     if (line.length > 150) line = line.substring(0, 147) + '…';
-    if (line) return line;
-    return getPartToken(p) || rawCode || '-';
+    if (!line) line = getPartToken(p) || rawCode || '-';
+    if (typeof window.stxMarkNewDropdownLabel === 'function') {
+      try { line = window.stxMarkNewDropdownLabel(line, p); } catch (_e) {}
+    }
+    return line;
   }
 
   function guidedOptionLabelForSelect(sel, p) {
@@ -1839,7 +1843,11 @@
 
     var line = bits.join(' · ');
     if (line.length > 180) line = line.slice(0, 177) + '…';
-    return line || '-';
+    line = line || '-';
+    if (typeof window.stxMarkNewDropdownLabel === 'function') {
+      try { line = window.stxMarkNewDropdownLabel(line, p); } catch (_) {}
+    }
+    return line;
   }
 
   /** Flavor quote for coral row — catalog red text only (abilities go in desc sub). */
@@ -2540,7 +2548,7 @@
 
   var HEAVY_FALLBACK_MANS = ['Maliwan', 'Ripper', 'Torgue', 'Vladof'];
   var WEAPON_FALLBACK_MANS = ['Daedalus', 'Jakobs', 'Maliwan', 'Order', 'Ripper', 'Tediore', 'Torgue', 'Vladof'];
-  var CLASSMOD_FALLBACK_MANS = ['Siren', 'Paladin', 'Exo Soldier', 'Gravitar', 'Robodealer'];
+  var CLASSMOD_FALLBACK_MANS = ['Siren', 'Paladin', 'Exo Soldier', 'Gravitar', 'Robodealer', 'Corpohacker'];
 
   function getClassModDisplayName(manufacturer) {
     var m = String(manufacturer || '').trim();
@@ -2550,6 +2558,7 @@
     if (/^exo\s*soldier$/i.test(m) || /^exosoldier$/i.test(m)) return 'Rafa';
     if (/^gravitar$/i.test(m)) return 'Harlowe';
     if (/^c4sh$/i.test(m) || /^robodealer$/i.test(m)) return 'C4sh';
+    if (/^loveless$/i.test(m) || /^corpohacker$/i.test(m) || /^hacker$/i.test(m) || /^the\s*hacker$/i.test(m)) return 'Loveless';
     if (/^universal$/i.test(m)) return 'Universal';
     return m;
   }
@@ -2562,6 +2571,7 @@
     if (m === 'exo soldier' || m === 'exosoldier') return base + 'player_class_exo_soldier.png';
     if (m === 'gravitar') return base + 'player_class_gravitar.png';
     if (m === 'robodealer' || m === 'c4sh') return base + 'player_robodealer.png';
+    if (m === 'corpohacker' || m === 'loveless' || m === 'hacker' || m === 'the hacker') return base + 'player_corpohacker.png';
     return '';
   }
 
@@ -6360,7 +6370,8 @@
       amon: 'Paladin', paladin: 'Paladin',
       rafa: 'Exo Soldier', 'exo soldier': 'Exo Soldier', exosoldier: 'Exo Soldier',
       harlowe: 'Gravitar', gravitar: 'Gravitar',
-      c4sh: 'Robodealer', robodealer: 'Robodealer'
+      c4sh: 'Robodealer', robodealer: 'Robodealer',
+      loveless: 'Corpohacker', corpohacker: 'Corpohacker', hacker: 'Corpohacker', 'the hacker': 'Corpohacker'
     };
     var lc = String(name || '').trim().toLowerCase();
     return aliasByLower[lc] || String(name || '').trim();
@@ -6370,7 +6381,7 @@
     var n = moddedGenNormalizeClassModCharacter(charName);
     var slugMap = {
       Siren: 'dark_siren', Paladin: 'paladin', 'Exo Soldier': 'exo_soldier',
-      Gravitar: 'gravitar', Robodealer: 'robodealer'
+      Gravitar: 'gravitar', Robodealer: 'robodealer', Corpohacker: 'corpohacker'
     };
     return slugMap[n] || n.toLowerCase().replace(/[^a-z0-9]+/g, '_');
   }
@@ -6395,6 +6406,7 @@
     if (/exo_soldier/.test(its)) return 'Exo Soldier';
     if (/gravitar/.test(its)) return 'Gravitar';
     if (/robodealer/.test(its)) return 'Robodealer';
+    if (/corpohacker/.test(its)) return 'Corpohacker';
     return '';
   }
 

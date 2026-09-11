@@ -109,7 +109,9 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "275:38",
     "id": 38,
@@ -163,7 +165,10 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList4.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "274:9",
     "id": 9,
@@ -201,8 +206,8 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "nexus_ref:Nexus-Data-itempool8.json",
-      "all_json:Nexus-Data-inv_custom4.json"
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "nexus_ref:Nexus-Data-itempool8.json"
     ],
     "idRaw": "7:54",
     "id": 54,
@@ -216,13 +221,40 @@
     "weaponType": "Shotgun",
     "partType": "Rarity",
     "code": "\"bor_sg.comp_05_legendary_plumbbob\"",
-    "name": "Plumbbob",
+    "name": "Plumb Bob",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool4.json",
       "all_json:Nexus-Data-ItemPoolList.json"
     ],
-    "effects": "Plumbbob"
+    "idRaw": "7:65",
+    "id": 65,
+    "family": 7,
+    "effects": "Plumb Bob"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Ripper",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Rarity",
+    "code": "\"bor_sg.comp_05_legendary_relay\"",
+    "name": "Astonisher",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "7:85",
+    "id": 85,
+    "family": 7,
+    "effects": "Astonisher"
   },
   {
     "category": "Weapon",
@@ -298,6 +330,42 @@
     "effects": "Part Mag 02 Crazedearl"
   },
   {
+    "category": "Weapon",
+    "manufacturer": "Ripper",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Barrel",
+    "code": "\"bor_sg.part_unique_barrel_02_plumbbob\"",
+    "name": "Part Unique Barrel 02 Plumbbob",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "7:59",
+    "id": 59,
+    "family": 7,
+    "effects": "Part Unique Barrel 02 Plumbbob"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Ripper",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Barrel",
+    "code": "\"bor_sg.part_unique_barrel_02_relay\"",
+    "name": "Part Unique Barrel 02 Relay",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "7:84",
+    "id": 84,
+    "family": 7,
+    "effects": "Part Unique Barrel 02 Relay"
+  },
+  {
     "category": "Shield",
     "manufacturer": "Ripper",
     "itemType": "Shield",
@@ -361,12 +429,36 @@
     "itemType": "SMG",
     "weaponType": "SMG",
     "partType": "Rarity",
+    "code": "\"bor_sm.comp_05_legendary_enumeration\"",
+    "name": "Enumeration",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
+    ],
+    "idRaw": "19:83",
+    "id": 83,
+    "family": 19,
+    "effects": "Enumeration"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Ripper",
+    "itemType": "SMG",
+    "weaponType": "SMG",
+    "partType": "Rarity",
     "code": "\"bor_sm.comp_05_legendary_falke\"",
     "name": "Falke",
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "19:59",
     "id": 59,
@@ -386,8 +478,8 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "all_json:Nexus-Data-ItemPoolList.json",
-      "all_json:Nexus-Data-ItemPoolList4.json"
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList.json"
     ],
     "idRaw": "19:61",
     "id": 61,
@@ -411,6 +503,24 @@
     "id": 18,
     "family": 19,
     "effects": "Comp 05 Legendary"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Ripper",
+    "itemType": "SMG",
+    "weaponType": "SMG",
+    "partType": "Barrel",
+    "code": "\"bor_sm.part_barrel_01_enumeration\"",
+    "name": "Part Barrel 01 Enumeration",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "19:82",
+    "id": 82,
+    "family": 19,
+    "effects": "Part Barrel 01 Enumeration"
   },
   {
     "category": "Weapon",
@@ -459,12 +569,32 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "23:61",
     "id": 61,
     "family": 23,
     "effects": "Abyss"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Ripper",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Rarity",
+    "code": "\"bor_sr.comp_05_legendary_devourer\"",
+    "name": "Devourer",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "23:83",
+    "id": 83,
+    "family": 23,
+    "effects": "Devourer"
   },
   {
     "category": "Weapon",
@@ -501,6 +631,24 @@
     "id": 60,
     "family": 23,
     "effects": "Part Barrel 02 Abyss"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Ripper",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Barrel",
+    "code": "\"bor_sr.part_barrel_02_devourer\"",
+    "name": "Part Barrel 02 Devourer",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "23:82",
+    "id": 82,
+    "family": 23,
+    "effects": "Part Barrel 02 Devourer"
   },
   {
     "category": "Weapon",
@@ -767,7 +915,10 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList4.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "278:17",
     "id": 17,
@@ -866,37 +1017,515 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "characters",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_01_common\"",
+    "name": "Comp 01 Common",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "402:221",
+    "id": 221,
+    "family": 402,
+    "effects": "Comp 01 Common"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_02_uncommon\"",
+    "name": "Comp 02 Uncommon",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "402:220",
+    "id": 220,
+    "family": 402,
+    "effects": "Comp 02 Uncommon"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_03_rare\"",
+    "name": "Comp 03 Rare",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "402:219",
+    "id": 219,
+    "family": 402,
+    "effects": "Comp 03 Rare"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_04_epic\"",
+    "name": "Comp 04 Epic",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "402:218",
+    "id": 218,
+    "family": 402,
+    "effects": "Comp 04 Epic"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_05_legendary_01\"",
+    "name": "Devourer",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "402:52",
+    "id": 52,
+    "family": 402,
+    "effects": "Devourer"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_05_legendary_02\"",
+    "name": "Virophile",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "402:53",
+    "id": 53,
+    "family": 402,
+    "effects": "Virophile"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_05_legendary_03\"",
+    "name": "Montage Maker",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "402:54",
+    "id": 54,
+    "family": 402,
+    "effects": "Montage Maker"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_05_legendary_04\"",
+    "name": "Memory Hoarder",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "402:55",
+    "id": 55,
+    "family": 402,
+    "effects": "Memory Hoarder"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_05_legendary_05\"",
+    "name": "Trackstar",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "402:56",
+    "id": 56,
+    "family": 402,
+    "effects": "Trackstar"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_05_legendary_06\"",
+    "name": "Functional Human",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "402:217",
+    "id": 217,
+    "family": 402,
+    "effects": "Functional Human"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_05_legendary_dlc1\"",
+    "name": "Martyr",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "402:544",
+    "id": 544,
+    "family": 402,
+    "effects": "Martyr"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_05_legendary_dlc2\"",
+    "name": "Programmer",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "402:546",
+    "id": 546,
+    "family": 402,
+    "effects": "Programmer"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_05_legendary_raid1\"",
+    "name": "Boomer",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "all_json:Nexus-Data-itempool4.json",
+      "classmod_raid_comp_alias"
+    ],
+    "idRaw": "402:543",
+    "id": 543,
+    "family": 402,
+    "effects": "Boomer"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Rarity",
     "code": "\"classmod_corpohacker.comp_05_legendary_raid2\"",
-    "name": "Prestidigitator",
+    "name": "Plague Engineer",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
       "all_json:Nexus-Data-itempool.json"
     ],
-    "effects": "Prestidigitator"
+    "idRaw": "402:542",
+    "id": 542,
+    "family": 402,
+    "effects": "Plague Engineer"
   },
   {
     "category": "Class Mod",
-    "manufacturer": "characters",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_corpohacker.comp_05_legendary_tuba\"",
+    "name": "Puppetmaster",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
+    ],
+    "idRaw": "402:541",
+    "id": 541,
+    "family": 402,
+    "effects": "Puppetmaster"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Body",
+    "code": "\"classmod_corpohacker.leg_body_01\"",
+    "name": "Devourer",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "402:6",
+    "id": 6,
+    "family": 402,
+    "effects": "Devourer"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Body",
+    "code": "\"classmod_corpohacker.leg_body_02\"",
+    "name": "Virophile",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "402:5",
+    "id": 5,
+    "family": 402,
+    "effects": "Virophile"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Body",
+    "code": "\"classmod_corpohacker.leg_body_03\"",
+    "name": "Montage Maker",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "402:4",
+    "id": 4,
+    "family": 402,
+    "effects": "Montage Maker"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Body",
+    "code": "\"classmod_corpohacker.leg_body_04\"",
+    "name": "Memory Hoarder",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "402:3",
+    "id": 3,
+    "family": 402,
+    "effects": "Memory Hoarder"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Body",
+    "code": "\"classmod_corpohacker.leg_body_05\"",
+    "name": "Trackstar",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "402:2",
+    "id": 2,
+    "family": 402,
+    "effects": "Trackstar"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Body",
+    "code": "\"classmod_corpohacker.leg_body_06\"",
+    "name": "Functional Human",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "402:1",
+    "id": 1,
+    "family": 402,
+    "effects": "Functional Human"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Body",
+    "code": "\"classmod_corpohacker.leg_body_dlc1\"",
+    "name": "Martyr",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "402:540",
+    "id": 540,
+    "family": 402,
+    "effects": "Martyr"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Body",
+    "code": "\"classmod_corpohacker.leg_body_dlc2\"",
+    "name": "Programmer",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "402:545",
+    "id": 545,
+    "family": 402,
+    "effects": "Programmer"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Body",
+    "code": "\"classmod_corpohacker.leg_body_raid1\"",
+    "name": "Boomer",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "classmod_raid_body_alias"
+    ],
+    "idRaw": "402:539",
+    "id": 539,
+    "family": 402,
+    "effects": "Boomer"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Corpohacker",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Body",
     "code": "\"classmod_corpohacker.leg_body_raid2\"",
-    "name": "Prestidigitator",
+    "name": "Plague Engineer",
     "source": "nexus_extract",
-    "dataNote": "From full Nexus export catalog scan.",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
+      "inv_deps",
       "classmod_raid_body_alias"
     ],
-    "effects": "Prestidigitator"
+    "idRaw": "402:538",
+    "id": 538,
+    "family": 402,
+    "effects": "Plague Engineer"
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Body",
+    "code": "\"classmod_corpohacker.leg_body_tuba\"",
+    "name": "Puppetmaster",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "402:222",
+    "id": 222,
+    "family": 402,
+    "effects": "Puppetmaster"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Rarity",
@@ -917,7 +1546,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Rarity",
@@ -938,7 +1567,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Rarity",
@@ -959,7 +1588,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Rarity",
@@ -980,7 +1609,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Rarity",
@@ -1001,7 +1630,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Rarity",
@@ -1022,7 +1651,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Rarity",
@@ -1031,7 +1660,9 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
     ],
     "idRaw": "254:540",
     "id": 540,
@@ -1040,7 +1671,27 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_dark_siren.comp_05_legendary_harmonica\"",
+    "name": "GOAT",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "254:542",
+    "id": 542,
+    "family": 254,
+    "effects": "GOAT"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Rarity",
@@ -1050,8 +1701,9 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "all_json:Nexus-Data-itempool.json",
-      "classmod_raid_comp_alias"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool.json"
     ],
     "idRaw": "254:544",
     "id": 544,
@@ -1060,7 +1712,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Rarity",
@@ -1075,7 +1727,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Rarity",
@@ -1090,7 +1742,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Rarity",
@@ -1099,7 +1751,9 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "254:546",
     "id": 546,
@@ -1108,7 +1762,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Body",
@@ -1127,22 +1781,26 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Body",
     "code": "\"classmod_dark_siren.leg_body_harmonica\"",
-    "name": "Harmonica",
+    "name": "GOAT",
     "source": "nexus_extract",
-    "dataNote": "From full Nexus export catalog scan.",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
+      "inv_deps",
       "name_strategy:Nexus-Data-inv_name_strategy4.json"
     ],
-    "effects": "Harmonica"
+    "idRaw": "254:541",
+    "id": 541,
+    "family": 254,
+    "effects": "GOAT"
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Body",
@@ -1162,7 +1820,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Body",
@@ -1178,7 +1836,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Body",
@@ -1194,7 +1852,7 @@
   },
   {
     "category": "Class Mod",
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "weaponType": "",
     "partType": "Body",
@@ -1203,7 +1861,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "name_strategy:Nexus-Data-inv_name_strategy4.json"
     ],
     "idRaw": "254:545",
     "id": 545,
@@ -1347,12 +2006,34 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
     ],
     "idRaw": "256:541",
     "id": 541,
     "family": 256,
     "effects": "Reaparición"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Exo Soldier",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_exo_soldier.comp_05_legendary_harmonica\"",
+    "name": "Masochist",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "256:543",
+    "id": 543,
+    "family": 256,
+    "effects": "Masochist"
   },
   {
     "category": "Class Mod",
@@ -1366,8 +2047,9 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "all_json:Nexus-Data-itempool.json",
-      "classmod_raid_comp_alias"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool.json"
     ],
     "idRaw": "256:545",
     "id": 545,
@@ -1415,7 +2097,9 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "256:547",
     "id": 547,
@@ -1448,13 +2132,17 @@
     "weaponType": "",
     "partType": "Body",
     "code": "\"classmod_exo_soldier.leg_body_harmonica\"",
-    "name": "Harmonica",
+    "name": "Masochist",
     "source": "nexus_extract",
-    "dataNote": "From full Nexus export catalog scan.",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
+      "inv_deps",
       "name_strategy:Nexus-Data-inv_name_strategy4.json"
     ],
-    "effects": "Harmonica"
+    "idRaw": "256:542",
+    "id": 542,
+    "family": 256,
+    "effects": "Masochist"
   },
   {
     "category": "Class Mod",
@@ -1519,7 +2207,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "name_strategy:Nexus-Data-inv_name_strategy4.json"
     ],
     "idRaw": "256:546",
     "id": 546,
@@ -1662,12 +2351,34 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
     ],
     "idRaw": "259:543",
     "id": 543,
     "family": 259,
     "effects": "Phlebotomist"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Gravitar",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_gravitar.comp_05_legendary_harmonica\"",
+    "name": "Ultracapacitor",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "259:545",
+    "id": 545,
+    "family": 259,
+    "effects": "Ultracapacitor"
   },
   {
     "category": "Class Mod",
@@ -1681,8 +2392,9 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "all_json:Nexus-Data-itempool.json",
-      "classmod_raid_comp_alias"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool.json"
     ],
     "idRaw": "259:547",
     "id": 547,
@@ -1730,7 +2442,9 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "259:549",
     "id": 549,
@@ -1763,13 +2477,17 @@
     "weaponType": "",
     "partType": "Body",
     "code": "\"classmod_gravitar.leg_body_harmonica\"",
-    "name": "Harmonica",
+    "name": "Ultracapacitor",
     "source": "nexus_extract",
-    "dataNote": "From full Nexus export catalog scan.",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
+      "inv_deps",
       "name_strategy:Nexus-Data-inv_name_strategy4.json"
     ],
-    "effects": "Harmonica"
+    "idRaw": "259:544",
+    "id": 544,
+    "family": 259,
+    "effects": "Ultracapacitor"
   },
   {
     "category": "Class Mod",
@@ -1834,7 +2552,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "name_strategy:Nexus-Data-inv_name_strategy4.json"
     ],
     "idRaw": "259:548",
     "id": 548,
@@ -1996,12 +2715,34 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
     ],
     "idRaw": "255:541",
     "id": 541,
     "family": 255,
     "effects": "Tempest"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Paladin",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_paladin.comp_05_legendary_harmonica\"",
+    "name": "Wastelander",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "255:543",
+    "id": 543,
+    "family": 255,
+    "effects": "Wastelander"
   },
   {
     "category": "Class Mod",
@@ -2015,8 +2756,9 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "all_json:Nexus-Data-itempool.json",
-      "classmod_raid_comp_alias"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool.json"
     ],
     "idRaw": "255:545",
     "id": 545,
@@ -2064,7 +2806,9 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "255:547",
     "id": 547,
@@ -2097,13 +2841,17 @@
     "weaponType": "",
     "partType": "Body",
     "code": "\"classmod_paladin.leg_body_harmonica\"",
-    "name": "Harmonica",
+    "name": "Wastelander",
     "source": "nexus_extract",
-    "dataNote": "From full Nexus export catalog scan.",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
+      "inv_deps",
       "name_strategy:Nexus-Data-inv_name_strategy4.json"
     ],
-    "effects": "Harmonica"
+    "idRaw": "255:542",
+    "id": 542,
+    "family": 255,
+    "effects": "Wastelander"
   },
   {
     "category": "Class Mod",
@@ -2168,12 +2916,33 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "name_strategy:Nexus-Data-inv_name_strategy4.json"
     ],
     "idRaw": "255:546",
     "id": 546,
     "family": 255,
     "effects": "Damned"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Robodealer",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"classmod_robodealer.comp_05_legendary_harmonica\"",
+    "name": "Table Hopper",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "404:542",
+    "id": 542,
+    "family": 404,
+    "effects": "Table Hopper"
   },
   {
     "category": "Class Mod",
@@ -2187,8 +2956,9 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "all_json:Nexus-Data-itempool.json",
-      "classmod_raid_comp_alias"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool.json"
     ],
     "idRaw": "404:544",
     "id": 544,
@@ -2206,12 +2976,47 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "404:546",
     "id": 546,
     "family": 404,
     "effects": "Trainer"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Robodealer",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Body",
+    "code": "\"classmod_robodealer.leg_body_dlc2\"",
+    "name": "Programmer",
+    "source": "nexus_extract",
+    "dataNote": "From full Nexus export catalog scan.",
+    "scanSources": [
+      "name_strategy:Nexus-Data-inv_name_strategy4.json"
+    ],
+    "effects": "Programmer"
+  },
+  {
+    "category": "Class Mod",
+    "manufacturer": "Robodealer",
+    "itemType": "Class Mod",
+    "weaponType": "",
+    "partType": "Body",
+    "code": "\"classmod_robodealer.leg_body_harmonica\"",
+    "name": "Table Hopper",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "404:541",
+    "id": 541,
+    "family": 404,
+    "effects": "Table Hopper"
   },
   {
     "category": "Class Mod",
@@ -2244,7 +3049,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "name_strategy:Nexus-Data-inv_name_strategy4.json"
     ],
     "idRaw": "404:545",
     "id": 545,
@@ -2298,7 +3104,10 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
     ],
     "idRaw": "13:87",
     "id": 87,
@@ -2314,11 +3123,37 @@
     "code": "\"dad_ar.comp_05_legendary_kaos\"",
     "name": "Kaos",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "all_json:Nexus-Data-ItemPoolList.json"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
     ],
+    "idRaw": "13:91",
+    "id": 91,
+    "family": 13,
     "effects": "Kaos"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Daedalus",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Rarity",
+    "code": "\"dad_ar.comp_05_legendary_shardenfreude\"",
+    "name": "Shardenfreude",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "13:93",
+    "id": 93,
+    "family": 13,
+    "effects": "Shardenfreude"
   },
   {
     "category": "Weapon",
@@ -2397,20 +3232,61 @@
     "effects": "Part Barrel 02 Harddark"
   },
   {
+    "category": "Weapon",
+    "manufacturer": "Daedalus",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Barrel",
+    "code": "\"dad_ar.part_barrel_02_kaos\"",
+    "name": "Part Barrel 02 Kaos",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "13:88",
+    "id": 88,
+    "family": 13,
+    "effects": "Part Barrel 02 Kaos"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Daedalus",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Barrel",
+    "code": "\"dad_ar.part_barrel_02_shardenfreude\"",
+    "name": "Part Barrel 02 Shardenfreude",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "13:92",
+    "id": 92,
+    "family": 13,
+    "effects": "Part Barrel 02 Shardenfreude"
+  },
+  {
     "category": "Grenade",
     "manufacturer": "Daedalus",
     "itemType": "Grenade",
     "weaponType": "",
     "partType": "Rarity",
     "code": "\"dad_grenade_gadget.comp_05_legendary_pressurecooker\"",
-    "name": "Pressurecooker",
+    "name": "Pressure Kettle",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-vault_cards0.json",
       "nexus_ref:Nexus-Data-vault_cards4.json",
-      "all_json:Nexus-Data-vault_cards4.json"
+      "all_json:Nexus-Data-vault_cards0.json"
     ],
-    "effects": "Pressurecooker"
+    "idRaw": "270:12",
+    "id": 12,
+    "family": 270,
+    "effects": "Pressure Kettle"
   },
   {
     "category": "Grenade",
@@ -2431,19 +3307,64 @@
     "effects": "Comp 05 Legendary"
   },
   {
+    "category": "Grenade",
+    "manufacturer": "Daedalus",
+    "itemType": "Grenade",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"dad_grenade_gadget.part_payload_pressurecooker\"",
+    "name": "Part Payload Pressurecooker",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "270:11",
+    "id": 11,
+    "family": 270,
+    "effects": "Part Payload Pressurecooker"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Daedalus",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Rarity",
+    "code": "\"dad_ps.comp_05_legendary_blackout\"",
+    "name": "Shield Overflow",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "nexus_ref:Nexus-Data-vault_cards0.json"
+    ],
+    "idRaw": "2:87",
+    "id": 87,
+    "family": 2,
+    "effects": "Shield Overflow"
+  },
+  {
     "category": "Weapon",
     "manufacturer": "Daedalus",
     "itemType": "Pistol",
     "weaponType": "Pistol",
     "partType": "Rarity",
     "code": "\"dad_ps.comp_05_legendary_silversliver\"",
-    "name": "Silversliver",
+    "name": "Silver Sliver",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool4.json",
       "all_json:Nexus-Data-ItemPoolList.json"
     ],
-    "effects": "Silversliver"
+    "idRaw": "2:84",
+    "id": 84,
+    "family": 2,
+    "effects": "Silver Sliver"
   },
   {
     "category": "Weapon",
@@ -2457,8 +3378,9 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "nexus_ref:Nexus-Data-itempool8.json",
-      "all_json:Nexus-Data-itempool8.json"
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "nexus_ref:Nexus-Data-itempool8.json"
     ],
     "idRaw": "2:80",
     "id": 80,
@@ -2502,6 +3424,42 @@
     "id": 55,
     "family": 2,
     "effects": "Comp First Gun"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Daedalus",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
+    "code": "\"dad_ps.part_barrel_01_blackout\"",
+    "name": "Part Barrel 01 Blackout",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "2:86",
+    "id": 86,
+    "family": 2,
+    "effects": "Part Barrel 01 Blackout"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Daedalus",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
+    "code": "\"dad_ps.part_barrel_01_silversliver\"",
+    "name": "Part Barrel 01 Silversliver",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "2:83",
+    "id": 83,
+    "family": 2,
+    "effects": "Part Barrel 01 Silversliver"
   },
   {
     "category": "Weapon",
@@ -2560,6 +3518,24 @@
   {
     "category": "Weapon",
     "manufacturer": "Daedalus",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
+    "code": "\"dad_ps.part_underbarrel_02_knifelauncher_blackout\"",
+    "name": "Part Underbarrel 02 Knifelauncher Blackout",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "2:85",
+    "id": 85,
+    "family": 2,
+    "effects": "Part Underbarrel 02 Knifelauncher Blackout"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Daedalus",
     "itemType": "Shotgun",
     "weaponType": "Shotgun",
     "partType": "Rarity",
@@ -2570,12 +3546,34 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "all_json:Nexus-Data-inv_custom4.json"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json"
     ],
     "idRaw": "8:82",
     "id": 82,
     "family": 8,
     "effects": "Swan Song"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Daedalus",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Rarity",
+    "code": "\"dad_sg.comp_05_legendary_pragmate\"",
+    "name": "Pragmate",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
+    ],
+    "idRaw": "8:84",
+    "id": 84,
+    "family": 8,
+    "effects": "Pragmate"
   },
   {
     "category": "Weapon",
@@ -2608,7 +3606,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-gbxactor6.json"
     ],
     "idRaw": "8:59",
     "id": 59,
@@ -2639,6 +3638,24 @@
     "itemType": "Shotgun",
     "weaponType": "Shotgun",
     "partType": "Barrel",
+    "code": "\"dad_sg.part_barrel_pragmate\"",
+    "name": "Part Barrel Pragmate",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "8:83",
+    "id": 83,
+    "family": 8,
+    "effects": "Part Barrel Pragmate"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Daedalus",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Barrel",
     "code": "\"dad_sg.part_underbarrel_01_cannonbrawl\"",
     "name": "Part Underbarrel 01 Cannonbrawl",
     "source": "nexus_extract",
@@ -2662,7 +3679,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "312:11",
     "id": 11,
@@ -2718,7 +3736,10 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "20:2",
     "id": 2,
@@ -2731,12 +3752,36 @@
     "itemType": "SMG",
     "weaponType": "SMG",
     "partType": "Rarity",
+    "code": "\"dad_sm.comp_05_legendary_handfrag\"",
+    "name": "Hand Frag",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "20:74",
+    "id": 74,
+    "family": 20,
+    "effects": "Hand Frag"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Daedalus",
+    "itemType": "SMG",
+    "weaponType": "SMG",
+    "partType": "Rarity",
     "code": "\"dad_sm.comp_05_legendary_raiden\"",
     "name": "Raiden",
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList4.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "20:70",
     "id": 70,
@@ -2772,7 +3817,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "20:72",
     "id": 72,
@@ -2814,6 +3860,24 @@
     "id": 1,
     "family": 20,
     "effects": "Part Barrel 02 Follower"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Daedalus",
+    "itemType": "SMG",
+    "weaponType": "SMG",
+    "partType": "Barrel",
+    "code": "\"dad_sm.part_barrel_02_handfrag\"",
+    "name": "Part Barrel 02 Handfrag",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "20:73",
+    "id": 73,
+    "family": 20,
+    "effects": "Part Barrel 02 Handfrag"
   },
   {
     "category": "Weapon",
@@ -3285,6 +4349,24 @@
     "manufacturer": "gadgets",
     "itemType": "Grenade",
     "weaponType": "",
+    "partType": "",
+    "code": "\"grenade_gadget.part_01_mirv_brudder\"",
+    "name": "Part 01 Mirv Brudder",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "245:91",
+    "id": 91,
+    "family": 245,
+    "effects": "Part 01 Mirv Brudder"
+  },
+  {
+    "category": "Grenade",
+    "manufacturer": "gadgets",
+    "itemType": "Grenade",
+    "weaponType": "",
     "partType": "Firmware",
     "code": "\"grenade_gadget.part_firmware_active_fire\"",
     "name": "Part Firmware Active Fire",
@@ -3479,6 +4561,7 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
       "all_json:Nexus-Data-inv_custom4.json"
     ],
     "idRaw": "27:83",
@@ -3492,13 +4575,35 @@
     "itemType": "Assault Rifle",
     "weaponType": "Assault Rifle",
     "partType": "Rarity",
+    "code": "\"jak_ar.comp_05_legendary_flashfuel\"",
+    "name": "Flash Fuel",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-vault_cards0.json",
+      "all_json:Nexus-Data-inv_custom4.json"
+    ],
+    "idRaw": "27:89",
+    "id": 89,
+    "family": 27,
+    "effects": "Flash Fuel"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Rarity",
     "code": "\"jak_ar.comp_05_legendary_gomie\"",
     "name": "Gomie",
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "all_json:Nexus-Data-ItemPoolList.json"
+      "all_json:Nexus-Data-ItemPoolList.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
     ],
     "idRaw": "27:81",
     "id": 81,
@@ -3549,6 +4654,24 @@
     "itemType": "Assault Rifle",
     "weaponType": "Assault Rifle",
     "partType": "Barrel",
+    "code": "\"jak_ar.part_barrel_01_flashfuel\"",
+    "name": "Part Barrel 01 Flashfuel",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "27:88",
+    "id": 88,
+    "family": 27,
+    "effects": "Part Barrel 01 Flashfuel"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Barrel",
     "code": "\"jak_ar.part_barrel_01_gomie\"",
     "name": "Part Barrel 01 Gomie",
     "source": "nexus_extract",
@@ -3584,6 +4707,24 @@
     "manufacturer": "Jakobs",
     "itemType": "Assault Rifle",
     "weaponType": "Assault Rifle",
+    "partType": "",
+    "code": "\"jak_ar.part_mag_04_cov_flashfuel\"",
+    "name": "Part Mag 04 Cov Flashfuel",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "27:87",
+    "id": 87,
+    "family": 27,
+    "effects": "Part Mag 04 Cov Flashfuel"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
     "partType": "Barrel",
     "code": "\"jak_ar.part_underbarrel_02_crank_fishward\"",
     "name": "Part Underbarrel 02 Crank Fishward",
@@ -3598,6 +4739,24 @@
     "effects": "Part Underbarrel 02 Crank Fishward"
   },
   {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Barrel",
+    "code": "\"jak_ar.part_underbarrel_02_crank_flashfuel\"",
+    "name": "Part Underbarrel 02 Crank Flashfuel",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "27:86",
+    "id": 86,
+    "family": 27,
+    "effects": "Part Underbarrel 02 Crank Flashfuel"
+  },
+  {
     "category": "Grenade",
     "manufacturer": "Jakobs",
     "itemType": "Grenade",
@@ -3608,7 +4767,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "267:20",
     "id": 20,
@@ -3801,6 +4961,27 @@
     "itemType": "Pistol",
     "weaponType": "Pistol",
     "partType": "Rarity",
+    "code": "\"jak_ps.comp_05_legendary_infection\"",
+    "name": "Infection",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "3:91",
+    "id": 91,
+    "family": 3,
+    "effects": "Infection"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Rarity",
     "code": "\"jak_ps.comp_05_legendary_shoals\"",
     "name": "Shoals",
     "source": "nexus_extract",
@@ -3808,7 +4989,8 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "all_json:Nexus-Data-inv_custom4.json"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json"
     ],
     "idRaw": "3:85",
     "id": 85,
@@ -3895,6 +5077,96 @@
     "itemType": "Pistol",
     "weaponType": "Pistol",
     "partType": "Barrel",
+    "code": "\"jak_ps.part_barrel_infection_corrosive\"",
+    "name": "Part Barrel Infection Corrosive",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "3:90",
+    "id": 90,
+    "family": 3,
+    "effects": "Part Barrel Infection Corrosive"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
+    "code": "\"jak_ps.part_barrel_infection_cryo\"",
+    "name": "Part Barrel Infection Cryo",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "3:89",
+    "id": 89,
+    "family": 3,
+    "effects": "Part Barrel Infection Cryo"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
+    "code": "\"jak_ps.part_barrel_infection_fire\"",
+    "name": "Part Barrel Infection Fire",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "3:88",
+    "id": 88,
+    "family": 3,
+    "effects": "Part Barrel Infection Fire"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
+    "code": "\"jak_ps.part_barrel_infection_radiation\"",
+    "name": "Part Barrel Infection Radiation",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "3:87",
+    "id": 87,
+    "family": 3,
+    "effects": "Part Barrel Infection Radiation"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
+    "code": "\"jak_ps.part_barrel_infection_shock\"",
+    "name": "Part Barrel Infection Shock",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "3:86",
+    "id": 86,
+    "family": 3,
+    "effects": "Part Barrel Infection Shock"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
     "code": "\"jak_ps.part_barrel_shoals\"",
     "name": "Part Barrel Shoals",
     "source": "nexus_extract",
@@ -3918,7 +5190,9 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "265:9",
     "id": 9,
@@ -3949,13 +5223,40 @@
     "itemType": "Shotgun",
     "weaponType": "Shotgun",
     "partType": "Rarity",
+    "code": "\"jak_sg.comp_05_legendary_hippogun\"",
+    "name": "Hippo Gun",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "9:106",
+    "id": 106,
+    "family": 9,
+    "effects": "Hippo Gun"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Rarity",
     "code": "\"jak_sg.comp_05_legendary_verce\"",
     "name": "Verce",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
       "all_json:Nexus-Data-ItemPoolList.json"
     ],
+    "idRaw": "9:104",
+    "id": 104,
+    "family": 9,
     "effects": "Verce"
   },
   {
@@ -3987,7 +5288,10 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList4.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "9:101",
     "id": 101,
@@ -4013,6 +5317,61 @@
     "effects": "Part Barrel 01 Constable"
   },
   {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Barrel",
+    "code": "\"jak_sg.part_barrel_hippogun\"",
+    "name": "Part Barrel Hippogun",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "9:105",
+    "id": 105,
+    "family": 9,
+    "effects": "Part Barrel Hippogun"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Barrel",
+    "code": "\"jak_sg.part_barrel_verce\"",
+    "name": "Part Barrel Verce",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "9:103",
+    "id": 103,
+    "family": 9,
+    "effects": "Part Barrel Verce"
+  },
+  {
+    "category": "Shield",
+    "manufacturer": "Jakobs",
+    "itemType": "Shield",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"jak_shield.comp_05_legendary_exfoliatrix\"",
+    "name": "Exfoliatrix",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "306:11",
+    "id": 11,
+    "family": 306,
+    "effects": "Exfoliatrix"
+  },
+  {
     "category": "Shield",
     "manufacturer": "Jakobs",
     "itemType": "Shield",
@@ -4031,19 +5390,43 @@
     "effects": "Comp 05 Legendary"
   },
   {
+    "category": "Shield",
+    "manufacturer": "Jakobs",
+    "itemType": "Shield",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"jak_shield.part_body_armor_exfoliatrix\"",
+    "name": "Part Body Armor Exfoliatrix",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "306:12",
+    "id": 12,
+    "family": 306,
+    "effects": "Part Body Armor Exfoliatrix"
+  },
+  {
     "category": "Weapon",
     "manufacturer": "Jakobs",
     "itemType": "Sniper",
     "weaponType": "Sniper",
     "partType": "Rarity",
     "code": "\"jak_sr.comp_05_legendary_burrow\"",
-    "name": "Burrow",
+    "name": "PRISM",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "all_json:Nexus-Data-ItemPoolList.json"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "all_json:Nexus-Data-ItemPoolList.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
     ],
-    "effects": "Burrow"
+    "idRaw": "24:83",
+    "id": 83,
+    "family": 24,
+    "effects": "PRISM"
   },
   {
     "category": "Weapon",
@@ -4056,12 +5439,36 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "nexus_ref:Nexus-Data-itempool6.json"
     ],
     "idRaw": "24:78",
     "id": 78,
     "family": 24,
     "effects": "Fearstalker"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Rarity",
+    "code": "\"jak_sr.comp_05_legendary_outback\"",
+    "name": "Wind Skimmer",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
+    ],
+    "idRaw": "24:87",
+    "id": 87,
+    "family": 24,
+    "effects": "Wind Skimmer"
   },
   {
     "category": "Weapon",
@@ -4086,6 +5493,42 @@
     "manufacturer": "Jakobs",
     "itemType": "Sniper",
     "weaponType": "Sniper",
+    "partType": "Rarity",
+    "code": "\"jak_sr.comp_flak_weapon\"",
+    "name": "Comp Flak Weapon",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "24:79",
+    "id": 79,
+    "family": 24,
+    "effects": "Comp Flak Weapon"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Barrel",
+    "code": "\"jak_sr.part_barrel_02_burrow\"",
+    "name": "Part Barrel 02 Burrow",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "24:82",
+    "id": 82,
+    "family": 24,
+    "effects": "Part Barrel 02 Burrow"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
     "partType": "Barrel",
     "code": "\"jak_sr.part_barrel_02_fearstalker\"",
     "name": "Part Barrel 02 Fearstalker",
@@ -4098,6 +5541,24 @@
     "id": 77,
     "family": 24,
     "effects": "Part Barrel 02 Fearstalker"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Barrel",
+    "code": "\"jak_sr.part_barrel_02_outback\"",
+    "name": "Part Barrel 02 Outback",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "24:86",
+    "id": 86,
+    "family": 24,
+    "effects": "Part Barrel 02 Outback"
   },
   {
     "category": "Weapon",
@@ -4123,6 +5584,24 @@
     "itemType": "Sniper",
     "weaponType": "Sniper",
     "partType": "",
+    "code": "\"jak_sr.part_mag_torgue_normal_outback\"",
+    "name": "Part Mag Torgue Normal Outback",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "24:85",
+    "id": 85,
+    "family": 24,
+    "effects": "Part Mag Torgue Normal Outback"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "",
     "code": "\"jak_sr.part_mag_torgue_sticky_fearstalker\"",
     "name": "Part Mag Torgue Sticky Fearstalker",
     "source": "nexus_extract",
@@ -4134,6 +5613,24 @@
     "id": 80,
     "family": 24,
     "effects": "Part Mag Torgue Sticky Fearstalker"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Jakobs",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "",
+    "code": "\"jak_sr.part_mag_torgue_sticky_outback\"",
+    "name": "Part Mag Torgue Sticky Outback",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "24:84",
+    "id": 84,
+    "family": 24,
+    "effects": "Part Mag Torgue Sticky Outback"
   },
   {
     "category": "Weapon",
@@ -4396,6 +5893,25 @@
     "itemType": "Grenade",
     "weaponType": "",
     "partType": "Rarity",
+    "code": "\"mal_grenade_gadget.comp_05_legendary_brudder\"",
+    "name": "Li'l Brudder",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "263:22",
+    "id": 22,
+    "family": 263,
+    "effects": "Li'l Brudder"
+  },
+  {
+    "category": "Grenade",
+    "manufacturer": "Maliwan",
+    "itemType": "Grenade",
+    "weaponType": "",
+    "partType": "Rarity",
     "code": "\"mal_grenade_gadget.comp_05_legendary\"",
     "name": "Comp 05 Legendary",
     "source": "nexus_extract",
@@ -4463,6 +5979,24 @@
     "effects": "Part 02 Divider Maliwan"
   },
   {
+    "category": "Grenade",
+    "manufacturer": "Maliwan",
+    "itemType": "Grenade",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"mal_grenade_gadget.part_brudder\"",
+    "name": "Part Brudder",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "263:21",
+    "id": 21,
+    "family": 263,
+    "effects": "Part Brudder"
+  },
+  {
     "category": "Heavy Weapon",
     "manufacturer": "Maliwan",
     "itemType": "Heavy Weapon",
@@ -4473,7 +6007,10 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList4.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "289:29",
     "id": 29,
@@ -4491,7 +6028,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "289:28",
     "id": 28,
@@ -4563,12 +6101,32 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "266:8",
     "id": 8,
     "family": 266,
     "effects": "Geigerroid"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Maliwan",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Rarity",
+    "code": "\"mal_sg.comp_05_legendary_assembler\"",
+    "name": "Decompiler",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "10:86",
+    "id": 86,
+    "family": 10,
+    "effects": "Decompiler"
   },
   {
     "category": "Weapon",
@@ -4583,7 +6141,8 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "all_json:Nexus-Data-inv_custom4.json"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json"
     ],
     "idRaw": "10:81",
     "id": 81,
@@ -4601,7 +6160,10 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool0.json"
     ],
     "idRaw": "10:61",
     "id": 61,
@@ -4625,6 +6187,24 @@
     "id": 99,
     "family": 10,
     "effects": "Comp 05 Legendary"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Maliwan",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Barrel",
+    "code": "\"mal_sg.part_barrel_01_assembler\"",
+    "name": "Part Barrel 01 Assembler",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "10:85",
+    "id": 85,
+    "family": 10,
+    "effects": "Part Barrel 01 Assembler"
   },
   {
     "category": "Weapon",
@@ -4663,6 +6243,42 @@
     "effects": "Part Barrel 01 Reminisce"
   },
   {
+    "category": "Weapon",
+    "manufacturer": "Maliwan",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "",
+    "code": "\"mal_sg.part_mag_torgue_normal_assembler\"",
+    "name": "Part Mag Torgue Normal Assembler",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "10:84",
+    "id": 84,
+    "family": 10,
+    "effects": "Part Mag Torgue Normal Assembler"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Maliwan",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "",
+    "code": "\"mal_sg.part_mag_torgue_sticky_assembler\"",
+    "name": "Part Mag Torgue Sticky Assembler",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "10:83",
+    "id": 83,
+    "family": 10,
+    "effects": "Part Mag Torgue Sticky Assembler"
+  },
+  {
     "category": "Shield",
     "manufacturer": "Maliwan",
     "itemType": "Shield",
@@ -4673,7 +6289,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "279:12",
     "id": 12,
@@ -4722,12 +6339,36 @@
     "itemType": "SMG",
     "weaponType": "SMG",
     "partType": "Rarity",
+    "code": "\"mal_sm.comp_05_legendary_accretion\"",
+    "name": "Honeymooner",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "21:93",
+    "id": 93,
+    "family": 21,
+    "effects": "Honeymooner"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Maliwan",
+    "itemType": "SMG",
+    "weaponType": "SMG",
+    "partType": "Rarity",
     "code": "\"mal_sm.comp_05_legendary_flashcyclone\"",
     "name": "Flash Cyclone",
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "21:85",
     "id": 85,
@@ -4763,7 +6404,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "21:90",
     "id": 90,
@@ -4788,6 +6430,24 @@
     "id": 64,
     "family": 21,
     "effects": "Comp Amara Weapon"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Maliwan",
+    "itemType": "SMG",
+    "weaponType": "SMG",
+    "partType": "Barrel",
+    "code": "\"mal_sm.part_barrel_02_accretion\"",
+    "name": "Part Barrel 02 Accretion",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "21:92",
+    "id": 92,
+    "family": 21,
+    "effects": "Part Barrel 02 Accretion"
   },
   {
     "category": "Weapon",
@@ -4882,6 +6542,45 @@
   {
     "category": "Weapon",
     "manufacturer": "Maliwan",
+    "itemType": "SMG",
+    "weaponType": "SMG",
+    "partType": "",
+    "code": "\"mal_sm.part_mag_torgue_normal_accretion\"",
+    "name": "Part Mag Torgue Normal Accretion",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "21:91",
+    "id": 91,
+    "family": 21,
+    "effects": "Part Mag Torgue Normal Accretion"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Maliwan",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Rarity",
+    "code": "\"mal_sr.comp_05_legendary_clarity\"",
+    "name": "Clarity",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
+    ],
+    "idRaw": "25:92",
+    "id": 92,
+    "family": 25,
+    "effects": "Clarity"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Maliwan",
     "itemType": "Sniper",
     "weaponType": "Sniper",
     "partType": "Rarity",
@@ -4892,7 +6591,8 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "all_json:Nexus-Data-inv_custom4.json"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json"
     ],
     "idRaw": "25:87",
     "id": 87,
@@ -4906,14 +6606,19 @@
     "weaponType": "Sniper",
     "partType": "Rarity",
     "code": "\"mal_sr.comp_05_legendary_stealth\"",
-    "name": "Stealth",
+    "name": "Stealth & Seek",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "nexus_ref:Nexus-Data-vault_cards4.json",
-      "all_json:Nexus-Data-vault_cards4.json"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "nexus_ref:Nexus-Data-vault_cards0.json"
     ],
-    "effects": "Stealth"
+    "idRaw": "25:83",
+    "id": 83,
+    "family": 25,
+    "effects": "Stealth & Seek"
   },
   {
     "category": "Weapon",
@@ -4956,6 +6661,42 @@
     "manufacturer": "Maliwan",
     "itemType": "Sniper",
     "weaponType": "Sniper",
+    "partType": "Barrel",
+    "code": "\"mal_sr.part_barrel_02_clarity\"",
+    "name": "Part Barrel 02 Clarity",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "25:91",
+    "id": 91,
+    "family": 25,
+    "effects": "Part Barrel 02 Clarity"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Maliwan",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Barrel",
+    "code": "\"mal_sr.part_barrel_02_stealth\"",
+    "name": "Part Barrel 02 Stealth",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "25:84",
+    "id": 84,
+    "family": 25,
+    "effects": "Part Barrel 02 Stealth"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Maliwan",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
     "partType": "",
     "code": "\"mal_sr.part_mag_05_borg_acc_manifest\"",
     "name": "Part Mag 05 Borg Acc Manifest",
@@ -4968,6 +6709,24 @@
     "id": 86,
     "family": 25,
     "effects": "Part Mag 05 Borg Acc Manifest"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Maliwan",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "",
+    "code": "\"mal_sr.part_mag_05_borg_clarity\"",
+    "name": "Part Mag 05 Borg Clarity",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "25:90",
+    "id": 90,
+    "family": 25,
+    "effects": "Part Mag 05 Borg Clarity"
   },
   {
     "category": "Weapon",
@@ -5230,6 +6989,27 @@
     "itemType": "Assault Rifle",
     "weaponType": "Assault Rifle",
     "partType": "Rarity",
+    "code": "\"ord_ar.comp_05_legendary_avarice\"",
+    "name": "Avarice",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "15:84",
+    "id": 84,
+    "family": 15,
+    "effects": "Avarice"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Order",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Rarity",
     "code": "\"ord_ar.comp_05_legendary_crowsourced\"",
     "name": "Crow-Sourced",
     "source": "nexus_extract",
@@ -5237,6 +7017,7 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-itempool8.json",
+      "all_json:Nexus-Data-ItemPoolList0.json",
       "all_json:Nexus-Data-itempool8.json"
     ],
     "idRaw": "15:77",
@@ -5250,15 +7031,41 @@
     "itemType": "Assault Rifle",
     "weaponType": "Assault Rifle",
     "partType": "Rarity",
-    "code": "\"ord_ar.comp_05_legendary_testament\"",
-    "name": "Testament",
+    "code": "\"ord_ar.comp_05_legendary_pchonk\"",
+    "name": "Pachonk",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "nexus_ref:Nexus-Data-vault_cards4.json",
-      "all_json:Nexus-Data-vault_cards4.json"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
-    "effects": "Testament"
+    "idRaw": "15:79",
+    "id": 79,
+    "family": 15,
+    "effects": "Pachonk"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Order",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Rarity",
+    "code": "\"ord_ar.comp_05_legendary_testament\"",
+    "name": "Divided Glow",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-vault_cards0.json",
+      "nexus_ref:Nexus-Data-vault_cards4.json",
+      "all_json:Nexus-Data-vault_cards0.json"
+    ],
+    "idRaw": "15:81",
+    "id": 81,
+    "family": 15,
+    "effects": "Divided Glow"
   },
   {
     "category": "Weapon",
@@ -5284,6 +7091,24 @@
     "itemType": "Assault Rifle",
     "weaponType": "Assault Rifle",
     "partType": "Barrel",
+    "code": "\"ord_ar.part_barrel_02_avarice\"",
+    "name": "Part Barrel 02 Avarice",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "15:83",
+    "id": 83,
+    "family": 15,
+    "effects": "Part Barrel 02 Avarice"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Order",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Barrel",
     "code": "\"ord_ar.part_barrel_02_crowsourced\"",
     "name": "Part Barrel 02 Crowsourced",
     "source": "nexus_extract",
@@ -5295,6 +7120,80 @@
     "id": 78,
     "family": 15,
     "effects": "Part Barrel 02 Crowsourced"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Order",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Barrel",
+    "code": "\"ord_ar.part_barrel_02_pchonk\"",
+    "name": "Part Barrel 02 Pchonk",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "15:80",
+    "id": 80,
+    "family": 15,
+    "effects": "Part Barrel 02 Pchonk"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Order",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Barrel",
+    "code": "\"ord_ar.part_barrel_02_testament\"",
+    "name": "Part Barrel 02 Testament",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "15:82",
+    "id": 82,
+    "family": 15,
+    "effects": "Part Barrel 02 Testament"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Order",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "",
+    "code": "\"ord_ar.part_shield_ricochet_testament\"",
+    "name": "Part Shield Ricochet Testament",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "15:85",
+    "id": 85,
+    "family": 15,
+    "effects": "Part Shield Ricochet Testament"
+  },
+  {
+    "category": "Grenade",
+    "manufacturer": "Order",
+    "itemType": "Grenade",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"ord_grenade_gadget.comp_05_legendary_alignment\"",
+    "name": "Alignment",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-vault_cards0.json",
+      "all_json:Nexus-Data-vault_cards0.json"
+    ],
+    "idRaw": "272:15",
+    "id": 15,
+    "family": 272,
+    "effects": "Alignment"
   },
   {
     "category": "Grenade",
@@ -5315,6 +7214,80 @@
     "effects": "Comp 05 Legendary"
   },
   {
+    "category": "Grenade",
+    "manufacturer": "Order",
+    "itemType": "Grenade",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"ord_grenade_gadget.part_alignment\"",
+    "name": "Part Alignment",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "272:14",
+    "id": 14,
+    "family": 272,
+    "effects": "Part Alignment"
+  },
+  {
+    "category": "Grenade",
+    "manufacturer": "Order",
+    "itemType": "Grenade",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"ord_grenade_gadget.part_ord_alignment\"",
+    "name": "Part Ord Alignment",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "272:13",
+    "id": 13,
+    "family": 272,
+    "effects": "Part Ord Alignment"
+  },
+  {
+    "category": "Grenade",
+    "manufacturer": "Order",
+    "itemType": "Grenade",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"ord_grenade_gadget.part_stat_05_elemental_power_alignment\"",
+    "name": "Part Stat 05 Elemental Power Alignment",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "272:16",
+    "id": 16,
+    "family": 272,
+    "effects": "Part Stat 05 Elemental Power Alignment"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Order",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Rarity",
+    "code": "\"ord_ps.comp_05_legendary_patience\"",
+    "name": "Virtue",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-rewards4.json",
+      "all_json:Nexus-Data-rewards4.json"
+    ],
+    "idRaw": "4:89",
+    "id": 89,
+    "family": 4,
+    "effects": "Virtue"
+  },
+  {
     "category": "Weapon",
     "manufacturer": "Order",
     "itemType": "Pistol",
@@ -5327,8 +7300,8 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "nexus_ref:Nexus-Data-vault_cards0.json",
-      "all_json:Nexus-Data-inv_custom4.json"
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "nexus_ref:Nexus-Data-vault_cards0.json"
     ],
     "idRaw": "4:87",
     "id": 87,
@@ -5346,7 +7319,10 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "4:83",
     "id": 83,
@@ -5395,6 +7371,24 @@
     "itemType": "Pistol",
     "weaponType": "Pistol",
     "partType": "Barrel",
+    "code": "\"ord_ps.part_barrel_patience\"",
+    "name": "Part Barrel Patience",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "4:88",
+    "id": 88,
+    "family": 4,
+    "effects": "Part Barrel Patience"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Order",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
     "code": "\"ord_ps.part_barrel_rhythm\"",
     "name": "Part Barrel Rhythm",
     "source": "nexus_extract",
@@ -5436,7 +7430,9 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
     ],
     "idRaw": "285:9",
     "id": 9,
@@ -5530,7 +7526,8 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "all_json:Nexus-Data-inv_custom4.json"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json"
     ],
     "idRaw": "26:82",
     "id": 82,
@@ -5543,12 +7540,34 @@
     "itemType": "Sniper",
     "weaponType": "Sniper",
     "partType": "Rarity",
+    "code": "\"ord_sr.comp_05_legendary_petanque\"",
+    "name": "Petanque",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "26:86",
+    "id": 86,
+    "family": 26,
+    "effects": "Petanque"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Order",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Rarity",
     "code": "\"ord_sr.comp_05_legendary_temper\"",
     "name": "Solar Temper",
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "26:84",
     "id": 84,
@@ -5597,6 +7616,24 @@
     "itemType": "Sniper",
     "weaponType": "Sniper",
     "partType": "Barrel",
+    "code": "\"ord_sr.part_barrel_02_petanque\"",
+    "name": "Part Barrel 02 Petanque",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "26:85",
+    "id": 85,
+    "family": 26,
+    "effects": "Part Barrel 02 Petanque"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Order",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Barrel",
     "code": "\"ord_sr.part_barrel_02_temper\"",
     "name": "Part Barrel 02 Temper",
     "source": "nexus_extract",
@@ -5608,6 +7645,24 @@
     "id": 83,
     "family": 26,
     "effects": "Part Barrel 02 Temper"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Order",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Barrel",
+    "code": "\"ord_sr.part_underbarrel_02_tether_snare_ishmael_0\"",
+    "name": "Part Underbarrel 02 Tether Snare Ishmael 0",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "26:87",
+    "id": 87,
+    "family": 26,
+    "effects": "Part Underbarrel 02 Tether Snare Ishmael 0"
   },
   {
     "category": "Weapon",
@@ -6190,6 +8245,7 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
+      "all_json:Nexus-Data-inv0.json",
       "all_json:Nexus-Data-inv4.json"
     ],
     "idRaw": "246:59",
@@ -6209,6 +8265,7 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
+      "all_json:Nexus-Data-inv0.json",
       "all_json:Nexus-Data-inv4.json"
     ],
     "idRaw": "246:60",
@@ -6228,6 +8285,7 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
+      "all_json:Nexus-Data-inv0.json",
       "all_json:Nexus-Data-inv4.json"
     ],
     "idRaw": "246:61",
@@ -6247,6 +8305,7 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
+      "all_json:Nexus-Data-inv0.json",
       "all_json:Nexus-Data-inv4.json"
     ],
     "idRaw": "246:62",
@@ -6266,6 +8325,7 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
+      "all_json:Nexus-Data-inv0.json",
       "all_json:Nexus-Data-inv4.json"
     ],
     "idRaw": "246:63",
@@ -6315,6 +8375,27 @@
     "itemType": "Assault Rifle",
     "weaponType": "Assault Rifle",
     "partType": "Rarity",
+    "code": "\"ted_ar.comp_05_legendary_hotmod\"",
+    "name": "Lovelorn",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "14:93",
+    "id": 93,
+    "family": 14,
+    "effects": "Lovelorn"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Rarity",
     "code": "\"ted_ar.comp_05_legendary\"",
     "name": "Comp 05 Legendary",
     "source": "nexus_extract",
@@ -6349,6 +8430,42 @@
     "effects": "Comp Nudge Weapon"
   },
   {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Barrel",
+    "code": "\"ted_ar.part_barrel_02_hotmod\"",
+    "name": "Part Barrel 02 Hotmod",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "14:81",
+    "id": 81,
+    "family": 14,
+    "effects": "Part Barrel 02 Hotmod"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Barrel",
+    "code": "\"ted_ar.part_underbarrel_01_hotmod\"",
+    "name": "Part Underbarrel 01 Hotmod",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "14:80",
+    "id": 80,
+    "family": 14,
+    "effects": "Part Underbarrel 01 Hotmod"
+  },
+  {
     "category": "Grenade",
     "manufacturer": "Tediore",
     "itemType": "Grenade",
@@ -6359,7 +8476,9 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "311:13",
     "id": 13,
@@ -6408,14 +8527,61 @@
     "itemType": "Pistol",
     "weaponType": "Pistol",
     "partType": "Rarity",
-    "code": "\"ted_ps.comp_05_legendary_earlyexcess\"",
-    "name": "Earlyexcess",
+    "code": "\"ted_ps.comp_03_relievingguard\"",
+    "name": "Comp 03 Relievingguard",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-rewards4.json",
+      "all_json:Nexus-Data-rewards4.json"
+    ],
+    "idRaw": "5:101",
+    "id": 101,
+    "family": 5,
+    "effects": "Comp 03 Relievingguard"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Rarity",
+    "code": "\"ted_ps.comp_03_tradingup\"",
+    "name": "Comp 03 Tradingup",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-rewards4.json",
+      "all_json:Nexus-Data-Mission4.json",
+      "all_json:Nexus-Data-rewards4.json"
+    ],
+    "idRaw": "5:91",
+    "id": 91,
+    "family": 5,
+    "effects": "Comp 03 Tradingup"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Rarity",
+    "code": "\"ted_ps.comp_05_legendary_earlyexcess\"",
+    "name": "Overconsumption",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool4.json",
       "all_json:Nexus-Data-ItemPoolList.json"
     ],
-    "effects": "Earlyexcess"
+    "idRaw": "5:99",
+    "id": 99,
+    "family": 5,
+    "effects": "Overconsumption"
   },
   {
     "category": "Weapon",
@@ -6430,8 +8596,8 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "all_json:Nexus-Data-ItemPoolList.json",
-      "all_json:Nexus-Data-ItemPoolList4.json"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json"
     ],
     "idRaw": "5:89",
     "id": 89,
@@ -6461,6 +8627,24 @@
     "manufacturer": "Tediore",
     "itemType": "Pistol",
     "weaponType": "Pistol",
+    "partType": "Rarity",
+    "code": "\"ted_ps.comp_harmony_weapon\"",
+    "name": "Comp Harmony Weapon",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "5:87",
+    "id": 87,
+    "family": 5,
+    "effects": "Comp Harmony Weapon"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
     "partType": "Barrel",
     "code": "\"ted_ps.part_barrel_01_shammy\"",
     "name": "Part Barrel 01 Shammy",
@@ -6479,6 +8663,78 @@
     "manufacturer": "Tediore",
     "itemType": "Pistol",
     "weaponType": "Pistol",
+    "partType": "Barrel",
+    "code": "\"ted_ps.part_barrel_02_earlyexcess\"",
+    "name": "Part Barrel 02 Earlyexcess",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "5:94",
+    "id": 94,
+    "family": 5,
+    "effects": "Part Barrel 02 Earlyexcess"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
+    "code": "\"ted_ps.part_barrel_02_tradingup\"",
+    "name": "Part Barrel 02 Tradingup",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "5:90",
+    "id": 90,
+    "family": 5,
+    "effects": "Part Barrel 02 Tradingup"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
+    "code": "\"ted_ps.part_barrel_relievingguard\"",
+    "name": "Part Barrel Relievingguard",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "5:100",
+    "id": 100,
+    "family": 5,
+    "effects": "Part Barrel Relievingguard"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "",
+    "code": "\"ted_ps.part_grip_05a_ted_legs_earlyexcess\"",
+    "name": "Part Grip 05a Ted Legs Earlyexcess",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "5:92",
+    "id": 92,
+    "family": 5,
+    "effects": "Part Grip 05a Ted Legs Earlyexcess"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
     "partType": "",
     "code": "\"ted_ps.part_mag_torgue_normal_inscriber\"",
     "name": "Part Mag Torgue Normal Inscriber",
@@ -6491,6 +8747,100 @@
     "id": 84,
     "family": 5,
     "effects": "Part Mag Torgue Normal Inscriber"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "",
+    "code": "\"ted_ps.part_scope_02_lens_01_tradingup\"",
+    "name": "Part Scope 02 Lens 01 Tradingup",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "5:102",
+    "id": 102,
+    "family": 5,
+    "effects": "Part Scope 02 Lens 01 Tradingup"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
+    "code": "\"ted_ps.part_underbarrel_02_rockets_earlyexcess\"",
+    "name": "Part Underbarrel 02 Rockets Earlyexcess",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "5:93",
+    "id": 93,
+    "family": 5,
+    "effects": "Part Underbarrel 02 Rockets Earlyexcess"
+  },
+  {
+    "category": "Repkit",
+    "manufacturer": "Tediore",
+    "itemType": "Repkit",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"ted_repair_kit.comp_05_legendary_font\"",
+    "name": "Font",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "290:9",
+    "id": 9,
+    "family": 290,
+    "effects": "Font"
+  },
+  {
+    "category": "Repkit",
+    "manufacturer": "Tediore",
+    "itemType": "Repkit",
+    "weaponType": "",
+    "partType": "Augment",
+    "code": "\"ted_repair_kit.part_augment_unique_font\"",
+    "name": "Part Augment Unique Font",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "290:8",
+    "id": 8,
+    "family": 290,
+    "effects": "Part Augment Unique Font"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Rarity",
+    "code": "\"ted_sg.comp_05_legendary_fourier\"",
+    "name": "Fourier's Malady",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "11:92",
+    "id": 92,
+    "family": 11,
+    "effects": "Fourier's Malady"
   },
   {
     "category": "Weapon",
@@ -6521,12 +8871,33 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList4.json",
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "11:90",
     "id": 90,
     "family": 11,
     "effects": "Sharkbait"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Barrel",
+    "code": "\"ted_sg.part_barrel_01_fourier\"",
+    "name": "Part Barrel 01 Fourier",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "11:91",
+    "id": 91,
+    "family": 11,
+    "effects": "Part Barrel 01 Fourier"
   },
   {
     "category": "Weapon",
@@ -6624,6 +8995,24 @@
     "itemType": "Shotgun",
     "weaponType": "Shotgun",
     "partType": "",
+    "code": "\"ted_sg.part_mag_05_borg_fourier\"",
+    "name": "Part Mag 05 Borg Fourier",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "11:93",
+    "id": 93,
+    "family": 11,
+    "effects": "Part Mag 05 Borg Fourier"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Tediore",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "",
     "code": "\"ted_sg.part_mag_torgue_normal_sharkbait\"",
     "name": "Part Mag Torgue Normal Sharkbait",
     "source": "nexus_extract",
@@ -6665,7 +9054,10 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList4.json",
+      "all_json:Nexus-Data-ItemPoolList6.json"
     ],
     "idRaw": "287:14",
     "id": 14,
@@ -8313,13 +10705,34 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "all_json:Nexus-Data-ItemPoolList.json",
-      "all_json:Nexus-Data-ItemPoolList4.json"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json"
     ],
     "idRaw": "17:85",
     "id": 85,
     "family": 17,
     "effects": "Lockjaw"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Torgue",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Rarity",
+    "code": "\"tor_ar.comp_05_legendary_ripple\"",
+    "name": "Ripple",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "17:90",
+    "id": 90,
+    "family": 17,
+    "effects": "Ripple"
   },
   {
     "category": "Weapon",
@@ -8358,6 +10771,78 @@
     "effects": "Part Barrel Lockjaw"
   },
   {
+    "category": "Weapon",
+    "manufacturer": "Torgue",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Barrel",
+    "code": "\"tor_ar.part_barrel_ripple\"",
+    "name": "Part Barrel Ripple",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "17:89",
+    "id": 89,
+    "family": 17,
+    "effects": "Part Barrel Ripple"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Torgue",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "",
+    "code": "\"tor_ar.part_foregrip_01_ripple\"",
+    "name": "Part Foregrip 01 Ripple",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "17:88",
+    "id": 88,
+    "family": 17,
+    "effects": "Part Foregrip 01 Ripple"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Torgue",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "",
+    "code": "\"tor_ar.part_foregrip_02_ripple\"",
+    "name": "Part Foregrip 02 Ripple",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "17:87",
+    "id": 87,
+    "family": 17,
+    "effects": "Part Foregrip 02 Ripple"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Torgue",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "",
+    "code": "\"tor_ar.part_foregrip_03_ripple\"",
+    "name": "Part Foregrip 03 Ripple",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "17:86",
+    "id": 86,
+    "family": 17,
+    "effects": "Part Foregrip 03 Ripple"
+  },
+  {
     "category": "Grenade",
     "manufacturer": "Torgue",
     "itemType": "Grenade",
@@ -8386,7 +10871,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "273:43",
     "id": 43,
@@ -8400,13 +10886,18 @@
     "weaponType": "Heavy Weapon",
     "partType": "Rarity",
     "code": "\"tor_hw.comp_05_legendary_loiter\"",
-    "name": "Loiter",
+    "name": "Loiter Sploiter",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "all_json:Nexus-Data-ItemPoolList.json"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
     ],
-    "effects": "Loiter"
+    "idRaw": "273:45",
+    "id": 45,
+    "family": 273,
+    "effects": "Loiter Sploiter"
   },
   {
     "category": "Heavy Weapon",
@@ -8467,6 +10958,24 @@
     "manufacturer": "Torgue",
     "itemType": "Heavy Weapon",
     "weaponType": "Heavy Weapon",
+    "partType": "Barrel",
+    "code": "\"tor_hw.part_barrel_loiter\"",
+    "name": "Part Barrel Loiter",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "273:44",
+    "id": 44,
+    "family": 273,
+    "effects": "Part Barrel Loiter"
+  },
+  {
+    "category": "Heavy Weapon",
+    "manufacturer": "Torgue",
+    "itemType": "Heavy Weapon",
+    "weaponType": "Heavy Weapon",
     "partType": "",
     "code": "\"tor_hw.part_normal\"",
     "name": "Part Normal",
@@ -8491,12 +11000,36 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "6:57",
     "id": 57,
     "family": 6,
     "effects": "Scoot'n'Shoot"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Torgue",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Rarity",
+    "code": "\"tor_ps.comp_05_legendary_sledge\"",
+    "name": "Critical Decay",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "6:88",
+    "id": 88,
+    "family": 6,
+    "effects": "Critical Decay"
   },
   {
     "category": "Weapon",
@@ -8527,7 +11060,8 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "6:85",
     "id": 85,
@@ -8569,6 +11103,24 @@
     "id": 56,
     "family": 6,
     "effects": "Part Barrel 02 Scootshoot"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Torgue",
+    "itemType": "Pistol",
+    "weaponType": "Pistol",
+    "partType": "Barrel",
+    "code": "\"tor_ps.part_barrel_02_sledge\"",
+    "name": "Part Barrel 02 Sledge",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "6:87",
+    "id": 87,
+    "family": 6,
+    "effects": "Part Barrel 02 Sledge"
   },
   {
     "category": "Weapon",
@@ -8625,6 +11177,64 @@
     "effects": "Part Foregrip 03 Herald"
   },
   {
+    "category": "Repkit",
+    "manufacturer": "Torgue",
+    "itemType": "Repkit",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"tor_repair_kit.comp_05_legendary_outburst\"",
+    "name": "Outburst",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList4.json"
+    ],
+    "idRaw": "261:9",
+    "id": 9,
+    "family": 261,
+    "effects": "Outburst"
+  },
+  {
+    "category": "Repkit",
+    "manufacturer": "Torgue",
+    "itemType": "Repkit",
+    "weaponType": "",
+    "partType": "Augment",
+    "code": "\"tor_repair_kit.part_augment_unique_outburst\"",
+    "name": "Part Augment Unique Outburst",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "261:8",
+    "id": 8,
+    "family": 261,
+    "effects": "Part Augment Unique Outburst"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Torgue",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Rarity",
+    "code": "\"tor_sg.comp_05_legendary_aerodramatic\"",
+    "name": "AeroDramatic",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
+    ],
+    "idRaw": "12:86",
+    "id": 86,
+    "family": 12,
+    "effects": "AeroDramatic"
+  },
+  {
     "category": "Weapon",
     "manufacturer": "Torgue",
     "itemType": "Shotgun",
@@ -8637,8 +11247,8 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "nexus_ref:Nexus-Data-vault_cards0.json",
-      "all_json:Nexus-Data-inv_custom4.json"
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "nexus_ref:Nexus-Data-vault_cards0.json"
     ],
     "idRaw": "12:83",
     "id": 83,
@@ -8656,7 +11266,10 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "12:77",
     "id": 77,
@@ -8680,6 +11293,24 @@
     "id": 55,
     "family": 12,
     "effects": "Comp 05 Legendary"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Torgue",
+    "itemType": "Shotgun",
+    "weaponType": "Shotgun",
+    "partType": "Barrel",
+    "code": "\"tor_sg.part_barrel_01_aerodramatic\"",
+    "name": "Part Barrel 01 Aerodramatic",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "12:85",
+    "id": 85,
+    "family": 12,
+    "effects": "Part Barrel 01 Aerodramatic"
   },
   {
     "category": "Weapon",
@@ -8834,10 +11465,15 @@
     "code": "\"tor_shield.comp_05_legendary_hydrowerks\"",
     "name": "Hydrowerks",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "all_json:Nexus-Data-ItemPoolList.json"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
     ],
+    "idRaw": "321:12",
+    "id": 12,
+    "family": 321,
     "effects": "Hydrowerks"
   },
   {
@@ -8857,6 +11493,24 @@
     "id": 5,
     "family": 321,
     "effects": "Comp 05 Legendary"
+  },
+  {
+    "category": "Shield",
+    "manufacturer": "Torgue",
+    "itemType": "Shield",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"tor_shield.part_unique_hydrowerks\"",
+    "name": "Part Unique Hydrowerks",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "321:11",
+    "id": 11,
+    "family": 321,
+    "effects": "Part Unique Hydrowerks"
   },
   {
     "category": "Weapon",
@@ -10723,14 +13377,19 @@
     "weaponType": "Assault Rifle",
     "partType": "Rarity",
     "code": "\"vla_ar.comp_05_legendary_extinction\"",
-    "name": "Extinction",
+    "name": "Eradication",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "nexus_ref:Nexus-Data-vault_cards4.json",
-      "all_json:Nexus-Data-vault_cards4.json"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "nexus_ref:Nexus-Data-vault_cards0.json"
     ],
-    "effects": "Extinction"
+    "idRaw": "18:105",
+    "id": 105,
+    "family": 18,
+    "effects": "Eradication"
   },
   {
     "category": "Weapon",
@@ -10743,12 +13402,36 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "18:103",
     "id": 103,
     "family": 18,
     "effects": "Laser-Cutter"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Vladof",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Rarity",
+    "code": "\"vla_ar.comp_05_legendary_triplicate\"",
+    "name": "Triplicate",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
+    ],
+    "idRaw": "18:107",
+    "id": 107,
+    "family": 18,
+    "effects": "Triplicate"
   },
   {
     "category": "Weapon",
@@ -10774,6 +13457,24 @@
     "itemType": "Assault Rifle",
     "weaponType": "Assault Rifle",
     "partType": "Barrel",
+    "code": "\"vla_ar.part_barrel_01_extinction\"",
+    "name": "Part Barrel 01 Extinction",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "18:104",
+    "id": 104,
+    "family": 18,
+    "effects": "Part Barrel 01 Extinction"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Vladof",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Barrel",
     "code": "\"vla_ar.part_barrel_01_lasercutter\"",
     "name": "Part Barrel 01 Lasercutter",
     "source": "nexus_extract",
@@ -10785,6 +13486,24 @@
     "id": 102,
     "family": 18,
     "effects": "Part Barrel 01 Lasercutter"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Vladof",
+    "itemType": "Assault Rifle",
+    "weaponType": "Assault Rifle",
+    "partType": "Barrel",
+    "code": "\"vla_ar.part_barrel_01_triplicate\"",
+    "name": "Part Barrel 01 Triplicate",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "18:106",
+    "id": 106,
+    "family": 18,
+    "effects": "Part Barrel 01 Triplicate"
   },
   {
     "category": "Weapon",
@@ -10815,7 +13534,9 @@
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json",
+      "all_json:Nexus-Data-ItemPoolList6.json"
     ],
     "idRaw": "291:12",
     "id": 12,
@@ -10884,6 +13605,25 @@
     "itemType": "Heavy Weapon",
     "weaponType": "Heavy Weapon",
     "partType": "Rarity",
+    "code": "\"vla_hw.comp_05_legendary_quattro\"",
+    "name": "Quadratus",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "282:33",
+    "id": 33,
+    "family": 282,
+    "effects": "Quadratus"
+  },
+  {
+    "category": "Heavy Weapon",
+    "manufacturer": "Vladof",
+    "itemType": "Heavy Weapon",
+    "weaponType": "Heavy Weapon",
+    "partType": "Rarity",
     "code": "\"vla_hw.comp_05_legendary\"",
     "name": "Comp 05 Legendary",
     "source": "nexus_extract",
@@ -10919,6 +13659,24 @@
     "manufacturer": "Vladof",
     "itemType": "Heavy Weapon",
     "weaponType": "Heavy Weapon",
+    "partType": "Barrel",
+    "code": "\"vla_hw.part_barrel_02_quattro\"",
+    "name": "Part Barrel 02 Quattro",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "282:32",
+    "id": 32,
+    "family": 282,
+    "effects": "Part Barrel 02 Quattro"
+  },
+  {
+    "category": "Heavy Weapon",
+    "manufacturer": "Vladof",
+    "itemType": "Heavy Weapon",
+    "weaponType": "Heavy Weapon",
     "partType": "",
     "code": "\"vla_hw.part_normal\"",
     "name": "Part Normal",
@@ -10941,11 +13699,34 @@
     "code": "\"vla_repair_kit.comp_05_legendary_bloodiron\"",
     "name": "Bloodiron",
     "source": "nexus_extract",
-    "dataNote": "From Nexus reference tables (itempool, rewards, etc.).",
+    "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "all_json:Nexus-Data-ItemPoolList.json"
+      "inv_deps",
+      "all_json:Nexus-Data-ItemPoolList.json",
+      "all_json:Nexus-Data-ItemPoolList4.json"
     ],
+    "idRaw": "269:9",
+    "id": 9,
+    "family": 269,
     "effects": "Bloodiron"
+  },
+  {
+    "category": "Repkit",
+    "manufacturer": "Vladof",
+    "itemType": "Repkit",
+    "weaponType": "",
+    "partType": "Augment",
+    "code": "\"vla_repair_kit.part_augment_unique_bloodiron\"",
+    "name": "Part Augment Unique Bloodiron",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "269:8",
+    "id": 8,
+    "family": 269,
+    "effects": "Part Augment Unique Bloodiron"
   },
   {
     "category": "Shield",
@@ -10971,6 +13752,27 @@
     "itemType": "SMG",
     "weaponType": "SMG",
     "partType": "Rarity",
+    "code": "\"vla_sm.comp_05_legendary_aura\"",
+    "name": "Tempered Essence",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom4.json",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "nexus_ref:Nexus-Data-vault_cards0.json"
+    ],
+    "idRaw": "22:105",
+    "id": 105,
+    "family": 22,
+    "effects": "Tempered Essence"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Vladof",
+    "itemType": "SMG",
+    "weaponType": "SMG",
+    "partType": "Rarity",
     "code": "\"vla_sm.comp_05_legendary_brickhouse\"",
     "name": "Brickhouse",
     "source": "nexus_extract",
@@ -10978,7 +13780,8 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "all_json:Nexus-Data-inv_custom4.json"
+      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool6.json"
     ],
     "idRaw": "22:94",
     "id": 94,
@@ -11016,12 +13819,31 @@
     "scanSources": [
       "inv_deps",
       "nexus_ref:Nexus-Data-inv_custom4.json",
-      "all_json:Nexus-Data-inv_custom4.json"
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "22:101",
     "id": 101,
     "family": 22,
     "effects": "Parasite"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Vladof",
+    "itemType": "SMG",
+    "weaponType": "SMG",
+    "partType": "Barrel",
+    "code": "\"vla_sm.part_barrel_aura\"",
+    "name": "Part Barrel Aura",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "22:104",
+    "id": 104,
+    "family": 22,
+    "effects": "Part Barrel Aura"
   },
   {
     "category": "Weapon",
@@ -11119,12 +13941,36 @@
     "itemType": "Sniper",
     "weaponType": "Sniper",
     "partType": "Rarity",
+    "code": "\"vla_sr.comp_05_legendary_exhibition\"",
+    "name": "Exhibition",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
+    ],
+    "idRaw": "16:93",
+    "id": 93,
+    "family": 16,
+    "effects": "Exhibition"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Vladof",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Rarity",
     "code": "\"vla_sr.comp_05_legendary_hemorrhage\"",
     "name": "Hemorrhage",
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
-      "inv_deps"
+      "inv_deps",
+      "nexus_ref:Nexus-Data-inv_custom0.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-ItemPoolList0.json"
     ],
     "idRaw": "16:88",
     "id": 88,
@@ -11143,8 +13989,9 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
       "nexus_ref:Nexus-Data-vault_cards0.json",
-      "all_json:Nexus-Data-vault_cards0.json"
+      "all_json:Nexus-Data-itempool6.json"
     ],
     "idRaw": "16:91",
     "id": 91,
@@ -11169,6 +14016,43 @@
     "id": 70,
     "family": 16,
     "effects": "Comp 05 Legendary"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Vladof",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Rarity",
+    "code": "\"vla_sr.comp_fl4k_weapon\"",
+    "name": "Comp Fl4k Weapon",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "all_json:Nexus-Data-loot_config6.json"
+    ],
+    "idRaw": "16:89",
+    "id": 89,
+    "family": 16,
+    "effects": "Comp Fl4k Weapon"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Vladof",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Barrel",
+    "code": "\"vla_sr.part_barrel_01_fl4k\"",
+    "name": "Part Barrel 01 Fl4k",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "16:94",
+    "id": 94,
+    "family": 16,
+    "effects": "Part Barrel 01 Fl4k"
   },
   {
     "category": "Weapon",
@@ -11205,6 +14089,24 @@
     "id": 90,
     "family": 16,
     "effects": "Part Barrel 01 Lightgun"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "Vladof",
+    "itemType": "Sniper",
+    "weaponType": "Sniper",
+    "partType": "Barrel",
+    "code": "\"vla_sr.part_barrel_02_exhibition\"",
+    "name": "Part Barrel 02 Exhibition",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "16:92",
+    "id": 92,
+    "family": 16,
+    "effects": "Part Barrel 02 Exhibition"
   },
   {
     "category": "Weapon",
@@ -11563,9 +14465,9 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "nexus_ref:Nexus-Data-itempool4.json",
+      "nexus_ref:Nexus-Data-itempool0.json",
       "all_json:Nexus-Data-gbxactor0.json",
-      "all_json:Nexus-Data-gbxactor4.json"
+      "all_json:Nexus-Data-gbxactor6.json"
     ],
     "idRaw": "387:6",
     "id": 6,
@@ -11585,7 +14487,6 @@
     "scanSources": [
       "inv_deps",
       "all_json:Nexus-Data-gbxactor0.json",
-      "all_json:Nexus-Data-gbxactor4.json",
       "all_json:Nexus-Data-gbxactor6.json"
     ],
     "idRaw": "387:4",
@@ -11690,6 +14591,44 @@
     "itemType": "Weapon",
     "weaponType": "",
     "partType": "Rarity",
+    "code": "\"weapon_dahlmech_chaingun.comp_dahlmech_chaingun\"",
+    "name": "Comp Dahlmech Chaingun",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
+    ],
+    "idRaw": "418:2",
+    "id": 2,
+    "family": 418,
+    "effects": "Comp Dahlmech Chaingun"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_dahlmech_chaingun.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "418:1",
+    "id": 1,
+    "family": 418,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
     "code": "\"weapon_dahlmech_emp.comp_dahlmech_emp\"",
     "name": "Comp Dahlmech Emp",
     "source": "nexus_extract",
@@ -11762,6 +14701,118 @@
     "itemType": "Weapon",
     "weaponType": "",
     "partType": "Rarity",
+    "code": "\"weapon_dahlmech_flamespitter.comp_dahlmech_flamespitter\"",
+    "name": "Comp Dahlmech Flamespitter",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
+    ],
+    "idRaw": "420:1",
+    "id": 1,
+    "family": 420,
+    "effects": "Comp Dahlmech Flamespitter"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_dahlmech_flamespitter.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "420:2",
+    "id": 2,
+    "family": 420,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_dahlmech_flamespitterunderbarrel.comp_dahlmech_flamespitter\"",
+    "name": "Comp Dahlmech Flamespitter",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "459:1",
+    "id": 1,
+    "family": 459,
+    "effects": "Comp Dahlmech Flamespitter"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_dahlmech_flamespitterunderbarrel.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "459:2",
+    "id": 2,
+    "family": 459,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Grenade",
+    "manufacturer": "",
+    "itemType": "Grenade",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_dahlmech_grenadelauncher.comp_dahlmech_grenadelauncher\"",
+    "name": "Comp Dahlmech Grenadelauncher",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
+    ],
+    "idRaw": "421:1",
+    "id": 1,
+    "family": 421,
+    "effects": "Comp Dahlmech Grenadelauncher"
+  },
+  {
+    "category": "Grenade",
+    "manufacturer": "",
+    "itemType": "Grenade",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_dahlmech_grenadelauncher.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "421:2",
+    "id": 2,
+    "family": 421,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
     "code": "\"weapon_gunship_maingun.comp_gunship_maingun\"",
     "name": "Comp Gunship Maingun",
     "source": "nexus_extract",
@@ -11806,8 +14857,8 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "nexus_ref:Nexus-Data-itempool4.json",
-      "all_json:Nexus-Data-itempool4.json"
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
     ],
     "idRaw": "390:1",
     "id": 1,
@@ -11882,8 +14933,8 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "nexus_ref:Nexus-Data-itempool4.json",
-      "all_json:Nexus-Data-itempool4.json"
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
     ],
     "idRaw": "383:1",
     "id": 1,
@@ -12122,8 +15173,8 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "nexus_ref:Nexus-Data-itempool4.json",
-      "all_json:Nexus-Data-itempool4.json"
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
     ],
     "idRaw": "385:1",
     "id": 1,
@@ -12160,8 +15211,8 @@
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "nexus_ref:Nexus-Data-itempool4.json",
-      "all_json:Nexus-Data-itempool4.json"
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
     ],
     "idRaw": "386:1",
     "id": 1,
@@ -12192,14 +15243,34 @@
     "itemType": "Weapon",
     "weaponType": "",
     "partType": "Rarity",
+    "code": "\"weapon_soldier_sprayer.comp_soldier_sprayer_0\"",
+    "name": "Comp Soldier Sprayer 0",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
+    ],
+    "idRaw": "381:3",
+    "id": 3,
+    "family": 381,
+    "effects": "Comp Soldier Sprayer 0"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
     "code": "\"weapon_soldier_sprayer.comp_soldier_sprayer\"",
     "name": "Comp Soldier Sprayer",
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "nexus_ref:Nexus-Data-itempool4.json",
-      "all_json:Nexus-Data-itempool4.json"
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
     ],
     "idRaw": "381:2",
     "id": 2,
@@ -12286,14 +15357,500 @@
     "itemType": "Weapon",
     "weaponType": "",
     "partType": "Rarity",
+    "code": "\"weapon_tediorearmy_framesprayerl.comp_tediorearmy_framesprayerl\"",
+    "name": "Comp Tediorearmy Framesprayerl",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "504:1",
+    "id": 1,
+    "family": 504,
+    "effects": "Comp Tediorearmy Framesprayerl"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tediorearmy_framesprayerl.part_body_lp\"",
+    "name": "Part Body Lp",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "504:2",
+    "id": 2,
+    "family": 504,
+    "effects": "Part Body Lp"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_tediorearmy_framesprayerr.comp_tediorearmy_framesprayerr\"",
+    "name": "Comp Tediorearmy Framesprayerr",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "503:1",
+    "id": 1,
+    "family": 503,
+    "effects": "Comp Tediorearmy Framesprayerr"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tediorearmy_framesprayerr.part_body_lp\"",
+    "name": "Part Body Lp",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "503:2",
+    "id": 2,
+    "family": 503,
+    "effects": "Part Body Lp"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_tediorearmy_sprayer.comp_tediorearmy_sprayer\"",
+    "name": "Comp Tediorearmy Sprayer",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
+    ],
+    "idRaw": "474:1",
+    "id": 1,
+    "family": 474,
+    "effects": "Comp Tediorearmy Sprayer"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tediorearmy_sprayer.part_body_lp\"",
+    "name": "Part Body Lp",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "474:2",
+    "id": 2,
+    "family": 474,
+    "effects": "Part Body Lp"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_tedioredigishotgun.comp_digishotgun\"",
+    "name": "Comp Digishotgun",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "506:2",
+    "id": 2,
+    "family": 506,
+    "effects": "Comp Digishotgun"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tedioredigishotgun.part_body_digishotgun\"",
+    "name": "Part Body Digishotgun",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "506:1",
+    "id": 1,
+    "family": 506,
+    "effects": "Part Body Digishotgun"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_tedioreglider_flamethrower.comp_tedioreglider_flamethrower\"",
+    "name": "Comp Tedioreglider Flamethrower",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "475:2",
+    "id": 2,
+    "family": 475,
+    "effects": "Comp Tedioreglider Flamethrower"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tedioreglider_flamethrower.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "475:1",
+    "id": 1,
+    "family": 475,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_tedioreglider_rapidlaser.comp_tedioreglider_rapidlaser\"",
+    "name": "Comp Tedioreglider Rapidlaser",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
+    ],
+    "idRaw": "521:2",
+    "id": 2,
+    "family": 521,
+    "effects": "Comp Tedioreglider Rapidlaser"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tedioreglider_rapidlaser.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "521:1",
+    "id": 1,
+    "family": 521,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_tedioregliderarm_rocketlauncher.comp_tedioregliderarm_rocketlauncher\"",
+    "name": "Comp Tedioregliderarm Rocketlauncher",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "477:1",
+    "id": 1,
+    "family": 477,
+    "effects": "Comp Tedioregliderarm Rocketlauncher"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tedioregliderarm_rocketlauncher.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "477:2",
+    "id": 2,
+    "family": 477,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_tedioreglidercore_rocketlauncher.comp_tedioreglidercore_rocketlauncher\"",
+    "name": "Comp Tedioreglidercore Rocketlauncher",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "478:1",
+    "id": 1,
+    "family": 478,
+    "effects": "Comp Tedioreglidercore Rocketlauncher"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tedioreglidercore_rocketlauncher.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "478:2",
+    "id": 2,
+    "family": 478,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_tedioreturret_gatemission4.comp_tedioreturret_gatemission4\"",
+    "name": "Comp Tedioreturret Gatemission4",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
+    ],
+    "idRaw": "479:2",
+    "id": 2,
+    "family": 479,
+    "effects": "Comp Tedioreturret Gatemission4"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tedioreturret_gatemission4.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "479:1",
+    "id": 1,
+    "family": 479,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_tedioreturret_mg.comp_tedioreturret_mg\"",
+    "name": "Comp Tedioreturret Mg",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-itempool6.json"
+    ],
+    "idRaw": "480:2",
+    "id": 2,
+    "family": 480,
+    "effects": "Comp Tedioreturret Mg"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tedioreturret_mg.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "480:1",
+    "id": 1,
+    "family": 480,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_tedioreturret_microplasticsmg.comp_tedioreturret_microplasticsmg\"",
+    "name": "Comp Tedioreturret Microplasticsmg",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "484:2",
+    "id": 2,
+    "family": 484,
+    "effects": "Comp Tedioreturret Microplasticsmg"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tedioreturret_microplasticsmg.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "484:1",
+    "id": 1,
+    "family": 484,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_tedioreturret_rapidlaser.comp_tedioreturret_rapidlaser\"",
+    "name": "Comp Tedioreturret Rapidlaser",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "482:2",
+    "id": 2,
+    "family": 482,
+    "effects": "Comp Tedioreturret Rapidlaser"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tedioreturret_rapidlaser.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "482:1",
+    "id": 1,
+    "family": 482,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_tedioreturret_rocketlauncher.comp_tedioreturret_rocketlauncher\"",
+    "name": "Comp Tedioreturret Rocketlauncher",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
+    ],
+    "idRaw": "485:2",
+    "id": 2,
+    "family": 485,
+    "effects": "Comp Tedioreturret Rocketlauncher"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_tedioreturret_rocketlauncher.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "485:1",
+    "id": 1,
+    "family": 485,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
     "code": "\"weapon_turret_chaingun.comp_turret_chaingun\"",
     "name": "Comp Turret Chaingun",
     "source": "nexus_extract",
     "dataNote": "From inv serialindex (Nexus extract).",
     "scanSources": [
       "inv_deps",
-      "nexus_ref:Nexus-Data-itempool4.json",
-      "all_json:Nexus-Data-itempool4.json"
+      "nexus_ref:Nexus-Data-itempool0.json",
+      "all_json:Nexus-Data-itempool0.json"
     ],
     "idRaw": "384:2",
     "id": 2,
@@ -12317,6 +15874,81 @@
     "id": 1,
     "family": 384,
     "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_turret_dahlchaingun.comp_turret_dahlchaingun\"",
+    "name": "Comp Turret Dahlchaingun",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps",
+      "nexus_ref:Nexus-Data-itempool6.json",
+      "all_json:Nexus-Data-inv4.json",
+      "all_json:Nexus-Data-inv6.json"
+    ],
+    "idRaw": "470:1",
+    "id": 1,
+    "family": 470,
+    "effects": "Comp Turret Dahlchaingun"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_turret_dahlchaingun.part_body\"",
+    "name": "Part Body",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "470:2",
+    "id": 2,
+    "family": 470,
+    "effects": "Part Body"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "Rarity",
+    "code": "\"weapon_uberhead.comp_uberhead\"",
+    "name": "Comp Uberhead",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "491:2",
+    "id": 2,
+    "family": 491,
+    "effects": "Comp Uberhead"
+  },
+  {
+    "category": "Weapon",
+    "manufacturer": "",
+    "itemType": "Weapon",
+    "weaponType": "",
+    "partType": "",
+    "code": "\"weapon_uberhead.part_body_uberhead\"",
+    "name": "Part Body Uberhead",
+    "source": "nexus_extract",
+    "dataNote": "From inv serialindex (Nexus extract).",
+    "scanSources": [
+      "inv_deps"
+    ],
+    "idRaw": "491:1",
+    "id": 1,
+    "family": 491,
+    "effects": "Part Body Uberhead"
   },
   {
     "category": "Weapon",
@@ -12364,7 +15996,7 @@
         try{ if (typeof window.ensurePartPools === 'function') window.ensurePartPools(); }catch(_e){}
         try{ window.__ccStablePartRenderStateV1 = null; }catch(_e){}
         try{ if (typeof window.stxInvalidateSimpleBuilderPartCaches === 'function') window.stxInvalidateSimpleBuilderPartCaches(); }catch(_e){}
-        try{ window.dispatchEvent(new CustomEvent('stx:dataset-growth', { detail: { source: 'stx_editor_extract', added: added } })); }catch(_e){}
+        try{ window.dispatchEvent(new CustomEvent('stx:dataset-growth')); }catch(_e){}
       }
     }catch(_e){}
   }

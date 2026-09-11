@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-12T14:21:25.394Z",
+  "generated": "2026-09-10T19:44:49.584Z",
   "source": "Nexus gbx_ue_data_table + inv_name_part + preferredparts",
-  "total_entries": 1474,
+  "total_entries": 1534,
   "by_prefix": {
     "X-Y Combo": [
       {
@@ -258,6 +258,20 @@
         "col_key": "part_core_bor_hardcharger",
         "prefix": "Devourer",
         "required_parts": "Part_Core_BOR_ShortCircuit + part_core_bor_hardcharger"
+      },
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_leg_01",
+        "prefix": "Devourer",
+        "required_parts": "np_cm_corpo_leg_01"
+      },
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_devourer",
+        "prefix": "Devourer",
+        "required_parts": "np_devourer"
       }
     ],
     "Slugger": [
@@ -2113,6 +2127,15 @@
         "col_key": "part_stat_weapon_equipspeed",
         "prefix": "Snappy",
         "required_parts": "Part_Stat_Weapon_FireRate + part_stat_weapon_equipspeed"
+      },
+      {
+        "source": "gbx_ue_data_table",
+        "table": "EnhancementNamingStatCombinationsTable",
+        "type": "part_slot_mag",
+        "row_key": "Part_Stat_Weapon_EquipSpeed",
+        "col_key": "part_stat_weapon_firerate",
+        "prefix": "Snappy",
+        "required_parts": "Part_Stat_Weapon_EquipSpeed + part_stat_weapon_firerate"
       }
     ],
     "Disgorging": [
@@ -3548,17 +3571,6 @@
         "col_key": "part_stat_weapon_equipspeed",
         "prefix": "Legerdemain",
         "required_parts": "Part_Stat_Weapon_EquipSpeed + part_stat_weapon_equipspeed"
-      }
-    ],
-    "Sanppy": [
-      {
-        "source": "gbx_ue_data_table",
-        "table": "EnhancementNamingStatCombinationsTable",
-        "type": "part_slot_mag",
-        "row_key": "Part_Stat_Weapon_EquipSpeed",
-        "col_key": "part_stat_weapon_firerate",
-        "prefix": "Sanppy",
-        "required_parts": "Part_Stat_Weapon_EquipSpeed + part_stat_weapon_firerate"
       }
     ],
     "Prestidigital": [
@@ -6519,10 +6531,10 @@
         "source": "gbx_ue_data_table",
         "table": "VLA_Weapon_LicensedPartPrefix_Table",
         "type": "part_slot_mag",
-        "row_key": "NewRow",
+        "row_key": "licensed_ted",
         "col_key": "default",
         "prefix": "-Provided",
-        "required_parts": "NewRow (default mag)"
+        "required_parts": "licensed_ted (default mag)"
       }
     ],
     "-Inspired": [
@@ -7712,10 +7724,10 @@
         "source": "gbx_ue_data_table",
         "table": "TOR_Weapon_LicensedPartPrefix_Table",
         "type": "part_slot_mag",
-        "row_key": "NewRow",
+        "row_key": "licensed_ted",
         "col_key": "borg_mag",
         "prefix": "-Stuffed",
-        "required_parts": "NewRow + borg_mag"
+        "required_parts": "licensed_ted + borg_mag"
       }
     ],
     "-Exploding": [
@@ -7723,10 +7735,10 @@
         "source": "gbx_ue_data_table",
         "table": "TOR_Weapon_LicensedPartPrefix_Table",
         "type": "part_slot_mag",
-        "row_key": "NewRow",
+        "row_key": "licensed_ted",
         "col_key": "cov_mag",
         "prefix": "-Exploding",
-        "required_parts": "NewRow + cov_mag"
+        "required_parts": "licensed_ted + cov_mag"
       }
     ],
     "-Jobbed": [
@@ -7734,10 +7746,10 @@
         "source": "gbx_ue_data_table",
         "table": "TOR_Weapon_LicensedPartPrefix_Table",
         "type": "part_slot_mag",
-        "row_key": "NewRow",
+        "row_key": "licensed_ted",
         "col_key": "default",
         "prefix": "-Jobbed",
-        "required_parts": "NewRow (default mag)"
+        "required_parts": "licensed_ted (default mag)"
       }
     ],
     "Topping": [
@@ -8482,10 +8494,10 @@
         "source": "gbx_ue_data_table",
         "table": "VLA_Weapon_LicensedPartPrefix_Table",
         "type": "part_slot_mag",
-        "row_key": "NewRow",
+        "row_key": "licensed_ted",
         "col_key": "borg_mag",
         "prefix": "-Affixed",
-        "required_parts": "NewRow + borg_mag"
+        "required_parts": "licensed_ted + borg_mag"
       }
     ],
     "-Installed": [
@@ -8493,10 +8505,10 @@
         "source": "gbx_ue_data_table",
         "table": "VLA_Weapon_LicensedPartPrefix_Table",
         "type": "part_slot_mag",
-        "row_key": "NewRow",
+        "row_key": "licensed_ted",
         "col_key": "cov_mag",
         "prefix": "-Installed",
-        "required_parts": "NewRow + cov_mag"
+        "required_parts": "licensed_ted + cov_mag"
       }
     ],
     "-Wasted": [
@@ -8504,10 +8516,10 @@
         "source": "gbx_ue_data_table",
         "table": "VLA_Weapon_LicensedPartPrefix_Table",
         "type": "part_slot_mag",
-        "row_key": "NewRow",
+        "row_key": "licensed_ted",
         "col_key": "tor_mag",
         "prefix": "-Wasted",
-        "required_parts": "NewRow + tor_mag"
+        "required_parts": "licensed_ted + tor_mag"
       }
     ],
     "Party's": [
@@ -10296,6 +10308,33 @@
         "required_parts": "np_Abyss"
       }
     ],
+    "Honeymooner": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_accretion",
+        "prefix": "Honeymooner",
+        "required_parts": "np_accretion"
+      }
+    ],
+    "AeroDramatic": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_AeroDramatic",
+        "prefix": "AeroDramatic",
+        "required_parts": "np_AeroDramatic"
+      }
+    ],
+    "Alignment": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_alignment",
+        "prefix": "Alignment",
+        "required_parts": "np_alignment"
+      }
+    ],
     "ARC-TAN": [
       {
         "source": "inv_name_part",
@@ -10303,6 +10342,33 @@
         "part_id": "np_arctic",
         "prefix": "ARC-TAN",
         "required_parts": "np_arctic"
+      }
+    ],
+    "Decompiler": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_assembler",
+        "prefix": "Decompiler",
+        "required_parts": "np_assembler"
+      }
+    ],
+    "Tempered Essence": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_aura",
+        "prefix": "Tempered Essence",
+        "required_parts": "np_aura"
+      }
+    ],
+    "Avarice": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_Avarice",
+        "prefix": "Avarice",
+        "required_parts": "np_Avarice"
       }
     ],
     "Barb'ara": [
@@ -10332,6 +10398,15 @@
         "required_parts": "np_Bismuth"
       }
     ],
+    "Shield Overflow": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_blackout",
+        "prefix": "Shield Overflow",
+        "required_parts": "np_blackout"
+      }
+    ],
     "Hardpoint": [
       {
         "source": "inv_name_part",
@@ -10348,6 +10423,15 @@
         "part_id": "np_brickhouse",
         "prefix": "Brickhouse",
         "required_parts": "np_brickhouse"
+      }
+    ],
+    "Li'l Brudder": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_Brudder",
+        "prefix": "Li'l Brudder",
+        "required_parts": "np_Brudder"
       }
     ],
     "Bubbles": [
@@ -10368,6 +10452,195 @@
         "required_parts": "np_Burrow"
       }
     ],
+    "Clarity": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_clarity",
+        "prefix": "Clarity",
+        "required_parts": "np_clarity"
+      }
+    ],
+    "Keylogger": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_01",
+        "prefix": "Keylogger",
+        "required_parts": "np_cm_corpo_01"
+      }
+    ],
+    "Hacktivist": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_02",
+        "prefix": "Hacktivist",
+        "required_parts": "np_cm_corpo_02"
+      }
+    ],
+    "Researcher": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_03",
+        "prefix": "Researcher",
+        "required_parts": "np_cm_corpo_03"
+      }
+    ],
+    "Assimilator": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_04",
+        "prefix": "Assimilator",
+        "required_parts": "np_cm_corpo_04"
+      }
+    ],
+    "Royal We": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_05",
+        "prefix": "Royal We",
+        "required_parts": "np_cm_corpo_05"
+      }
+    ],
+    "Wyrmkind": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_06",
+        "prefix": "Wyrmkind",
+        "required_parts": "np_cm_corpo_06"
+      }
+    ],
+    "Defragger": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_07",
+        "prefix": "Defragger",
+        "required_parts": "np_cm_corpo_07"
+      }
+    ],
+    "Corrupter": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_08",
+        "prefix": "Corrupter",
+        "required_parts": "np_cm_corpo_08"
+      }
+    ],
+    "Eminence": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_09",
+        "prefix": "Eminence",
+        "required_parts": "np_cm_corpo_09"
+      }
+    ],
+    "System": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_10",
+        "prefix": "System",
+        "required_parts": "np_cm_corpo_10"
+      }
+    ],
+    "Virophile": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_leg_02",
+        "prefix": "Virophile",
+        "required_parts": "np_cm_corpo_leg_02"
+      }
+    ],
+    "Montage Maker": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_leg_03",
+        "prefix": "Montage Maker",
+        "required_parts": "np_cm_corpo_leg_03"
+      }
+    ],
+    "Memory Hoarder": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_leg_04",
+        "prefix": "Memory Hoarder",
+        "required_parts": "np_cm_corpo_leg_04"
+      }
+    ],
+    "Trackstar": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_leg_05",
+        "prefix": "Trackstar",
+        "required_parts": "np_cm_corpo_leg_05"
+      }
+    ],
+    "Functional Human": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_leg_06",
+        "prefix": "Functional Human",
+        "required_parts": "np_cm_corpo_leg_06"
+      }
+    ],
+    "Martyr": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_leg_dlc1",
+        "prefix": "Martyr",
+        "required_parts": "np_cm_corpo_leg_dlc1"
+      }
+    ],
+    "Programmer": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_leg_dlc2",
+        "prefix": "Programmer",
+        "required_parts": "np_cm_corpo_leg_dlc2"
+      }
+    ],
+    "Boomer": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_leg_raid1",
+        "prefix": "Boomer",
+        "required_parts": "np_cm_corpo_leg_raid1"
+      }
+    ],
+    "Plague Engineer": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_leg_raid2",
+        "prefix": "Plague Engineer",
+        "required_parts": "np_cm_corpo_leg_raid2"
+      }
+    ],
+    "Puppetmaster": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_corpo_leg_tuba",
+        "prefix": "Puppetmaster",
+        "required_parts": "np_cm_corpo_leg_tuba"
+      }
+    ],
     "Configuration": [
       {
         "source": "inv_name_part",
@@ -10375,6 +10648,15 @@
         "part_id": "np_cm_ds_leg_dlc1",
         "prefix": "Configuration",
         "required_parts": "np_cm_ds_leg_dlc1"
+      }
+    ],
+    "GOAT": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_ds_leg_harmonica",
+        "prefix": "GOAT",
+        "required_parts": "np_cm_ds_leg_harmonica"
       }
     ],
     "Grim Sister": [
@@ -10395,6 +10677,15 @@
         "required_parts": "np_cm_exo_leg_cowbell"
       }
     ],
+    "Masochist": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_exo_leg_harmonica",
+        "prefix": "Masochist",
+        "required_parts": "np_cm_exo_leg_harmonica"
+      }
+    ],
     "Bombastic": [
       {
         "source": "inv_name_part",
@@ -10413,6 +10704,15 @@
         "required_parts": "np_cm_grav_leg_cowbell"
       }
     ],
+    "Ultracapacitor": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_grav_leg_harmonica",
+        "prefix": "Ultracapacitor",
+        "required_parts": "np_cm_grav_leg_harmonica"
+      }
+    ],
     "Plasmaphile": [
       {
         "source": "inv_name_part",
@@ -10429,6 +10729,15 @@
         "part_id": "np_cm_pld_leg_cowbell",
         "prefix": "Tempest",
         "required_parts": "np_cm_pld_leg_cowbell"
+      }
+    ],
+    "Wastelander": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_pld_leg_harmonica",
+        "prefix": "Wastelander",
+        "required_parts": "np_cm_pld_leg_harmonica"
       }
     ],
     "Artificer": [
@@ -10584,6 +10893,15 @@
         "required_parts": "np_cm_robo_leg_dlc1"
       }
     ],
+    "Table Hopper": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_cm_robo_leg_harmonica",
+        "prefix": "Table Hopper",
+        "required_parts": "np_cm_robo_leg_harmonica"
+      }
+    ],
     "Hooligan": [
       {
         "source": "inv_name_part",
@@ -10719,6 +11037,33 @@
         "required_parts": "np_elpisstar"
       }
     ],
+    "Enumeration": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_enumeration",
+        "prefix": "Enumeration",
+        "required_parts": "np_enumeration"
+      }
+    ],
+    "Exfoliatrix": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_Exfoliatrix",
+        "prefix": "Exfoliatrix",
+        "required_parts": "np_Exfoliatrix"
+      }
+    ],
+    "Exhibition": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_Exhibition",
+        "prefix": "Exhibition",
+        "required_parts": "np_Exhibition"
+      }
+    ],
     "Eradication": [
       {
         "source": "inv_name_part",
@@ -10744,6 +11089,15 @@
         "part_id": "np_fearstalker",
         "prefix": "Fearstalker",
         "required_parts": "np_fearstalker"
+      }
+    ],
+    "Fanged Beast": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_Fl4k_weapon",
+        "prefix": "Fanged Beast",
+        "required_parts": "np_Fl4k_weapon"
       }
     ],
     "Flak Cannon": [
@@ -10773,6 +11127,15 @@
         "required_parts": "np_flashcyclone"
       }
     ],
+    "Flash Fuel": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_FlashFuel",
+        "prefix": "Flash Fuel",
+        "required_parts": "np_FlashFuel"
+      }
+    ],
     "Fleabag": [
       {
         "source": "inv_name_part",
@@ -10789,6 +11152,15 @@
         "part_id": "np_follower",
         "prefix": "Prowler",
         "required_parts": "np_follower"
+      }
+    ],
+    "Fourier's Malady": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_Fourier",
+        "prefix": "Fourier's Malady",
+        "required_parts": "np_Fourier"
       }
     ],
     "Gomie": [
@@ -10809,6 +11181,15 @@
         "required_parts": "np_Handcannon"
       }
     ],
+    "Hand Frag": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_handfrag",
+        "prefix": "Hand Frag",
+        "required_parts": "np_handfrag"
+      }
+    ],
     "Hemorrhage": [
       {
         "source": "inv_name_part",
@@ -10825,6 +11206,15 @@
         "part_id": "np_Herald",
         "prefix": "Herald",
         "required_parts": "np_Herald"
+      }
+    ],
+    "Hippo Gun": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_Hippogun",
+        "prefix": "Hippo Gun",
+        "required_parts": "np_Hippogun"
       }
     ],
     "Honey Badger": [
@@ -10845,6 +11235,15 @@
         "required_parts": "np_Hopscotch"
       }
     ],
+    "Lovelorn": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_HotMod",
+        "prefix": "Lovelorn",
+        "required_parts": "np_HotMod"
+      }
+    ],
     "Hydrowerks": [
       {
         "source": "inv_name_part",
@@ -10861,6 +11260,15 @@
         "part_id": "np_Ichor",
         "prefix": "Ichor",
         "required_parts": "np_Ichor"
+      }
+    ],
+    "Infection": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_Infection",
+        "prefix": "Infection",
+        "required_parts": "np_Infection"
       }
     ],
     "Inscriber": [
@@ -11007,6 +11415,15 @@
         "required_parts": "np_Murder"
       }
     ],
+    "Wind Skimmer": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_outback",
+        "prefix": "Wind Skimmer",
+        "required_parts": "np_outback"
+      }
+    ],
     "Over Swarm": [
       {
         "source": "inv_name_part",
@@ -11014,6 +11431,15 @@
         "part_id": "np_OverSwarm",
         "prefix": "Over Swarm",
         "required_parts": "np_OverSwarm"
+      }
+    ],
+    "Virtue": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "NP_Patience",
+        "prefix": "Virtue",
+        "required_parts": "NP_Patience"
       }
     ],
     "Pachonk": [
@@ -11034,6 +11460,15 @@
         "required_parts": "np_pellet"
       }
     ],
+    "Petanque": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_petanque",
+        "prefix": "Petanque",
+        "required_parts": "np_petanque"
+      }
+    ],
     "Plumb Bob": [
       {
         "source": "inv_name_part",
@@ -11043,6 +11478,15 @@
         "required_parts": "np_plumbbob"
       }
     ],
+    "Pragmate": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "NP_pragmate",
+        "prefix": "Pragmate",
+        "required_parts": "NP_pragmate"
+      }
+    ],
     "Pressure Kettle": [
       {
         "source": "inv_name_part",
@@ -11050,6 +11494,15 @@
         "part_id": "np_pressurecooker",
         "prefix": "Pressure Kettle",
         "required_parts": "np_pressurecooker"
+      }
+    ],
+    "Quadratus": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_Quattro",
+        "prefix": "Quadratus",
+        "required_parts": "np_Quattro"
       }
     ],
     "Raiden": [
@@ -11068,6 +11521,24 @@
         "part_id": "np_rainmaker",
         "prefix": "Rainmaker",
         "required_parts": "np_rainmaker"
+      }
+    ],
+    "Astonisher": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_relay",
+        "prefix": "Astonisher",
+        "required_parts": "np_relay"
+      }
+    ],
+    "Secured Relief": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_RelievingGuard",
+        "prefix": "Secured Relief",
+        "required_parts": "np_RelievingGuard"
       }
     ],
     "Reminisce": [
@@ -11115,6 +11586,24 @@
         "required_parts": "np_repkit_uni_ORD_PaleBlood"
       }
     ],
+    "Font of Life": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_repkit_uni_TED_font",
+        "prefix": "Font of Life",
+        "required_parts": "np_repkit_uni_TED_font"
+      }
+    ],
+    "Outburst": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_repkit_uni_TOR_Outburst",
+        "prefix": "Outburst",
+        "required_parts": "np_repkit_uni_TOR_Outburst"
+      }
+    ],
     "Oxidation": [
       {
         "source": "inv_name_part",
@@ -11131,6 +11620,15 @@
         "part_id": "NP_Rhythm",
         "prefix": "Rhythm",
         "required_parts": "NP_Rhythm"
+      }
+    ],
+    "Ripple": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "NP_Ripple",
+        "prefix": "Ripple",
+        "required_parts": "NP_Ripple"
       }
     ],
     "Roil": [
@@ -11205,6 +11703,15 @@
         "required_parts": "np_Shammy"
       }
     ],
+    "Shardenfreude": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_Shardenfreude",
+        "prefix": "Shardenfreude",
+        "required_parts": "np_Shardenfreude"
+      }
+    ],
     "Silver Sliver": [
       {
         "source": "inv_name_part",
@@ -11221,6 +11728,15 @@
         "part_id": "np_skully",
         "prefix": "Skully",
         "required_parts": "np_skully"
+      }
+    ],
+    "Critical Decay": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_Sledge",
+        "prefix": "Critical Decay",
+        "required_parts": "np_Sledge"
       }
     ],
     "Broken Wings": [
@@ -11284,6 +11800,24 @@
         "part_id": "np_Testament",
         "prefix": "Divided Glow",
         "required_parts": "np_Testament"
+      }
+    ],
+    "Paperclip": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_TradingUp",
+        "prefix": "Paperclip",
+        "required_parts": "np_TradingUp"
+      }
+    ],
+    "Triplicate": [
+      {
+        "source": "inv_name_part",
+        "type": "part_display_name",
+        "part_id": "np_Triplicate",
+        "prefix": "Triplicate",
+        "required_parts": "np_Triplicate"
       }
     ],
     "Undershield": [
@@ -17615,7 +18149,7 @@
       "type": "part_slot_mag",
       "row_key": "Part_Stat_Weapon_EquipSpeed",
       "col_key": "part_stat_weapon_firerate",
-      "prefix": "Sanppy",
+      "prefix": "Snappy",
       "required_parts": "Part_Stat_Weapon_EquipSpeed + part_stat_weapon_firerate"
     },
     {
@@ -21051,28 +21585,28 @@
       "source": "gbx_ue_data_table",
       "table": "TOR_Weapon_LicensedPartPrefix_Table",
       "type": "part_slot_mag",
-      "row_key": "NewRow",
+      "row_key": "licensed_ted",
       "col_key": "borg_mag",
       "prefix": "-Stuffed",
-      "required_parts": "NewRow + borg_mag"
+      "required_parts": "licensed_ted + borg_mag"
     },
     {
       "source": "gbx_ue_data_table",
       "table": "TOR_Weapon_LicensedPartPrefix_Table",
       "type": "part_slot_mag",
-      "row_key": "NewRow",
+      "row_key": "licensed_ted",
       "col_key": "cov_mag",
       "prefix": "-Exploding",
-      "required_parts": "NewRow + cov_mag"
+      "required_parts": "licensed_ted + cov_mag"
     },
     {
       "source": "gbx_ue_data_table",
       "table": "TOR_Weapon_LicensedPartPrefix_Table",
       "type": "part_slot_mag",
-      "row_key": "NewRow",
+      "row_key": "licensed_ted",
       "col_key": "default",
       "prefix": "-Jobbed",
-      "required_parts": "NewRow (default mag)"
+      "required_parts": "licensed_ted (default mag)"
     },
     {
       "source": "gbx_ue_data_table",
@@ -21699,37 +22233,37 @@
       "source": "gbx_ue_data_table",
       "table": "VLA_Weapon_LicensedPartPrefix_Table",
       "type": "part_slot_mag",
-      "row_key": "NewRow",
+      "row_key": "licensed_ted",
       "col_key": "borg_mag",
       "prefix": "-Affixed",
-      "required_parts": "NewRow + borg_mag"
+      "required_parts": "licensed_ted + borg_mag"
     },
     {
       "source": "gbx_ue_data_table",
       "table": "VLA_Weapon_LicensedPartPrefix_Table",
       "type": "part_slot_mag",
-      "row_key": "NewRow",
+      "row_key": "licensed_ted",
       "col_key": "cov_mag",
       "prefix": "-Installed",
-      "required_parts": "NewRow + cov_mag"
+      "required_parts": "licensed_ted + cov_mag"
     },
     {
       "source": "gbx_ue_data_table",
       "table": "VLA_Weapon_LicensedPartPrefix_Table",
       "type": "part_slot_mag",
-      "row_key": "NewRow",
+      "row_key": "licensed_ted",
       "col_key": "tor_mag",
       "prefix": "-Wasted",
-      "required_parts": "NewRow + tor_mag"
+      "required_parts": "licensed_ted + tor_mag"
     },
     {
       "source": "gbx_ue_data_table",
       "table": "VLA_Weapon_LicensedPartPrefix_Table",
       "type": "part_slot_mag",
-      "row_key": "NewRow",
+      "row_key": "licensed_ted",
       "col_key": "default",
       "prefix": "-Provided",
-      "required_parts": "NewRow (default mag)"
+      "required_parts": "licensed_ted (default mag)"
     },
     {
       "source": "gbx_ue_data_table",
@@ -23173,9 +23707,51 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_accretion",
+      "prefix": "Honeymooner",
+      "required_parts": "np_accretion"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_AeroDramatic",
+      "prefix": "AeroDramatic",
+      "required_parts": "np_AeroDramatic"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_alignment",
+      "prefix": "Alignment",
+      "required_parts": "np_alignment"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_arctic",
       "prefix": "ARC-TAN",
       "required_parts": "np_arctic"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_assembler",
+      "prefix": "Decompiler",
+      "required_parts": "np_assembler"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_aura",
+      "prefix": "Tempered Essence",
+      "required_parts": "np_aura"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_Avarice",
+      "prefix": "Avarice",
+      "required_parts": "np_Avarice"
     },
     {
       "source": "inv_name_part",
@@ -23201,6 +23777,13 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_blackout",
+      "prefix": "Shield Overflow",
+      "required_parts": "np_blackout"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_Breadth",
       "prefix": "Hardpoint",
       "required_parts": "np_Breadth"
@@ -23211,6 +23794,13 @@
       "part_id": "np_brickhouse",
       "prefix": "Brickhouse",
       "required_parts": "np_brickhouse"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_Brudder",
+      "prefix": "Li'l Brudder",
+      "required_parts": "np_Brudder"
     },
     {
       "source": "inv_name_part",
@@ -23229,9 +23819,170 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_clarity",
+      "prefix": "Clarity",
+      "required_parts": "np_clarity"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_01",
+      "prefix": "Keylogger",
+      "required_parts": "np_cm_corpo_01"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_02",
+      "prefix": "Hacktivist",
+      "required_parts": "np_cm_corpo_02"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_03",
+      "prefix": "Researcher",
+      "required_parts": "np_cm_corpo_03"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_04",
+      "prefix": "Assimilator",
+      "required_parts": "np_cm_corpo_04"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_05",
+      "prefix": "Royal We",
+      "required_parts": "np_cm_corpo_05"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_06",
+      "prefix": "Wyrmkind",
+      "required_parts": "np_cm_corpo_06"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_07",
+      "prefix": "Defragger",
+      "required_parts": "np_cm_corpo_07"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_08",
+      "prefix": "Corrupter",
+      "required_parts": "np_cm_corpo_08"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_09",
+      "prefix": "Eminence",
+      "required_parts": "np_cm_corpo_09"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_10",
+      "prefix": "System",
+      "required_parts": "np_cm_corpo_10"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_leg_01",
+      "prefix": "Devourer",
+      "required_parts": "np_cm_corpo_leg_01"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_leg_02",
+      "prefix": "Virophile",
+      "required_parts": "np_cm_corpo_leg_02"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_leg_03",
+      "prefix": "Montage Maker",
+      "required_parts": "np_cm_corpo_leg_03"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_leg_04",
+      "prefix": "Memory Hoarder",
+      "required_parts": "np_cm_corpo_leg_04"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_leg_05",
+      "prefix": "Trackstar",
+      "required_parts": "np_cm_corpo_leg_05"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_leg_06",
+      "prefix": "Functional Human",
+      "required_parts": "np_cm_corpo_leg_06"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_leg_dlc1",
+      "prefix": "Martyr",
+      "required_parts": "np_cm_corpo_leg_dlc1"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_leg_dlc2",
+      "prefix": "Programmer",
+      "required_parts": "np_cm_corpo_leg_dlc2"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_leg_raid1",
+      "prefix": "Boomer",
+      "required_parts": "np_cm_corpo_leg_raid1"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_leg_raid2",
+      "prefix": "Plague Engineer",
+      "required_parts": "np_cm_corpo_leg_raid2"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_corpo_leg_tuba",
+      "prefix": "Puppetmaster",
+      "required_parts": "np_cm_corpo_leg_tuba"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_cm_ds_leg_dlc1",
       "prefix": "Configuration",
       "required_parts": "np_cm_ds_leg_dlc1"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_ds_leg_harmonica",
+      "prefix": "GOAT",
+      "required_parts": "np_cm_ds_leg_harmonica"
     },
     {
       "source": "inv_name_part",
@@ -23250,6 +24001,13 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_cm_exo_leg_harmonica",
+      "prefix": "Masochist",
+      "required_parts": "np_cm_exo_leg_harmonica"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_cm_exo_leg_raid2",
       "prefix": "Bombastic",
       "required_parts": "np_cm_exo_leg_raid2"
@@ -23264,6 +24022,13 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_cm_grav_leg_harmonica",
+      "prefix": "Ultracapacitor",
+      "required_parts": "np_cm_grav_leg_harmonica"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_cm_grav_leg_raid2",
       "prefix": "Plasmaphile",
       "required_parts": "np_cm_grav_leg_raid2"
@@ -23274,6 +24039,13 @@
       "part_id": "np_cm_pld_leg_cowbell",
       "prefix": "Tempest",
       "required_parts": "np_cm_pld_leg_cowbell"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_cm_pld_leg_harmonica",
+      "prefix": "Wastelander",
+      "required_parts": "np_cm_pld_leg_harmonica"
     },
     {
       "source": "inv_name_part",
@@ -23404,6 +24176,13 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_cm_robo_leg_harmonica",
+      "prefix": "Table Hopper",
+      "required_parts": "np_cm_robo_leg_harmonica"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_cm_robo_leg_raid1",
       "prefix": "Hooligan",
       "required_parts": "np_cm_robo_leg_raid1"
@@ -23481,6 +24260,13 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_devourer",
+      "prefix": "Devourer",
+      "required_parts": "np_devourer"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_discybusiness",
       "prefix": "Discy Business",
       "required_parts": "np_discybusiness"
@@ -23516,6 +24302,27 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_enumeration",
+      "prefix": "Enumeration",
+      "required_parts": "np_enumeration"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_Exfoliatrix",
+      "prefix": "Exfoliatrix",
+      "required_parts": "np_Exfoliatrix"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_Exhibition",
+      "prefix": "Exhibition",
+      "required_parts": "np_Exhibition"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_Extinction",
       "prefix": "Eradication",
       "required_parts": "np_Extinction"
@@ -23533,6 +24340,13 @@
       "part_id": "np_fearstalker",
       "prefix": "Fearstalker",
       "required_parts": "np_fearstalker"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_Fl4k_weapon",
+      "prefix": "Fanged Beast",
+      "required_parts": "np_Fl4k_weapon"
     },
     {
       "source": "inv_name_part",
@@ -23558,6 +24372,13 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_FlashFuel",
+      "prefix": "Flash Fuel",
+      "required_parts": "np_FlashFuel"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "NP_fleabag",
       "prefix": "Fleabag",
       "required_parts": "NP_fleabag"
@@ -23568,6 +24389,13 @@
       "part_id": "np_follower",
       "prefix": "Prowler",
       "required_parts": "np_follower"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_Fourier",
+      "prefix": "Fourier's Malady",
+      "required_parts": "np_Fourier"
     },
     {
       "source": "inv_name_part",
@@ -23586,6 +24414,13 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_handfrag",
+      "prefix": "Hand Frag",
+      "required_parts": "np_handfrag"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_Hemorrhage",
       "prefix": "Hemorrhage",
       "required_parts": "np_Hemorrhage"
@@ -23596,6 +24431,13 @@
       "part_id": "np_Herald",
       "prefix": "Herald",
       "required_parts": "np_Herald"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_Hippogun",
+      "prefix": "Hippo Gun",
+      "required_parts": "np_Hippogun"
     },
     {
       "source": "inv_name_part",
@@ -23614,6 +24456,13 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_HotMod",
+      "prefix": "Lovelorn",
+      "required_parts": "np_HotMod"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_hydrowerks",
       "prefix": "Hydrowerks",
       "required_parts": "np_hydrowerks"
@@ -23624,6 +24473,13 @@
       "part_id": "np_Ichor",
       "prefix": "Ichor",
       "required_parts": "np_Ichor"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_Infection",
+      "prefix": "Infection",
+      "required_parts": "np_Infection"
     },
     {
       "source": "inv_name_part",
@@ -23740,9 +24596,23 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_outback",
+      "prefix": "Wind Skimmer",
+      "required_parts": "np_outback"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_OverSwarm",
       "prefix": "Over Swarm",
       "required_parts": "np_OverSwarm"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "NP_Patience",
+      "prefix": "Virtue",
+      "required_parts": "NP_Patience"
     },
     {
       "source": "inv_name_part",
@@ -23761,6 +24631,13 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_petanque",
+      "prefix": "Petanque",
+      "required_parts": "np_petanque"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_plumbbob",
       "prefix": "Plumb Bob",
       "required_parts": "np_plumbbob"
@@ -23768,9 +24645,23 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "NP_pragmate",
+      "prefix": "Pragmate",
+      "required_parts": "NP_pragmate"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_pressurecooker",
       "prefix": "Pressure Kettle",
       "required_parts": "np_pressurecooker"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_Quattro",
+      "prefix": "Quadratus",
+      "required_parts": "np_Quattro"
     },
     {
       "source": "inv_name_part",
@@ -23785,6 +24676,20 @@
       "part_id": "np_rainmaker",
       "prefix": "Rainmaker",
       "required_parts": "np_rainmaker"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_relay",
+      "prefix": "Astonisher",
+      "required_parts": "np_relay"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_RelievingGuard",
+      "prefix": "Secured Relief",
+      "required_parts": "np_RelievingGuard"
     },
     {
       "source": "inv_name_part",
@@ -23824,6 +24729,20 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_repkit_uni_TED_font",
+      "prefix": "Font of Life",
+      "required_parts": "np_repkit_uni_TED_font"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_repkit_uni_TOR_Outburst",
+      "prefix": "Outburst",
+      "required_parts": "np_repkit_uni_TOR_Outburst"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_repkit_uni_VLA_BloodIron",
       "prefix": "Oxidation",
       "required_parts": "np_repkit_uni_VLA_BloodIron"
@@ -23834,6 +24753,13 @@
       "part_id": "NP_Rhythm",
       "prefix": "Rhythm",
       "required_parts": "NP_Rhythm"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "NP_Ripple",
+      "prefix": "Ripple",
+      "required_parts": "NP_Ripple"
     },
     {
       "source": "inv_name_part",
@@ -23894,6 +24820,13 @@
     {
       "source": "inv_name_part",
       "type": "part_display_name",
+      "part_id": "np_Shardenfreude",
+      "prefix": "Shardenfreude",
+      "required_parts": "np_Shardenfreude"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
       "part_id": "np_silversliver",
       "prefix": "Silver Sliver",
       "required_parts": "np_silversliver"
@@ -23904,6 +24837,13 @@
       "part_id": "np_skully",
       "prefix": "Skully",
       "required_parts": "np_skully"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_Sledge",
+      "prefix": "Critical Decay",
+      "required_parts": "np_Sledge"
     },
     {
       "source": "inv_name_part",
@@ -23953,6 +24893,20 @@
       "part_id": "np_Testament",
       "prefix": "Divided Glow",
       "required_parts": "np_Testament"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_TradingUp",
+      "prefix": "Paperclip",
+      "required_parts": "np_TradingUp"
+    },
+    {
+      "source": "inv_name_part",
+      "type": "part_display_name",
+      "part_id": "np_Triplicate",
+      "prefix": "Triplicate",
+      "required_parts": "np_Triplicate"
     },
     {
       "source": "inv_name_part",

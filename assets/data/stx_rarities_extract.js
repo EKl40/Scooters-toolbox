@@ -130,6 +130,24 @@
   },
   {
     "manufacturer": "Ripper",
+    "itemType": "Shotgun",
+    "itemTypeString": "BOR_sg.comp_05_legendary_plumbbob",
+    "familyId": 7,
+    "itemId": 65,
+    "legendaryName": "Plumb Bob",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Ripper",
+    "itemType": "Shotgun",
+    "itemTypeString": "BOR_sg.comp_05_legendary_relay",
+    "familyId": 7,
+    "itemId": 85,
+    "legendaryName": "Astonisher",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Ripper",
     "itemType": "Shield",
     "itemTypeString": "BOR_shield.comp_05_legendary",
     "familyId": 300,
@@ -180,6 +198,15 @@
     "familyId": 19,
     "itemId": 18,
     "legendaryName": "Legendary",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Ripper",
+    "itemType": "SMG",
+    "itemTypeString": "BOR_sm.comp_05_legendary_enumeration",
+    "familyId": 19,
+    "itemId": 83,
+    "legendaryName": "Enumeration",
     "source": "Nexus extract"
   },
   {
@@ -243,6 +270,15 @@
     "familyId": 23,
     "itemId": 61,
     "legendaryName": "Abyss",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Ripper",
+    "itemType": "Sniper",
+    "itemTypeString": "BOR_sr.comp_05_legendary_devourer",
+    "familyId": 23,
+    "itemId": 83,
+    "legendaryName": "Devourer",
     "source": "Nexus extract"
   },
   {
@@ -345,7 +381,106 @@
     "source": "Nexus extract"
   },
   {
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_corpohacker.comp_05_legendary_01",
+    "familyId": 402,
+    "itemId": 52,
+    "legendaryName": "Devourer",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_corpohacker.comp_05_legendary_02",
+    "familyId": 402,
+    "itemId": 53,
+    "legendaryName": "Virophile",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_corpohacker.comp_05_legendary_03",
+    "familyId": 402,
+    "itemId": 54,
+    "legendaryName": "Montage Maker",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_corpohacker.comp_05_legendary_04",
+    "familyId": 402,
+    "itemId": 55,
+    "legendaryName": "Memory Hoarder",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_corpohacker.comp_05_legendary_05",
+    "familyId": 402,
+    "itemId": 56,
+    "legendaryName": "Trackstar",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_corpohacker.comp_05_legendary_06",
+    "familyId": 402,
+    "itemId": 217,
+    "legendaryName": "Functional Human",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_corpohacker.comp_05_legendary_dlc1",
+    "familyId": 402,
+    "itemId": 544,
+    "legendaryName": "Martyr",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_corpohacker.comp_05_legendary_dlc2",
+    "familyId": 402,
+    "itemId": 546,
+    "legendaryName": "Programmer",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_corpohacker.comp_05_legendary_raid1",
+    "familyId": 402,
+    "itemId": 543,
+    "legendaryName": "Boomer",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_corpohacker.comp_05_legendary_raid2",
+    "familyId": 402,
+    "itemId": 542,
+    "legendaryName": "Plague Engineer",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Corpohacker",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_corpohacker.comp_05_legendary_tuba",
+    "familyId": 402,
+    "itemId": 541,
+    "legendaryName": "Puppetmaster",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "itemTypeString": "CLASSMOD_dark_siren.comp_05_legendary_01",
     "familyId": 254,
@@ -354,7 +489,7 @@
     "source": "Nexus extract"
   },
   {
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "itemTypeString": "CLASSMOD_dark_siren.comp_05_legendary_02",
     "familyId": 254,
@@ -363,7 +498,7 @@
     "source": "Nexus extract"
   },
   {
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "itemTypeString": "CLASSMOD_dark_siren.comp_05_legendary_03",
     "familyId": 254,
@@ -372,7 +507,7 @@
     "source": "Nexus extract"
   },
   {
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "itemTypeString": "CLASSMOD_dark_siren.comp_05_legendary_04",
     "familyId": 254,
@@ -381,7 +516,7 @@
     "source": "Nexus extract"
   },
   {
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "itemTypeString": "CLASSMOD_dark_siren.comp_05_legendary_05",
     "familyId": 254,
@@ -390,7 +525,7 @@
     "source": "Nexus extract"
   },
   {
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "itemTypeString": "CLASSMOD_dark_siren.comp_05_legendary_06",
     "familyId": 254,
@@ -399,7 +534,7 @@
     "source": "Nexus extract"
   },
   {
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "itemTypeString": "CLASSMOD_dark_siren.comp_05_legendary_cowbell",
     "familyId": 254,
@@ -408,7 +543,16 @@
     "source": "Nexus extract"
   },
   {
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_dark_siren.comp_05_legendary_harmonica",
+    "familyId": 254,
+    "itemId": 542,
+    "legendaryName": "GOAT",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "itemTypeString": "CLASSMOD_dark_siren.comp_05_legendary_raid1",
     "familyId": 254,
@@ -417,7 +561,7 @@
     "source": "Nexus extract"
   },
   {
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "itemTypeString": "CLASSMOD_dark_siren.comp_05_legendary_raid2",
     "familyId": 254,
@@ -426,7 +570,7 @@
     "source": "Nexus extract"
   },
   {
-    "manufacturer": "Dark Siren",
+    "manufacturer": "Siren",
     "itemType": "Class Mod",
     "itemTypeString": "CLASSMOD_dark_siren.comp_05_legendary_tuba",
     "familyId": 254,
@@ -495,6 +639,15 @@
     "familyId": 256,
     "itemId": 541,
     "legendaryName": "Reaparición",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Exo Soldier",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_exo_soldier.comp_05_legendary_harmonica",
+    "familyId": 256,
+    "itemId": 543,
+    "legendaryName": "Masochist",
     "source": "Nexus extract"
   },
   {
@@ -590,6 +743,15 @@
   {
     "manufacturer": "Gravitar",
     "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_gravitar.comp_05_legendary_harmonica",
+    "familyId": 259,
+    "itemId": 545,
+    "legendaryName": "Ultracapacitor",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Gravitar",
+    "itemType": "Class Mod",
     "itemTypeString": "CLASSMOD_gravitar.comp_05_legendary_raid1",
     "familyId": 259,
     "itemId": 541,
@@ -675,6 +837,15 @@
     "familyId": 255,
     "itemId": 541,
     "legendaryName": "Tempest",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Paladin",
+    "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_paladin.comp_05_legendary_harmonica",
+    "familyId": 255,
+    "itemId": 543,
+    "legendaryName": "Wastelander",
     "source": "Nexus extract"
   },
   {
@@ -770,6 +941,15 @@
   {
     "manufacturer": "Robodealer",
     "itemType": "Class Mod",
+    "itemTypeString": "CLASSMOD_robodealer.comp_05_legendary_harmonica",
+    "familyId": 404,
+    "itemId": 542,
+    "legendaryName": "Table Hopper",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Robodealer",
+    "itemType": "Class Mod",
     "itemTypeString": "CLASSMOD_robodealer.comp_05_legendary_raid1",
     "familyId": 404,
     "itemId": 539,
@@ -833,6 +1013,15 @@
   {
     "manufacturer": "Daedalus",
     "itemType": "Assault Rifle",
+    "itemTypeString": "DAD_ar.comp_05_legendary_kaos",
+    "familyId": 13,
+    "itemId": 91,
+    "legendaryName": "Kaos",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Daedalus",
+    "itemType": "Assault Rifle",
     "itemTypeString": "DAD_ar.comp_05_legendary_lumberjack",
     "familyId": 13,
     "itemId": 72,
@@ -855,6 +1044,15 @@
     "familyId": 13,
     "itemId": 100,
     "legendaryName": "Oscar Mike",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Daedalus",
+    "itemType": "Assault Rifle",
+    "itemTypeString": "DAD_ar.comp_05_legendary_shardenfreude",
+    "familyId": 13,
+    "itemId": 93,
+    "legendaryName": "Shardenfreude",
     "source": "Nexus extract"
   },
   {
@@ -895,6 +1093,15 @@
   },
   {
     "manufacturer": "Daedalus",
+    "itemType": "Grenade",
+    "itemTypeString": "DAD_grenade_gadget.comp_05_legendary_pressurecooker",
+    "familyId": 270,
+    "itemId": 12,
+    "legendaryName": "Pressure Kettle",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Daedalus",
     "itemType": "Pistol",
     "itemTypeString": "DAD_ps.comp_05_legendary",
     "familyId": 2,
@@ -905,10 +1112,28 @@
   {
     "manufacturer": "Daedalus",
     "itemType": "Pistol",
+    "itemTypeString": "DAD_ps.comp_05_legendary_blackout",
+    "familyId": 2,
+    "itemId": 87,
+    "legendaryName": "Shield Overflow",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Daedalus",
+    "itemType": "Pistol",
     "itemTypeString": "DAD_ps.comp_05_legendary_rangefinder",
     "familyId": 2,
     "itemId": 59,
     "legendaryName": "Rangefinder",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Daedalus",
+    "itemType": "Pistol",
+    "itemTypeString": "DAD_ps.comp_05_legendary_silversliver",
+    "familyId": 2,
+    "itemId": 84,
+    "legendaryName": "Silver Sliver",
     "source": "Nexus extract"
   },
   {
@@ -994,6 +1219,15 @@
   },
   {
     "manufacturer": "Daedalus",
+    "itemType": "Shotgun",
+    "itemTypeString": "DAD_sg.comp_05_legendary_pragmate",
+    "familyId": 8,
+    "itemId": 84,
+    "legendaryName": "Pragmate",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Daedalus",
     "itemType": "Shield",
     "itemTypeString": "DAD_shield.comp_05_legendary",
     "familyId": 312,
@@ -1053,6 +1287,15 @@
     "familyId": 20,
     "itemId": 2,
     "legendaryName": "Prowler",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Daedalus",
+    "itemType": "SMG",
+    "itemTypeString": "DAD_sm.comp_05_legendary_handfrag",
+    "familyId": 20,
+    "itemId": 74,
+    "legendaryName": "Hand Frag",
     "source": "Nexus extract"
   },
   {
@@ -1175,6 +1418,15 @@
   {
     "manufacturer": "Jakobs",
     "itemType": "Assault Rifle",
+    "itemTypeString": "JAK_ar.comp_05_legendary_flashfuel",
+    "familyId": 27,
+    "itemId": 89,
+    "legendaryName": "Flash Fuel",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Jakobs",
+    "itemType": "Assault Rifle",
     "itemTypeString": "JAK_ar.comp_05_legendary_gomie",
     "familyId": 27,
     "itemId": 81,
@@ -1251,6 +1503,15 @@
     "familyId": 3,
     "itemId": 74,
     "legendaryName": "Legendary",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Jakobs",
+    "itemType": "Pistol",
+    "itemTypeString": "JAK_ps.comp_05_legendary_infection",
+    "familyId": 3,
+    "itemId": 91,
+    "legendaryName": "Infection",
     "source": "Nexus extract"
   },
   {
@@ -1355,6 +1616,15 @@
   {
     "manufacturer": "Jakobs",
     "itemType": "Shotgun",
+    "itemTypeString": "JAK_sg.comp_05_legendary_hippogun",
+    "familyId": 9,
+    "itemId": 106,
+    "legendaryName": "Hippo Gun",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Jakobs",
+    "itemType": "Shotgun",
     "itemTypeString": "JAK_sg.comp_05_legendary_rainbowvomit",
     "familyId": 9,
     "itemId": 85,
@@ -1382,6 +1652,15 @@
   {
     "manufacturer": "Jakobs",
     "itemType": "Shotgun",
+    "itemTypeString": "JAK_sg.comp_05_legendary_verce",
+    "familyId": 9,
+    "itemId": 104,
+    "legendaryName": "Verce",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Jakobs",
+    "itemType": "Shotgun",
     "itemTypeString": "JAK_sg.comp_06_pearl_constable",
     "familyId": 9,
     "itemId": 101,
@@ -1404,6 +1683,15 @@
     "familyId": 306,
     "itemId": 6,
     "legendaryName": "Oak-Aged Cask",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Jakobs",
+    "itemType": "Shield",
+    "itemTypeString": "JAK_shield.comp_05_legendary_exfoliatrix",
+    "familyId": 306,
+    "itemId": 11,
+    "legendaryName": "Exfoliatrix",
     "source": "Nexus extract"
   },
   {
@@ -1445,10 +1733,28 @@
   {
     "manufacturer": "Jakobs",
     "itemType": "Sniper",
+    "itemTypeString": "JAK_sr.comp_05_legendary_burrow",
+    "familyId": 24,
+    "itemId": 83,
+    "legendaryName": "PRISM",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Jakobs",
+    "itemType": "Sniper",
     "itemTypeString": "JAK_sr.comp_05_legendary_fearstalker",
     "familyId": 24,
     "itemId": 78,
     "legendaryName": "Fearstalker",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Jakobs",
+    "itemType": "Sniper",
+    "itemTypeString": "JAK_sr.comp_05_legendary_outback",
+    "familyId": 24,
+    "itemId": 87,
+    "legendaryName": "Wind Skimmer",
     "source": "Nexus extract"
   },
   {
@@ -1494,6 +1800,15 @@
     "familyId": 263,
     "itemId": 8,
     "legendaryName": "Legendary",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Maliwan",
+    "itemType": "Grenade",
+    "itemTypeString": "MAL_grenade_gadget.comp_05_legendary_brudder",
+    "familyId": 263,
+    "itemId": 22,
+    "legendaryName": "Li'l Brudder",
     "source": "Nexus extract"
   },
   {
@@ -1584,6 +1899,15 @@
     "familyId": 10,
     "itemId": 99,
     "legendaryName": "Legendary",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Maliwan",
+    "itemType": "Shotgun",
+    "itemTypeString": "MAL_sg.comp_05_legendary_assembler",
+    "familyId": 10,
+    "itemId": 86,
+    "legendaryName": "Decompiler",
     "source": "Nexus extract"
   },
   {
@@ -1688,6 +2012,15 @@
   {
     "manufacturer": "Maliwan",
     "itemType": "SMG",
+    "itemTypeString": "MAL_sm.comp_05_legendary_accretion",
+    "familyId": 21,
+    "itemId": 93,
+    "legendaryName": "Honeymooner",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Maliwan",
+    "itemType": "SMG",
     "itemTypeString": "MAL_sm.comp_05_legendary_firework",
     "familyId": 21,
     "itemId": 83,
@@ -1760,6 +2093,15 @@
   {
     "manufacturer": "Maliwan",
     "itemType": "Sniper",
+    "itemTypeString": "MAL_sr.comp_05_legendary_clarity",
+    "familyId": 25,
+    "itemId": 92,
+    "legendaryName": "Clarity",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Maliwan",
+    "itemType": "Sniper",
     "itemTypeString": "MAL_sr.comp_05_legendary_complex_root",
     "familyId": 25,
     "itemId": 59,
@@ -1791,6 +2133,15 @@
     "familyId": 25,
     "itemId": 87,
     "legendaryName": "Manifest",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Maliwan",
+    "itemType": "Sniper",
+    "itemTypeString": "MAL_sr.comp_05_legendary_stealth",
+    "familyId": 25,
+    "itemId": 83,
+    "legendaryName": "Stealth & Seek",
     "source": "Nexus extract"
   },
   {
@@ -1832,6 +2183,15 @@
   {
     "manufacturer": "Order",
     "itemType": "Assault Rifle",
+    "itemTypeString": "ORD_ar.comp_05_legendary_avarice",
+    "familyId": 15,
+    "itemId": 84,
+    "legendaryName": "Avarice",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Order",
+    "itemType": "Assault Rifle",
     "itemTypeString": "ORD_ar.comp_05_legendary_crowsourced",
     "familyId": 15,
     "itemId": 77,
@@ -1858,6 +2218,24 @@
   },
   {
     "manufacturer": "Order",
+    "itemType": "Assault Rifle",
+    "itemTypeString": "ORD_ar.comp_05_legendary_pchonk",
+    "familyId": 15,
+    "itemId": 79,
+    "legendaryName": "Pachonk",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Order",
+    "itemType": "Assault Rifle",
+    "itemTypeString": "ORD_ar.comp_05_legendary_testament",
+    "familyId": 15,
+    "itemId": 81,
+    "legendaryName": "Divided Glow",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Order",
     "itemType": "Grenade",
     "itemTypeString": "ORD_grenade_gadget.comp_05_legendary",
     "familyId": 272,
@@ -1872,6 +2250,15 @@
     "familyId": 272,
     "itemId": 10,
     "legendaryName": "Chaumurky",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Order",
+    "itemType": "Grenade",
+    "itemTypeString": "ORD_grenade_gadget.comp_05_legendary_alignment",
+    "familyId": 272,
+    "itemId": 15,
+    "legendaryName": "Alignment",
     "source": "Nexus extract"
   },
   {
@@ -1917,6 +2304,15 @@
     "familyId": 4,
     "itemId": 80,
     "legendaryName": "Noisy Cricket",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Order",
+    "itemType": "Pistol",
+    "itemTypeString": "ORD_ps.comp_05_legendary_patience",
+    "familyId": 4,
+    "itemId": 89,
+    "legendaryName": "Virtue",
     "source": "Nexus extract"
   },
   {
@@ -2039,6 +2435,15 @@
   {
     "manufacturer": "Order",
     "itemType": "Sniper",
+    "itemTypeString": "ORD_sr.comp_05_legendary_petanque",
+    "familyId": 26,
+    "itemId": 86,
+    "legendaryName": "Petanque",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Order",
+    "itemType": "Sniper",
     "itemTypeString": "ORD_sr.comp_05_legendary_seamstress",
     "familyId": 26,
     "itemId": 79,
@@ -2156,6 +2561,15 @@
   {
     "manufacturer": "Tediore",
     "itemType": "Assault Rifle",
+    "itemTypeString": "TED_ar.comp_05_legendary_hotmod",
+    "familyId": 14,
+    "itemId": 93,
+    "legendaryName": "Lovelorn",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Tediore",
+    "itemType": "Assault Rifle",
     "itemTypeString": "TED_ar.comp_05_legendary_laserdisc",
     "familyId": 14,
     "itemId": 79,
@@ -2237,6 +2651,15 @@
   {
     "manufacturer": "Tediore",
     "itemType": "Pistol",
+    "itemTypeString": "TED_ps.comp_05_legendary_earlyexcess",
+    "familyId": 5,
+    "itemId": 99,
+    "legendaryName": "Overconsumption",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Tediore",
+    "itemType": "Pistol",
     "itemTypeString": "TED_ps.comp_05_legendary_inscriber",
     "familyId": 5,
     "itemId": 86,
@@ -2268,6 +2691,15 @@
     "familyId": 5,
     "itemId": 1,
     "legendaryName": "Sideshow",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Tediore",
+    "itemType": "Weapon",
+    "itemTypeString": "TED_repair_kit.comp_05_legendary_font",
+    "familyId": 290,
+    "itemId": 9,
+    "legendaryName": "Font",
     "source": "Nexus extract"
   },
   {
@@ -2313,6 +2745,15 @@
     "familyId": 11,
     "itemId": 82,
     "legendaryName": "Eigenburst",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Tediore",
+    "itemType": "Shotgun",
+    "itemTypeString": "TED_sg.comp_05_legendary_fourier",
+    "familyId": 11,
+    "itemId": 92,
+    "legendaryName": "Fourier's Malady",
     "source": "Nexus extract"
   },
   {
@@ -2470,6 +2911,15 @@
   },
   {
     "manufacturer": "Torgue",
+    "itemType": "Assault Rifle",
+    "itemTypeString": "TOR_ar.comp_05_legendary_ripple",
+    "familyId": 17,
+    "itemId": 90,
+    "legendaryName": "Ripple",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Torgue",
     "itemType": "Grenade",
     "itemTypeString": "TOR_grenade_gadget.comp_05_legendary",
     "familyId": 298,
@@ -2529,6 +2979,15 @@
     "familyId": 273,
     "itemId": 34,
     "legendaryName": "Sprezzatura",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Torgue",
+    "itemType": "Heavy Weapon",
+    "itemTypeString": "TOR_hw.comp_05_legendary_loiter",
+    "familyId": 273,
+    "itemId": 45,
+    "legendaryName": "Loiter Sploiter",
     "source": "Nexus extract"
   },
   {
@@ -2606,10 +3065,28 @@
   {
     "manufacturer": "Torgue",
     "itemType": "Pistol",
+    "itemTypeString": "TOR_ps.comp_05_legendary_sledge",
+    "familyId": 6,
+    "itemId": 88,
+    "legendaryName": "Critical Decay",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Torgue",
+    "itemType": "Pistol",
     "itemTypeString": "TOR_ps.comp_06_pearl_herald",
     "familyId": 6,
     "itemId": 85,
     "legendaryName": "Herald",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Torgue",
+    "itemType": "Weapon",
+    "itemTypeString": "TOR_repair_kit.comp_05_legendary_outburst",
+    "familyId": 261,
+    "itemId": 9,
+    "legendaryName": "Outburst",
     "source": "Nexus extract"
   },
   {
@@ -2628,6 +3105,15 @@
     "familyId": 12,
     "itemId": 55,
     "legendaryName": "Legendary",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Torgue",
+    "itemType": "Shotgun",
+    "itemTypeString": "TOR_sg.comp_05_legendary_aerodramatic",
+    "familyId": 12,
+    "itemId": 86,
+    "legendaryName": "AeroDramatic",
     "source": "Nexus extract"
   },
   {
@@ -2704,6 +3190,15 @@
   },
   {
     "manufacturer": "Torgue",
+    "itemType": "Shield",
+    "itemTypeString": "TOR_shield.comp_05_legendary_hydrowerks",
+    "familyId": 321,
+    "itemId": 12,
+    "legendaryName": "Hydrowerks",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Torgue",
     "itemType": "Weapon",
     "itemTypeString": "TOR_terminal_combat.comp_05_legendary",
     "familyId": 327,
@@ -2768,6 +3263,15 @@
   {
     "manufacturer": "Vladof",
     "itemType": "Assault Rifle",
+    "itemTypeString": "VLA_ar.comp_05_legendary_extinction",
+    "familyId": 18,
+    "itemId": 105,
+    "legendaryName": "Eradication",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Vladof",
+    "itemType": "Assault Rifle",
     "itemTypeString": "VLA_ar.comp_05_legendary_lasercutter",
     "familyId": 18,
     "itemId": 103,
@@ -2781,6 +3285,15 @@
     "familyId": 18,
     "itemId": 63,
     "legendaryName": "Lucian's Flank",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Vladof",
+    "itemType": "Assault Rifle",
+    "itemTypeString": "VLA_ar.comp_05_legendary_triplicate",
+    "familyId": 18,
+    "itemId": 107,
+    "legendaryName": "Triplicate",
     "source": "Nexus extract"
   },
   {
@@ -2867,6 +3380,15 @@
   {
     "manufacturer": "Vladof",
     "itemType": "Heavy Weapon",
+    "itemTypeString": "VLA_hw.comp_05_legendary_quattro",
+    "familyId": 282,
+    "itemId": 33,
+    "legendaryName": "Quadratus",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Vladof",
+    "itemType": "Heavy Weapon",
     "itemTypeString": "VLA_hw.comp_05_legendary_splatoon",
     "familyId": 282,
     "itemId": 1,
@@ -2880,6 +3402,15 @@
     "familyId": 269,
     "itemId": 5,
     "legendaryName": "Adrenaline Pump",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Vladof",
+    "itemType": "Weapon",
+    "itemTypeString": "VLA_repair_kit.comp_05_legendary_bloodiron",
+    "familyId": 269,
+    "itemId": 9,
+    "legendaryName": "Bloodiron",
     "source": "Nexus extract"
   },
   {
@@ -2925,6 +3456,15 @@
     "familyId": 22,
     "itemId": 39,
     "legendaryName": "Legendary",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Vladof",
+    "itemType": "SMG",
+    "itemTypeString": "VLA_sm.comp_05_legendary_aura",
+    "familyId": 22,
+    "itemId": 105,
+    "legendaryName": "Tempered Essence",
     "source": "Nexus extract"
   },
   {
@@ -2997,6 +3537,15 @@
     "familyId": 16,
     "itemId": 69,
     "legendaryName": "Midnight Defiance",
+    "source": "Nexus extract"
+  },
+  {
+    "manufacturer": "Vladof",
+    "itemType": "Sniper",
+    "itemTypeString": "VLA_sr.comp_05_legendary_exhibition",
+    "familyId": 16,
+    "itemId": 93,
+    "legendaryName": "Exhibition",
     "source": "Nexus extract"
   },
   {

@@ -2,7 +2,7 @@
   'use strict';
   window.STX_PEARL_GEAR_CATALOG = {
   "version": "Raid 2 (May 2026)",
-  "source": "Borderlands 4 Gear Database (PDF/DOCX) + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync",
+  "source": "Borderlands 4 Gear Database (PDF/DOCX) + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync",
   "byNorm": {
     "jailbroken": {
       "name": "Jail-Broken Gatling",
@@ -510,14 +510,14 @@
     "kaos": {
       "name": "kaos",
       "isPearlescent": true,
-      "weaponType": "",
-      "manufacturer": "",
+      "weaponType": "Assault Rifle",
+      "manufacturer": "Daedalus",
       "redText": "",
       "ability": "",
       "source": "",
       "status": "export_synced",
       "notes": "Export-synced pearl (base_comp_06_pearlescent).",
-      "expectedInv": "",
+      "expectedInv": "dad_ar",
       "spawnTokens": [
         "kaos"
       ]

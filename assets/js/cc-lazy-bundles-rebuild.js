@@ -113,7 +113,7 @@
     if (!src) return false;
     /* names.js seeds Name+Skin (+ c4sh Skills). Real VH skill names live in
        legacy_classmod_skills_full.js — require Skill rows for every vault hunter. */
-    var required = ['vex', 'amon', 'rafa', 'harlowe', 'c4sh'];
+    var required = ['vex', 'amon', 'rafa', 'harlowe', 'c4sh', 'loveless'];
     for (var r = 0; r < required.length; r++) {
       var list = src[required[r]];
       if (!Array.isArray(list) || !list.length) return false;

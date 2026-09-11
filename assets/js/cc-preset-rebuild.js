@@ -15,9 +15,10 @@
     return byId('yamlInput') || byId('fullYamlInput') || document.querySelector('textarea[aria-label="YAML editor"]');
   }
 
-  var __oak2CharXpProg = { multiplier: 60, power: 2.8, offset: 7.33, levelCap: 60, anchorLevel: 50, anchorCumulativePoints: 3430227 };
+  var __oak2CharXpProg = { multiplier: 60, power: 2.8, offset: 7.33, levelCap: 70, anchorLevel: 50, anchorCumulativePoints: 3430227 };
   var __oak2MayhemLevelCap = 20;
   var __oak2VaultHunterLevelCap = 7;
+  var __yamlItemLevelCap = 70;
   var __oak2CharXpScale = null;
   function oak2CharacterCumulativeXpPoints(level) {
     var p = __oak2CharXpProg;
@@ -47,8 +48,6 @@
     if (!Number.isFinite(L)) L = __yamlItemLevelCap;
     return Math.max(1, Math.min(__yamlItemLevelCap, L));
   };
-
-  var __yamlItemLevelCap = 60;
   function clampYamlItemLevel(n) {
     var L = Math.floor(Number(n));
     if (!Number.isFinite(L)) L = __yamlItemLevelCap;
@@ -967,8 +966,11 @@
     if (!(window.ensurePresetDataLoaded && window.ensurePresetDataLoaded())) return stubNeedFullToolbox('Complete All Challenges');
     var data = (typeof window.getYamlDataFromEditor === 'function') ? window.getYamlDataFromEditor() : null;
     if (!data) return alert('Load or paste a YAML file first.');
+    /* stats.challenge.* UVH rank-up counters (through UVH 6 unlock path). */
     var uvh = { mission_uvh_1a: 1, mission_uvh_1b: 1, mission_uvh_1c: 1, mission_uvh_2a: 1, mission_uvh_2b: 1, mission_uvh_2c: 1, mission_uvh_2d: 1, mission_uvh_3a: 1, mission_uvh_3b: 1, mission_uvh_3c: 1, mission_uvh_3d: 1, mission_uvh_4a: 1, mission_uvh_4b: 1, mission_uvh_4c: 1, mission_uvh_4d: 1, mission_uvh_5a: 1, mission_uvh_5b: 1, mission_uvh_5c: 1, mission_uvh_6a: 1, uvh_1_finalchallenge: 1, uvh_2_finalchallenge: 1, uvh_3_finalchallenge: 1, uvh_4_finalchallenge: 1, uvh_5_finalchallenge: 1, uvh_6_finalchallenge: 1 };
-    updateStatsCounters(uvh);
+    updateStatsCounters(uvh, 'challenge');
+    /* UVH 7 uses stats.dlc_challenge.uvh_7 (Challenge_UVH_Rankup_7_Parent). */
+    updateStatsCounters({ uvh_7: 1 }, 'dlc_challenge');
     if (typeof window.mergeMissionsetsWithPrefix === 'function') window.mergeMissionsetsWithPrefix('missionset_zoneactivity_');
   };
   window.completeAllAchievements = function () {

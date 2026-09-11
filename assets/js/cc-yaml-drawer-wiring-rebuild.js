@@ -349,10 +349,12 @@
       var vc02El = byId('yaml-profile-vc02-level');
       var vc03El = byId('yaml-profile-vc03-level');
       var vc04El = byId('yaml-profile-vc04-level');
+      var vc05El = byId('yaml-profile-vc05-level');
       var vcTok1El = byId('yaml-profile-vaultcard01-tokens');
       var vcTok2El = byId('yaml-profile-vaultcard02-tokens');
       var vcTok3El = byId('yaml-profile-vaultcard03-tokens');
       var vcTok4El = byId('yaml-profile-vaultcard04-tokens');
+      var vcTok5El = byId('yaml-profile-vaultcard05-tokens');
       var echoTokEl = byId('yaml-profile-echotoken-points');
       if (data.globals && typeof data.globals === 'object') {
         var gvh = data.globals.highest_unlocked_vault_hunter_level;
@@ -370,13 +372,30 @@
       var kind = typeof detectYamlKind === 'function' ? detectYamlKind(text) : 'unknown';
       var bankSum = byId('yaml-profile-bank-summary');
       if (kind === 'profile' && bankSum) {
-        if (typeof window.__ccExtractBankSerialsSimple === 'function' && typeof window.__ccNextAvailableBankSlot === 'function') {
-          var bankSerials = window.__ccExtractBankSerialsSimple(text) || [];
+        /* Prefer in-memory inventory buffer (already extracted) — do not re-scan multi‑MB YAML. */
+        var bankSerials = null;
+        if (window.__yamlInventorySource === 'bank' && Array.isArray(window.extractedSerials)) {
+          bankSerials = window.extractedSerials;
+        } else if (typeof window.__ccExtractBankSerialsSimple === 'function') {
+          bankSerials = window.__ccExtractBankSerialsSimple(text) || [];
+        }
+        if (bankSerials) {
           var filled = 0;
           for (var bi = 0; bi < bankSerials.length; bi++) {
             if (bankSerials[bi] && String(bankSerials[bi].serial || '').trim()) filled++;
           }
-          var nextSl = window.__ccNextAvailableBankSlot(text);
+          var nextSl = filled;
+          if (typeof window.__ccNextAvailableBankSlot === 'function' && bankSerials === window.extractedSerials) {
+            var maxSlot = -1;
+            for (var si = 0; si < bankSerials.length; si++) {
+              var sn = bankSerials[si] && bankSerials[si].slot;
+              var n = parseInt(sn, 10);
+              if (Number.isFinite(n) && n > maxSlot) maxSlot = n;
+            }
+            nextSl = maxSlot + 1;
+          } else if (typeof window.__ccNextAvailableBankSlot === 'function') {
+            nextSl = window.__ccNextAvailableBankSlot(text);
+          }
           bankSum.textContent =
             'Shared bank: ' + filled + ' item slot(s) with serials, ' + bankSerials.length + ' slot entrie(s) parsed — next suggested index: ' + nextSl +
             ' (YAML path: domains.local.shared.inventory.items.bank).';
@@ -401,15 +420,18 @@
         var e2 = sharedExpByType('VaultCard02_Experience');
         var e3 = sharedExpByType('VaultCard03_Experience');
         var e4 = sharedExpByType('VaultCard04_Experience');
+        var e5 = sharedExpByType('VaultCard05_Experience');
         if (vc01El) vc01El.value = (e1 && e1.level != null) ? String(e1.level) : '';
         if (vc02El) vc02El.value = (e2 && e2.level != null) ? String(e2.level) : '';
         if (vc03El) vc03El.value = (e3 && e3.level != null) ? String(e3.level) : '';
         if (vc04El) vc04El.value = (e4 && e4.level != null) ? String(e4.level) : '';
+        if (vc05El) vc05El.value = (e5 && e5.level != null) ? String(e5.level) : '';
         var cur = sh.currencies || {};
         if (vcTok1El) vcTok1El.value = (cur.vaultcard01_tokens != null) ? String(cur.vaultcard01_tokens) : '';
         if (vcTok2El) vcTok2El.value = (cur.vaultcard02_tokens != null) ? String(cur.vaultcard02_tokens) : '';
         if (vcTok3El) vcTok3El.value = (cur.vaultcard03_tokens != null) ? String(cur.vaultcard03_tokens) : '';
         if (vcTok4El) vcTok4El.value = (cur.vaultcard04_tokens != null) ? String(cur.vaultcard04_tokens) : '';
+        if (vcTok5El) vcTok5El.value = (cur.vaultcard05_tokens != null) ? String(cur.vaultcard05_tokens) : '';
       }
       var progShared = data.domains && data.domains.local && data.domains.local.progression_shared;
       if (echoTokEl && progShared && progShared.point_pools && progShared.point_pools.echotokenprogresspoints != null) {
@@ -442,16 +464,23 @@
     if (delay == null) {
       var ta = yamlTextarea();
       var len = ta && ta.value ? ta.value.length : 0;
-      if (len > 500000) delay = 500;
-      else if (len > 200000) delay = 350;
-      else if (len > 80000) delay = 250;
-      else if (len > 30000) delay = 180;
+      /* Large banks: wait for inventory extract first, then parse off the critical path. */
+      if (len > 800000) delay = 900;
+      else if (len > 500000) delay = 650;
+      else if (len > 200000) delay = 450;
+      else if (len > 80000) delay = 300;
+      else if (len > 30000) delay = 200;
       else delay = 120;
     }
     if (syncFieldsTimer) clearTimeout(syncFieldsTimer);
     syncFieldsTimer = setTimeout(function () {
       syncFieldsTimer = null;
-      if (window.syncYamlToFields) window.syncYamlToFields();
+      var run = function () {
+        if (window.syncYamlToFields) window.syncYamlToFields();
+      };
+      if (typeof window.stxYieldToMain === 'function') window.stxYieldToMain(run);
+      else if (typeof requestIdleCallback === 'function') requestIdleCallback(function () { run(); }, { timeout: 1200 });
+      else run();
     }, delay);
   };
   window.setYAMLDifficulty = function (mode) {
@@ -473,8 +502,8 @@
     if (window.syncYamlToFields) window.syncYamlToFields();
   };
   window.setCharacterPreset = function (classKey) {
-    var CLASS_MAP = { DarkSiren: { name: 'Vex', class: 'Siren' }, Paladin: { name: 'Amon', class: 'Forgeknight' }, Gravitar: { name: 'Harlowe', class: 'Gravitar' }, ExoSoldier: { name: 'Rafa', class: 'Exo-Soldier' }, RoboDealer: { name: 'C4sh', class: 'Robodealer' } };
-    var nameToKey = { Amon: 'Paladin', Vex: 'DarkSiren', Harlowe: 'Gravitar', Rafa: 'ExoSoldier', C4sh: 'RoboDealer' };
+    var CLASS_MAP = { DarkSiren: { name: 'Vex', class: 'Siren' }, Paladin: { name: 'Amon', class: 'Forgeknight' }, Gravitar: { name: 'Harlowe', class: 'Gravitar' }, ExoSoldier: { name: 'Rafa', class: 'Exo-Soldier' }, RoboDealer: { name: 'C4sh', class: 'Robodealer' }, CorpoHacker: { name: 'Loveless', class: 'The Hacker' } };
+    var nameToKey = { Amon: 'Paladin', Vex: 'DarkSiren', Harlowe: 'Gravitar', Rafa: 'ExoSoldier', C4sh: 'RoboDealer', Loveless: 'CorpoHacker', Hacker: 'CorpoHacker' };
     var resolvedKey = CLASS_MAP[classKey] ? classKey : (nameToKey[classKey] || classKey);
     var meta = CLASS_MAP[resolvedKey];
     if (!meta) return;
@@ -591,21 +620,31 @@
     return true;
   }
 
-  /** Minimal VC4 rows when a profile has no Vault Card 4 yet (matches fresh game saves). */
-  function ensureVaultCard04Scaffold(sh, level, tokens) {
-    if (!sh) return;
+  /** Minimal VC4/VC5 rows when a profile has no Vault Card N yet (matches fresh game saves). */
+  function ensureVaultCardScaffold(sh, cardNum, level, tokens) {
+    if (!sh || !cardNum) return;
+    var n = String(cardNum).padStart(2, '0');
+    var expType = 'VaultCard' + n + '_Experience';
+    var tokKey = 'vaultcard' + n + '_tokens';
     sh.currencies = sh.currencies || {};
     var exp = ensureSharedExperienceArray(sh);
-    var hadExp = !!sharedExpEntry(sh, 'VaultCard04_Experience');
-    var hadTok = Object.prototype.hasOwnProperty.call(sh.currencies, 'vaultcard04_tokens');
-    if (tokens != null) sh.currencies.vaultcard04_tokens = tokens;
-    else if (!hadTok && level != null) sh.currencies.vaultcard04_tokens = 0;
+    var hadExp = !!sharedExpEntry(sh, expType);
+    var hadTok = Object.prototype.hasOwnProperty.call(sh.currencies, tokKey);
+    if (tokens != null) sh.currencies[tokKey] = tokens;
+    else if (!hadTok && level != null) sh.currencies[tokKey] = 0;
     if (level != null) {
-      var created = upsertVaultCardLevel(exp, 'VaultCard04_Experience', level);
-      if (created) hadExp = true;
+      upsertVaultCardLevel(exp, expType, level);
     } else if (!hadExp && tokens != null) {
-      upsertVaultCardLevel(exp, 'VaultCard04_Experience', 1);
+      upsertVaultCardLevel(exp, expType, 1);
     }
+  }
+
+  function ensureVaultCard04Scaffold(sh, level, tokens) {
+    ensureVaultCardScaffold(sh, 4, level, tokens);
+  }
+
+  function ensureVaultCard05Scaffold(sh, level, tokens) {
+    ensureVaultCardScaffold(sh, 5, level, tokens);
   }
 
   window.applyProfileYamlFieldChanges = function () {
@@ -620,10 +659,12 @@
     var vc02El = byId('yaml-profile-vc02-level');
     var vc03El = byId('yaml-profile-vc03-level');
     var vc04El = byId('yaml-profile-vc04-level');
+    var vc05El = byId('yaml-profile-vc05-level');
     var vcTok1El = byId('yaml-profile-vaultcard01-tokens');
     var vcTok2El = byId('yaml-profile-vaultcard02-tokens');
     var vcTok3El = byId('yaml-profile-vaultcard03-tokens');
     var vcTok4El = byId('yaml-profile-vaultcard04-tokens');
+    var vcTok5El = byId('yaml-profile-vaultcard05-tokens');
     var echoTokEl = byId('yaml-profile-echotoken-points');
     var vhProfUnlockedEl = byId('yaml-profile-vh-unlocked');
     var hu = parseOptionalInt(vhProfUnlockedEl);
@@ -639,6 +680,7 @@
     var t2 = parseOptionalInt(vcTok2El);
     var t3 = parseOptionalInt(vcTok3El);
     var t4 = parseOptionalInt(vcTok4El);
+    var t5 = parseOptionalInt(vcTok5El);
     if (t1 != null || t2 != null || t3 != null) {
       sh.currencies = sh.currencies || {};
       if (t1 != null) sh.currencies.vaultcard01_tokens = t1;
@@ -649,6 +691,7 @@
     var l2 = parseOptionalInt(vc02El);
     var l3 = parseOptionalInt(vc03El);
     var l4 = parseOptionalInt(vc04El);
+    var l5 = parseOptionalInt(vc05El);
     if (l1 != null || l2 != null || l3 != null) {
       var exp = ensureSharedExperienceArray(sh);
       upsertVaultCardLevel(exp, 'VaultCard01_Experience', l1);
@@ -656,6 +699,7 @@
       upsertVaultCardLevel(exp, 'VaultCard03_Experience', l3);
     }
     if (l4 != null || t4 != null) ensureVaultCard04Scaffold(sh, l4, t4);
+    if (l5 != null || t5 != null) ensureVaultCard05Scaffold(sh, l5, t5);
     var echoN = parseOptionalInt(echoTokEl);
     if (echoN != null) {
       data.domains.local.progression_shared = data.domains.local.progression_shared || {};

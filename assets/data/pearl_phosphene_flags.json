@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T21:09:15.372Z",
+  "generated_at": "2026-09-10T23:10:43.512Z",
   "source": "Nexus NCS export (challenge shiny + itempool_*_shiny + Cosmetics_Weapon_Shiny_*)",
   "proof_rule": "Challenge_Shiny_* / challengereward_*_shiny_* for slug, OR itempool_*_shiny with legendary/pearl-legendary comp + Cosmetics_Weapon_Shiny_*",
   "nexus_dir": "references/bl4_toolbox_export/ncs/json",
@@ -13,12 +13,12 @@
     "Crow-Sourced Order AR must never inherit Vladof CrowdSourced / Midnight Defiance challenge proof."
   ],
   "stats": {
-    "total": 20,
-    "verified_yes": 3,
+    "total": 23,
+    "verified_yes": 6,
     "verified_no": 17,
     "ambiguous": 0,
     "challenge_hits": 0,
-    "pool_hits": 1
+    "pool_hits": 6
   },
   "flags": {
     "jailbroken": {
@@ -27,6 +27,13 @@
       "display_name": "Jail-Broken Gatling",
       "gear_slug": "jailbroken",
       "evidence": [
+        {
+          "kind": "itempool_shiny",
+          "itempool_shiny": "itempool_mal_sg_05_legendary_jailbroken_shiny",
+          "comp": "BOR_SM.comp_05_legendary_Jailbroken",
+          "cosmetic": "Cosmetics_Weapon_Shiny_Jailbroken",
+          "matched_key": "jailbroken"
+        },
         {
           "kind": "override",
           "notes": "Curated: Jail-Broken Gatling phosphene (Subjugator pearl) — export ItemPoolList chunk may omit shiny proof.",
@@ -100,6 +107,13 @@
       "display_name": "Crazed Earl",
       "gear_slug": "crazedearl",
       "evidence": [
+        {
+          "kind": "itempool_shiny",
+          "itempool_shiny": "itempool_mal_sg_05_legendary_crazedearl_shiny",
+          "comp": "BOR_SG.comp_05_legendary_CrazedEarl",
+          "cosmetic": "Cosmetics_Weapon_Shiny_crazedEarl",
+          "matched_key": "crazedearl"
+        },
         {
           "kind": "override",
           "notes": "Curated: Crazed Earl phosphene — dedicated Crazy Earl pool; export may lack Challenge_Shiny row.",
@@ -205,12 +219,60 @@
       "notes": "Export: no Challenge_Shiny_* / challengereward_*_shiny_* and no itempool_*_shiny with Cosmetics_Weapon_Shiny_* for this pearl slug."
     },
     "pchonk": {
-      "can_be_phosphene": false,
-      "status": "verified_no",
+      "can_be_phosphene": true,
+      "status": "verified_yes",
       "display_name": "pchonk",
       "gear_slug": "pchonk",
+      "evidence": [
+        {
+          "kind": "itempool_shiny",
+          "itempool_shiny": "itempool_ord_ar_05_legendary_pchonk_shiny",
+          "comp": "ORD_AR.comp_05_legendary_PChonk",
+          "cosmetic": "Cosmetics_Weapon_Shiny_Pchonk",
+          "matched_key": "pchonk"
+        }
+      ],
+      "notes": "Export: shiny pool itempool_ord_ar_05_legendary_pchonk_shiny + Cosmetics_Weapon_Shiny_Pchonk"
+    },
+    "aerodramatic": {
+      "can_be_phosphene": true,
+      "status": "verified_yes",
+      "display_name": "aerodramatic",
+      "gear_slug": "aerodramatic",
+      "evidence": [
+        {
+          "kind": "itempool_shiny",
+          "itempool_shiny": "itempool_mal_sg_05_legendary_aerodramatic_shiny",
+          "comp": "TOR_SG.comp_05_legendary_AeroDramatic",
+          "cosmetic": "Cosmetics_Weapon_Shiny_AeroDramatic",
+          "matched_key": "aerodramatic"
+        }
+      ],
+      "notes": "Export: shiny pool itempool_mal_sg_05_legendary_aerodramatic_shiny + Cosmetics_Weapon_Shiny_AeroDramatic"
+    },
+    "quattro": {
+      "can_be_phosphene": false,
+      "status": "verified_no",
+      "display_name": "quattro",
+      "gear_slug": "quattro",
       "evidence": [],
       "notes": "Export: no Challenge_Shiny_* / challengereward_*_shiny_* and no itempool_*_shiny with Cosmetics_Weapon_Shiny_* for this pearl slug."
+    },
+    "relay": {
+      "can_be_phosphene": true,
+      "status": "verified_yes",
+      "display_name": "relay",
+      "gear_slug": "relay",
+      "evidence": [
+        {
+          "kind": "itempool_shiny",
+          "itempool_shiny": "itempool_bor_sg_05_legendary_relay_shiny",
+          "comp": "BOR_SG.comp_05_legendary_relay",
+          "cosmetic": "Cosmetics_Weapon_Shiny_relay",
+          "matched_key": "relay"
+        }
+      ],
+      "notes": "Export: shiny pool itempool_bor_sg_05_legendary_relay_shiny + Cosmetics_Weapon_Shiny_relay"
     }
   }
 }

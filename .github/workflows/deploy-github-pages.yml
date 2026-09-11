@@ -32,14 +32,19 @@ jobs:
           cp index.html _site/
           [ -f robots.txt ] && cp robots.txt _site/
           [ -f sitemap.xml ] && cp sitemap.xml _site/
+          [ -f favicon.ico ] && cp favicon.ico _site/
+          [ -f apple-touch-icon.png ] && cp apple-touch-icon.png _site/
           for f in google*.html; do [ -f "$f" ] && cp "$f" _site/; done || true
           # Never ship a CNAME in the artifact; custom host belongs in repo Settings only (and must be removed to drop it).
           rm -f _site/CNAME
 
-      - name: Patch index for Pages + shared PHP API
+      - name: Patch Pages mirror (SEO → primary; counters → PHP host)
         env:
-          GHPAGES_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
-          STX_SHARED_API_BASE: https://save-editor.be/Scooters_TBX
+          # Primary for Google — mirrors must not steal ranking from scooterstoolbox.com
+          SEO_CANONICAL_HOST: https://scooterstoolbox.com
+          STX_SHARED_API_BASE: https://scooterstoolbox.com
+          # Informational only (where this mirror is served)
+          GHPAGES_SITE_URL: https://squ1ggs.github.io/Scooters-toolbox-V2/
         run: node scripts/patch-index-for-github-pages.mjs _site
 
       - uses: actions/upload-pages-artifact@v3

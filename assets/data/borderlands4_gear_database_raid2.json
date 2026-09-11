@@ -1,6 +1,6 @@
 {
   "version": "Raid 2 (May 2026)",
-  "source": "Borderlands 4 Gear Database (PDF/DOCX) + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync",
+  "source": "Borderlands 4 Gear Database (PDF/DOCX) + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync + Nexus export sync",
   "pearlescent_weapons": [
     {
       "name": "Jail-Broken Gatling",
@@ -336,6 +336,48 @@
       "alternateEditorComps": [
         "ord_ar.comp_05_legendary_pchonk"
       ]
+    },
+    {
+      "name": "aerodramatic",
+      "weaponType": "Shotgun",
+      "manufacturer": "Torgue",
+      "expectedInv": "tor_sg",
+      "spawnTokens": [
+        "aerodramatic"
+      ],
+      "status": "export_synced",
+      "notes": "Export-synced pearl (base_comp_06_pearlescent).",
+      "alternateEditorComps": [
+        "tor_sg.comp_05_legendary_aerodramatic"
+      ]
+    },
+    {
+      "name": "quattro",
+      "weaponType": "Heavy Weapon",
+      "manufacturer": "Vladof",
+      "expectedInv": "vla_hw",
+      "spawnTokens": [
+        "quattro"
+      ],
+      "status": "export_synced",
+      "notes": "Export-synced pearl (rarity_06_pearlescent).",
+      "alternateEditorComps": [
+        "vla_hw.comp_05_legendary_quattro"
+      ]
+    },
+    {
+      "name": "relay",
+      "weaponType": "Shotgun",
+      "manufacturer": "Ripper",
+      "expectedInv": "bor_sg",
+      "spawnTokens": [
+        "relay"
+      ],
+      "status": "export_synced",
+      "notes": "Export-synced pearl (rarity_06_pearlescent).",
+      "alternateEditorComps": [
+        "bor_sg.comp_05_legendary_relay"
+      ]
     }
   ],
   "raid2_legendaries": [
@@ -461,9 +503,9 @@
     }
   ],
   "export_pearl_sync": {
-    "synced_at": "2026-08-04T21:25:23.571Z",
+    "synced_at": "2026-09-10T23:10:43.023Z",
     "nexus_dir": "references/bl4_toolbox_export/ncs/json",
-    "pearl_count": 20,
+    "pearl_count": 23,
     "added": [],
     "demoted": [],
     "ensured_legendary_shinies": []

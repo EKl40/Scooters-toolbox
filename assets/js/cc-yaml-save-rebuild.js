@@ -14,8 +14,14 @@
   window.__ccDecodedSerialsCache = window.__ccDecodedSerialsCache || {};
 
   var YAML_SERIALS_PAGE_SIZE = 50;
-  var YAML_DECODE_CHUNK_SIZE = 400;
+  /** Local Base85 naming chunks — keep small so the page paints names without main-thread stalls. */
+  var YAML_LOCAL_DECODE_CHUNK = 8;
+  var YAML_BRIDGE_DECODE_CHUNK = 25;
   if (window.__yamlSerialsPageIndex == null) window.__yamlSerialsPageIndex = 0;
+  /** Bumped to cancel in-flight page decodes when YAML is re-parsed / page changes. */
+  var __yamlDecodeGen = 0;
+  var __yamlDecodeBusy = false;
+  var __yamlDecodePageKey = '';
 
   function yamlTextLengthHint() {
     var ta = byId('yamlInput') || byId('fullYamlInput');
@@ -31,15 +37,291 @@
     return 80;
   }
   function yamlDecodeChunkSize(total) {
-    if (total > 3000) return 120;
-    if (total > 1500) return 200;
-    return YAML_DECODE_CHUNK_SIZE;
+    if (total > 40) return YAML_BRIDGE_DECODE_CHUNK;
+    return Math.max(1, total || 1);
   }
   function yamlDecodeChunkDelay(total) {
-    if (total > 2000) return 16;
-    if (total > 800) return 8;
+    if (total > 40) return 8;
     return 0;
   }
+  function yamlYield(fn) {
+    if (typeof window.stxYieldToMain === 'function') window.stxYieldToMain(fn);
+    else if (typeof requestAnimationFrame === 'function') requestAnimationFrame(function () { setTimeout(fn, 0); });
+    else setTimeout(fn, 0);
+  }
+
+  function getDecodedCacheForSerial(serial) {
+    var cache = window.__ccDecodedSerialsCache;
+    if (!cache) return null;
+    var keys = cacheKeyVariants(serial);
+    for (var i = 0; i < keys.length; i++) {
+      if (cache[keys[i]]) return cache[keys[i]];
+    }
+    return null;
+  }
+
+  function serialNeedsBridgeDecode(serial) {
+    var s = String(serial || '').trim().replace(/^["']|["']$/g, '');
+    if (!s || s.length < 10) return false;
+    var c = getDecodedCacheForSerial(s);
+    if (!c) return true;
+    /* failed: true = already tried; stop leaving rows on "Decoding…". */
+    if (c.failed) return false;
+    if (c.deserialized || c.success === true) return false;
+    if (c.success !== false) return false;
+    return true;
+  }
+
+  function markSerialDecodeFailed(serial) {
+    var s = String(serial || '').trim().replace(/^["']|["']$/g, '');
+    if (!s) return;
+    var cache = window.__ccDecodedSerialsCache || (window.__ccDecodedSerialsCache = {});
+    var entry = {
+      input: s,
+      success: false,
+      failed: true,
+      deserialized: '',
+      name: 'Unknown Item',
+      baseName: 'Unknown Item'
+    };
+    var keys = cacheKeyVariants(s);
+    for (var k = 0; k < keys.length; k++) {
+      var prev = cache[keys[k]];
+      if (prev && (prev.deserialized || prev.success === true) && !prev.failed) continue;
+      cache[keys[k]] = entry;
+    }
+  }
+
+  function collectSerialsNeedingDecode(items) {
+    var seen = Object.create(null);
+    var out = [];
+    if (!items || !items.length) return out;
+    for (var i = 0; i < items.length; i++) {
+      var s = String((items[i] && items[i].serial) || items[i] || '').trim().replace(/^["']|["']$/g, '');
+      if (!s || s.length < 10 || seen[s]) continue;
+      seen[s] = true;
+      if (serialNeedsBridgeDecode(s)) out.push(s);
+    }
+    return out;
+  }
+
+  /**
+   * Fast list naming via local Base85 (no WASM wait). Good enough for backpack/bank rows.
+   * Returns true if the cache was updated.
+   */
+  function seedCacheFromLocalSerial(serial) {
+    var s = String(serial || '').trim().replace(/^["']|["']$/g, '');
+    if (!s || s.length < 10 || !serialNeedsBridgeDecode(s)) return false;
+    if (typeof window.deserializeBase85 !== 'function') return false;
+    var meta = parseSerialMeta(s);
+    if (!meta || !meta.deserialized) return false;
+    var cache = window.__ccDecodedSerialsCache || (window.__ccDecodedSerialsCache = {});
+    var entry = {
+      input: s,
+      success: true,
+      deserialized: meta.deserialized,
+      itemTypeId: meta.familyId,
+      itemId: meta.itemId,
+      level: meta.level,
+      name: meta.name || '',
+      baseName: meta.name || '',
+      localOnly: true
+    };
+    var keys = cacheKeyVariants(s);
+    for (var k = 0; k < keys.length; k++) cache[keys[k]] = entry;
+    return true;
+  }
+
+  /**
+   * Chunked local naming for the visible page — yield between chunks so the UI stays responsive.
+   */
+  function decodeYamlSerialsLocalLazy(serials, gen, onDone) {
+    if (!serials || !serials.length) {
+      if (typeof onDone === 'function') onDone(false);
+      return;
+    }
+    var offset = 0;
+    var any = false;
+    function next() {
+      if (gen !== __yamlDecodeGen) {
+        if (typeof onDone === 'function') onDone(false);
+        return;
+      }
+      if (offset >= serials.length) {
+        if (any && typeof window.refreshBackpackUI === 'function') {
+          try { window.refreshBackpackUI({ skipDecode: true }); } catch (_) {}
+        }
+        if (typeof onDone === 'function') onDone(any);
+        return;
+      }
+      var end = Math.min(offset + YAML_LOCAL_DECODE_CHUNK, serials.length);
+      for (; offset < end; offset++) {
+        if (seedCacheFromLocalSerial(serials[offset])) any = true;
+      }
+      /* Mid-page paint so names appear in waves without rebuilding the list every chunk. */
+      if (any && offset < serials.length && (offset % (YAML_LOCAL_DECODE_CHUNK * 2) === 0) &&
+          typeof window.refreshBackpackUI === 'function') {
+        try { window.refreshBackpackUI({ skipDecode: true }); } catch (_) {}
+      }
+      if (offset < serials.length) yamlYield(next);
+      else {
+        if (any && typeof window.refreshBackpackUI === 'function') {
+          try { window.refreshBackpackUI({ skipDecode: true }); } catch (_) {}
+        }
+        if (typeof onDone === 'function') onDone(any);
+      }
+    }
+    next();
+  }
+
+  /**
+   * Decode only the given serials via WASM/bridge (fallback when local naming fails).
+   * Cancels when gen is stale. Always finishes (bridge timeout / missing callback cannot hang).
+   */
+  function decodeYamlSerialsLazy(serials, gen, onDone) {
+    if (!serials || !serials.length || typeof window.decodeSerialsViaBridge !== 'function') {
+      if (typeof onDone === 'function') onDone(false);
+      return;
+    }
+    if (typeof window.initStxDecoderBridge === 'function') window.initStxDecoderBridge();
+    var offset = 0;
+    var chunkSize = yamlDecodeChunkSize(serials.length);
+    var chunkDelay = yamlDecodeChunkDelay(serials.length);
+    var any = false;
+    function next() {
+      if (gen !== __yamlDecodeGen) {
+        if (typeof onDone === 'function') onDone(false);
+        return;
+      }
+      if (offset >= serials.length) {
+        if (typeof onDone === 'function') onDone(any);
+        return;
+      }
+      var chunk = serials.slice(offset, offset + chunkSize);
+      offset += chunk.length;
+      var settled = false;
+      function afterChunk(results) {
+        if (settled) return;
+        settled = true;
+        if (gen !== __yamlDecodeGen) {
+          if (typeof onDone === 'function') onDone(false);
+          return;
+        }
+        if (results && results.length) {
+          var fixed = [];
+          for (var j = 0; j < chunk.length; j++) {
+            var r = results[j] || {};
+            var entry = {};
+            for (var k in r) if (Object.prototype.hasOwnProperty.call(r, k)) entry[k] = r[k];
+            entry.input = chunk[j];
+            fixed.push(entry);
+          }
+          populateCacheFromDecodedResults(fixed);
+          any = true;
+          if (typeof window.refreshBackpackUI === 'function') {
+            try { window.refreshBackpackUI({ skipDecode: true }); } catch (_) {}
+          }
+        }
+        if (offset < serials.length) setTimeout(next, chunkDelay);
+        else if (typeof onDone === 'function') onDone(any);
+      }
+      try {
+        var p = window.decodeSerialsViaBridge(chunk, afterChunk);
+        if (p && typeof p.then === 'function') {
+          p.then(afterChunk).catch(function () { afterChunk([]); });
+        }
+      } catch (_) {
+        afterChunk([]);
+        return;
+      }
+      /* Hard ceiling — never leave the page stuck on Decoding… */
+      setTimeout(function () { afterChunk([]); }, 16000);
+    }
+    next();
+  }
+
+  /**
+   * Decode serials for the visible backpack/bank page (+ optional next-page prefetch).
+   * Local Base85 first (fast names), then bridge only for leftovers.
+   */
+  function ensureVisibleYamlSerialsDecoded(opts) {
+    opts = opts || {};
+    var list = window.extractedSerials || [];
+    if (!list.length) return;
+    var page = window.__yamlSerialsPageIndex || 0;
+    var start = page * YAML_SERIALS_PAGE_SIZE;
+    var visible = list.slice(start, start + YAML_SERIALS_PAGE_SIZE);
+    var toDecode = collectSerialsNeedingDecode(visible);
+    var prefetch = opts.prefetch !== false
+      ? collectSerialsNeedingDecode(list.slice(start + YAML_SERIALS_PAGE_SIZE, start + YAML_SERIALS_PAGE_SIZE * 2))
+      : [];
+
+    if (!toDecode.length && !prefetch.length) return;
+
+    var pageKey = page + ':' + start + ':' + list.length + ':' + toDecode.length + ':' + prefetch.length;
+    /* Same page already decoding — don't cancel and restart (that stalls names). */
+    if (__yamlDecodeBusy && __yamlDecodePageKey === pageKey && !opts.force) return;
+
+    var gen = ++__yamlDecodeGen;
+    __yamlDecodeBusy = true;
+    __yamlDecodePageKey = pageKey;
+    var statusEl = byId('decodedResultsStatus');
+    if (statusEl && toDecode.length) {
+      statusEl.textContent = 'Naming page ' + (page + 1) + ' (' + toDecode.length + ' item' + (toDecode.length === 1 ? '' : 's') + ')…';
+    }
+
+    function runPrefetch() {
+      if (!prefetch.length || gen !== __yamlDecodeGen) return;
+      setTimeout(function () {
+        if (gen !== __yamlDecodeGen) return;
+        decodeYamlSerialsLocalLazy(prefetch, gen, function () {});
+      }, 30);
+    }
+
+    function settleRemaining() {
+      var still = collectSerialsNeedingDecode(visible);
+      for (var i = 0; i < still.length; i++) markSerialDecodeFailed(still[i]);
+      if (still.length && typeof window.refreshBackpackUI === 'function') {
+        try { window.refreshBackpackUI({ skipDecode: true }); } catch (_) {}
+      }
+    }
+
+    function finishVisible(didWork) {
+      if (gen !== __yamlDecodeGen) {
+        __yamlDecodeBusy = false;
+        return;
+      }
+      var leftover = collectSerialsNeedingDecode(visible);
+      if (leftover.length && typeof window.decodeSerialsViaBridge === 'function') {
+        if (statusEl) {
+          statusEl.textContent = 'Finishing ' + leftover.length + ' item' + (leftover.length === 1 ? '' : 's') + '…';
+        }
+        decodeYamlSerialsLazy(leftover, gen, function (bridgeDid) {
+          if (gen === __yamlDecodeGen) settleRemaining();
+          __yamlDecodeBusy = false;
+          if (gen !== __yamlDecodeGen) return;
+          if (statusEl && toDecode.length) {
+            statusEl.textContent = (didWork || bridgeDid) ? 'Page names updated.' : 'Some items could not be named.';
+          }
+          runPrefetch();
+        });
+        return;
+      }
+      settleRemaining();
+      __yamlDecodeBusy = false;
+      if (statusEl && toDecode.length) {
+        statusEl.textContent = didWork ? 'Page names updated.' : '';
+      }
+      runPrefetch();
+    }
+
+    if (toDecode.length) {
+      decodeYamlSerialsLocalLazy(toDecode, gen, finishVisible);
+    } else {
+      finishVisible(false);
+    }
+  }
+  try { window.ensureVisibleYamlSerialsDecoded = ensureVisibleYamlSerialsDecoded; } catch (_) {}
 
   function cacheKeyVariants(raw) {
     var s = String(raw || '').trim().replace(/^["']|["']$/g, '');
@@ -74,7 +356,8 @@
     return '';
   }
 
-  function parseSerialMeta(serial) {
+  function parseSerialMeta(serial, opts) {
+    opts = opts || {};
     var s = String(serial || '').trim().replace(/^["']|["']$/g, '');
     var out = { name: '', level: null, elements: [], familyId: null, itemId: null, deserialized: '' };
     if (!s) return out;
@@ -110,6 +393,11 @@
         if (fromBarrel) out.name = fromBarrel;
       }
       if (!out.name) out.name = lookupNameBySerial(s);
+      return out;
+    }
+    /* Backpack/bank list: skip sync Base85 decode — page bridge decode fills the cache. */
+    if (opts.syncDeserialize === false) {
+      out.name = lookupNameBySerial(s) || '';
       return out;
     }
     var deser = s;
@@ -358,15 +646,48 @@
     if (typeof window.scheduleParseYAMLBackpack === 'function') window.scheduleParseYAMLBackpack(80);
   }
 
-  function extractBackpackSerialsSimple(yamlText) {
-    var serials = [];
+  /**
+   * Slice only the `backpack:` / `bank:` block from a large YAML so we do not
+   * split/scan the entire unlockables tree (main lag source on big banks).
+   */
+  function sliceYamlNamedBlock(yamlText, blockName) {
     var text = String(yamlText || '');
-    var lines = text.split(/\r?\n/);
-    var inBackpack = false;
-    var baseIndent = 999;
+    if (!text || !blockName) return { found: false, slice: '', baseIndent: 0 };
+    var re = new RegExp(
+      '(^|\\n)([ \\t]*)' + String(blockName).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') +
+        '\\s*:(?:\\s*\\{\\s*\\})?[ \\t]*(?:\\r?\\n|$)',
+      'i'
+    );
+    var m = re.exec(text);
+    if (!m) return { found: false, slice: '', baseIndent: 0 };
+    var baseIndent = m[2] ? m[2].length : 0;
+    var start = m.index + (m[1] ? m[1].length : 0);
+    var i = m.index + m[0].length;
+    while (i < text.length) {
+      var nl = text.indexOf('\n', i);
+      if (nl < 0) nl = text.length;
+      var line = text.slice(i, nl);
+      if (line.trim() !== '') {
+        var ind = 0;
+        while (ind < line.length && (line.charAt(ind) === ' ' || line.charAt(ind) === '\t')) ind++;
+        if (ind <= baseIndent) {
+          return { found: true, slice: text.slice(start, i), baseIndent: baseIndent };
+        }
+      }
+      i = nl + 1;
+    }
+    return { found: true, slice: text.slice(start), baseIndent: baseIndent };
+  }
+
+  function extractSlotSerialsFromBlockSlice(blockSlice, baseIndent) {
+    var serials = [];
+    if (!blockSlice) return serials;
+    var lines = String(blockSlice).split(/\r?\n/);
+    var inBlock = false;
     var slotNum = null;
     var serial = '';
     var slotIdx = 0;
+    var blockBase = Number.isFinite(baseIndent) ? baseIndent : 999;
 
     for (var i = 0; i < lines.length; i++) {
       var line = lines[i];
@@ -374,16 +695,16 @@
       var lineIndent = m ? m[1].length : 0;
       var content = line.trim();
 
-      if (/^backpack\s*:?\s*$/i.test(content) || /^backpack\s*:\s*\{\}\s*$/i.test(content)) {
-        inBackpack = true;
-        baseIndent = lineIndent;
+      if (/^(backpack|bank)\s*:?\s*$/i.test(content) || /^(backpack|bank)\s*:\s*\{\}\s*$/i.test(content)) {
+        inBlock = true;
+        blockBase = lineIndent;
         slotIdx = 0;
         continue;
       }
-      if (inBackpack && content && lineIndent <= baseIndent) {
-        inBackpack = false;
+      if (inBlock && content && lineIndent <= blockBase) {
+        inBlock = false;
       }
-      if (!inBackpack) continue;
+      if (!inBlock) continue;
 
       var slotMatch = line.match(/^\s*slot_(\d+)\s*:\s*$/i) ||
         line.match(/^\s*-\s*slot\s*:\s*(\d+)/i) ||
@@ -394,7 +715,7 @@
         serial = '';
       } else {
         var dashSlot = line.match(/^\s*-\s*$/);
-        if (dashSlot && lineIndent > baseIndent) {
+        if (dashSlot && lineIndent > blockBase) {
           if (slotNum != null) serials.push({ slot: slotNum, serial: serial || '' });
           slotNum = slotIdx++;
           serial = '';
@@ -409,55 +730,16 @@
     return serials;
   }
 
+  function extractBackpackSerialsSimple(yamlText) {
+    var region = sliceYamlNamedBlock(yamlText, 'backpack');
+    if (!region.found) return [];
+    return extractSlotSerialsFromBlockSlice(region.slice, region.baseIndent);
+  }
+
   function extractBankSerialsSimple(yamlText) {
-    var serials = [];
-    var text = String(yamlText || '');
-    var lines = text.split(/\r?\n/);
-    var inBank = false;
-    var baseIndent = 999;
-    var slotNum = null;
-    var serial = '';
-    var slotIdx = 0;
-
-    for (var i = 0; i < lines.length; i++) {
-      var line = lines[i];
-      var m = line.match(/^(\s*)(\S?)/);
-      var lineIndent = m ? m[1].length : 0;
-      var content = line.trim();
-
-      if (/^bank\s*:?\s*$/i.test(content)) {
-        inBank = true;
-        baseIndent = lineIndent;
-        slotIdx = 0;
-        continue;
-      }
-      if (inBank && content && lineIndent <= baseIndent) {
-        inBank = false;
-      }
-      if (!inBank) continue;
-
-      var slotMatch = line.match(/^\s*slot_(\d+)\s*:\s*$/i) ||
-        line.match(/^\s*-\s*slot\s*:\s*(\d+)/i) ||
-        line.match(/^\s*slot\s*:\s*(\d+)/i);
-      if (slotMatch) {
-        if (slotNum != null) serials.push({ slot: slotNum, serial: serial || '' });
-        slotNum = parseInt(slotMatch[1], 10);
-        serial = '';
-      } else {
-        var dashSlot = line.match(/^\s*-\s*$/);
-        if (dashSlot && lineIndent > baseIndent) {
-          if (slotNum != null) serials.push({ slot: slotNum, serial: serial || '' });
-          slotNum = slotIdx++;
-          serial = '';
-        }
-      }
-      var serialMatch = line.match(/^\s*serial\s*:\s*(.+)/i);
-      if (serialMatch && slotNum != null) {
-        serial = String(serialMatch[1]).trim().replace(/^["']|["']$/g, '');
-      }
-    }
-    if (slotNum != null) serials.push({ slot: slotNum, serial: serial || '' });
-    return serials;
+    var region = sliceYamlNamedBlock(yamlText, 'bank');
+    if (!region.found) return [];
+    return extractSlotSerialsFromBlockSlice(region.slice, region.baseIndent);
   }
 
   function computeMaxBackpackSlotFromExtracted(serials) {
@@ -551,16 +833,6 @@
   }
   window.importSerialToEditor = importSerialToEditor;
 
-  function getDecodedCacheForSerial(serial) {
-    var cache = window.__ccDecodedSerialsCache;
-    if (!cache) return null;
-    var keys = cacheKeyVariants(String(serial || '').trim());
-    for (var ki = 0; ki < keys.length; ki++) {
-      if (cache[keys[ki]]) return cache[keys[ki]];
-    }
-    return null;
-  }
-
   function yamlPartStatsKeyFromRow(p) {
     var alpha = String((p && p.alpha_code) || '').trim().replace(/^"(.*)"$/, '$1');
     if (alpha) return alpha.toLowerCase();
@@ -623,7 +895,29 @@
   }
 
   function createSerialRowElement(item, idx) {
+    /* Sync local Base85 for visible rows — names show immediately; bridge only fills gaps. */
     var meta = parseSerialMeta(item.serial);
+    if (meta && meta.deserialized) {
+      try {
+        var cache = window.__ccDecodedSerialsCache || (window.__ccDecodedSerialsCache = {});
+        var sk = String(item.serial || '').trim().replace(/^["']|["']$/g, '');
+        if (sk && !getDecodedCacheForSerial(sk)) {
+          var entry = {
+            input: sk,
+            success: true,
+            deserialized: meta.deserialized,
+            itemTypeId: meta.familyId,
+            itemId: meta.itemId,
+            level: meta.level,
+            name: meta.name || '',
+            baseName: meta.name || '',
+            localOnly: true
+          };
+          var ckeys = cacheKeyVariants(sk);
+          for (var ck = 0; ck < ckeys.length; ck++) cache[ckeys[ck]] = entry;
+        }
+      } catch (_) {}
+    }
     var row = document.createElement('div');
     row.className = 'yaml-serial-row';
     row.style.cssText = 'padding:10px;background:rgba(0,200,255,0.08);border:1px solid rgba(0,200,255,0.25);border-radius:6px;margin-bottom:8px;display:flex;flex-direction:column;gap:8px;';
@@ -632,7 +926,8 @@
     var left = document.createElement('div');
     left.style.flex = '1';
     left.style.minWidth = '0';
-    var nameLevel = (meta.name || 'Unknown Item') + (Number.isFinite(meta.level) ? ' | Level ' + meta.level : '');
+    var pendingDecode = !meta.deserialized && serialNeedsBridgeDecode(item.serial);
+    var nameLevel = (meta.name || (pendingDecode ? 'Decoding…' : 'Unknown Item')) + (Number.isFinite(meta.level) ? ' | Level ' + meta.level : '');
     var elementsHtml = '';
     if (meta.elements && meta.elements.length) {
       elementsHtml = '<div style="color:rgba(0,243,255,0.85);font-size:0.85em;margin-top:4px;">Elements: ' + meta.elements.join(', ') + '</div>';
@@ -727,7 +1022,8 @@
     }
   }
 
-  function refreshBackpackUI() {
+  function refreshBackpackUI(opts) {
+    opts = opts || {};
     updateYamlNextSlotDisplay();
     updateYamlSerialsSourceBadge();
     var container = byId('yaml-serials-container');
@@ -772,6 +1068,11 @@
       var idx = start + sliceIdx;
       container.appendChild(createSerialRowElement(item, idx));
     });
+
+    /* Decode only this page (+ light next-page prefetch) — never the full bank. */
+    if (!opts.skipDecode) {
+      try { ensureVisibleYamlSerialsDecoded({ prefetch: true }); } catch (_) {}
+    }
   }
   window.refreshBackpackUI = refreshBackpackUI;
 
@@ -1132,6 +1433,9 @@
     }
     function runParse() {
       window.__yamlSerialsPageIndex = 0;
+      __yamlDecodeGen++;
+      __yamlDecodeBusy = false;
+      __yamlDecodePageKey = '';
       var kind = typeof window.detectYamlSaveKind === 'function' ? window.detectYamlSaveKind(yamlText) : 'unknown';
       if (kind === 'profile') {
         window.__yamlInventorySource = 'bank';
@@ -1143,48 +1447,10 @@
         window.__yamlInventorySource = '';
         window.extractedSerials = extractBackpackSerialsSimple(yamlText);
       }
+      /* List paints immediately; only the visible page is decoded (see ensureVisibleYamlSerialsDecoded). */
+      /* In-memory inventory buffer — same array the UI uses; avoids re-scanning YAML for summaries. */
+      try { window.__ccYamlInventoryBuffer = window.extractedSerials; } catch (_) {}
       refreshBackpackUI();
-
-      var serials = window.extractedSerials || [];
-      var seen = Object.create(null);
-      var toDecode = [];
-      for (var i = 0; i < serials.length; i++) {
-        var s = String((serials[i] && serials[i].serial) || '').trim().replace(/^["']|["']$/g, '');
-        if (!s || s.length < 10 || seen[s]) continue;
-        seen[s] = true;
-        toDecode.push(s);
-      }
-      if (toDecode.length === 0 || typeof window.decodeSerialsViaBridge !== 'function') {
-        if (typeof window.updateYamlInjectButtons === 'function') window.updateYamlInjectButtons();
-        return;
-      }
-
-      if (typeof window.initStxDecoderBridge === 'function') window.initStxDecoderBridge();
-
-      var offset = 0;
-      var chunkSize = yamlDecodeChunkSize(toDecode.length);
-      var chunkDelay = yamlDecodeChunkDelay(toDecode.length);
-      function decodeNextChunk() {
-        if (offset >= toDecode.length) return;
-        var chunk = toDecode.slice(offset, offset + chunkSize);
-        offset += chunk.length;
-        window.decodeSerialsViaBridge(chunk, function (results) {
-          if (results && results.length) {
-            var fixed = [];
-            for (var j = 0; j < chunk.length; j++) {
-              var r = results[j] || {};
-              var entry = {};
-              for (var k in r) if (Object.prototype.hasOwnProperty.call(r, k)) entry[k] = r[k];
-              entry.input = chunk[j];
-              fixed.push(entry);
-            }
-            populateCacheFromDecodedResults(fixed);
-          }
-          if (offset < toDecode.length) setTimeout(decodeNextChunk, chunkDelay);
-          else if (typeof window.refreshBackpackUI === 'function') window.refreshBackpackUI();
-        });
-      }
-      decodeNextChunk();
       if (typeof window.updateYamlInjectButtons === 'function') window.updateYamlInjectButtons();
     }
     if (typeof window.stxYieldToMain === 'function') window.stxYieldToMain(runParse);
@@ -2908,7 +3174,11 @@
           var text = String(reader.result || '');
           ta.value = text;
           if (typeof window.scheduleParseYAMLBackpack === 'function') window.scheduleParseYAMLBackpack(50);
-          if (typeof window.syncYamlToFields === 'function') window.syncYamlToFields();
+          /* Defer full jsyaml parse — syncing every field on huge YAML freezes the tab. */
+          if (typeof window.scheduleSyncYamlToFields === 'function') window.scheduleSyncYamlToFields();
+          else if (typeof window.syncYamlToFields === 'function') {
+            setTimeout(function () { window.syncYamlToFields(); }, 200);
+          }
           if (typeof window.__updatePresetButtonsAvailability === 'function') window.__updatePresetButtonsAvailability();
           if (typeof window.updateYamlInjectButtons === 'function') window.updateYamlInjectButtons();
           if (typeof window.__ccRenderRuntimeStatus === 'function') window.__ccRenderRuntimeStatus();

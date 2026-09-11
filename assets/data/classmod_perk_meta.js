@@ -3324,6 +3324,504 @@
     "vaultHunter": "C4sh",
     "tree": "Class Mod",
     "description": ""
+  },
+  "highdatarate": {
+    "name": "High Data Rate",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains increased Status Effect Chance. The more full her RAM is, the greater the Bonus.Whenever Loveless uses Empowered Melee, her next Elemental Attack always applies its Elemental Effects."
+  },
+  "establishedgameplayloop": {
+    "name": "Established Gameplay Loop",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenevever Loveless applies an Elemental Effect or Contagion, she gains increased Gun Damage and Reload Speed."
+  },
+  "heatsink": {
+    "name": "Heat Sink",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless applies an Elemental Effect or Contagion she gains increased Action Skill Cooldown Rate."
+  },
+  "toxicchat": {
+    "name": "Toxic Chat",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless deals increased Corrosive Damage.Kill Skill. Loveless' Guns gain Bonus Corrosive Damage for a Duration."
+  },
+  "nootropicenergydrink": {
+    "name": "Nootropic Energy Drink",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenenver Loveless uses a Repkit she gains increased Elemental Damage.150 grams of caffeine! Chew the power!"
+  },
+  "contaminant": {
+    "name": "Contaminant",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Enemies infected by Loveless' Contagion gain a chance to drop a Contaminant when they die. Contaminants may be thrown and Explode on contact, infecting all damaged enemies with Contagion."
+  },
+  "centralprocessingunit": {
+    "name": "Central Processing Unit",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless applies an Elemental Effect to an enemy that does not already have one, she gains a Chance to apply an Additional Random Elemental Effect or Contagion. Whenever she inflicts Contagion, she Doubles this Chance."
+  },
+  "cat5": {
+    "name": "Cat 5",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains increased Elemental Damage and increased Status Effect Chance."
+  },
+  "transmissionvector": {
+    "name": "Transmission Vector",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless Critically Hits an enemy with a Gun, she gains a Chance to inflict that enemy with Contagion."
+  },
+  "kaleidoscontaminant": {
+    "name": "Kaleidoscontaminant",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless' Contaminants may now drop from enemies killed with any Elemental Effect. Contaminants deal the corresponding Elemental Damage if thrown at enemies.Contaminant gains decreased Cooldown."
+  },
+  "e2pulse": {
+    "name": "E2 Pulse",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless deals Ordnance Damage she gains increased Action Skill Damage and Status Effect Damage."
+  },
+  "immunoppressant": {
+    "name": "Immunoppressant",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless applies a Status Effect, she gains a Stack of Immunoppressant. Stacks provide Damage Reduction for a Duration."
+  },
+  "depletionload": {
+    "name": "Depletion Load",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless activates an Action Skill, Function, or Executable her Guns deal Bonus Radiation Damage."
+  },
+  "conservationoflife": {
+    "name": "Conservation of Life",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless damages an enemy with an Action Skill, she gains a chance to spawn a Contaminant. Whenever Loveless creates or destroys a Contaminant, she immediately gains Health, Shields, and Shield Recharge Rate."
+  },
+  "turbobutton": {
+    "name": "Turbo Button",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains increased Action Skill Cooldown Rate based on her RAM. The more full her RAM is, the greater the Bonus Whenever Loveless consumes RAM, she restores a portion of her Action Skill Cooldown."
+  },
+  "circularlogic": {
+    "name": "Circular Logic",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless deals Status Damage she gains a Circular Logic Stack. Whenever Loveless activates her Action Skill consume all Circular Logic Stacks and deal increased Action Skill Damage based on the Stacks consumed."
+  },
+  "unsupportedperipheral": {
+    "name": "Unsupported Peripheral",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless activates an Action Skill, Function, Executable she throws a free Grenade. If she has a Grenade Mod equipped, throw a free Grenade based on that."
+  },
+  "systemrestore": {
+    "name": "System Restore",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains Lifesteal from Splash Damage. Excess Healing is converted into Overshield."
+  },
+  "widenet": {
+    "name": "Wide Net",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains increased Splash Damage and Splash Radius."
+  },
+  "viralpayload": {
+    "name": "Viral Payload",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless' deals Bonus Corrosive Damage with Grenades. Additionally, Loveless gains a chance to infect enemies with Contagion whenever she damages them with Grenades."
+  },
+  "malware": {
+    "name": "Malware",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless uses her Empowered Melee Attack, she creates a Corrosive Explosion that deals Ordnance Damage to enemies. Additionally, Loveless gains increased RAM whenever she applies a Status Effect."
+  },
+  "conservationofvolatility": {
+    "name": "Conservation of Volatility",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless damages an enemy with an Action Skill, she gains a chance to spawn a Contaminant.Loveless' Contaminants gain increased Splash Radius. Whenever a Contanimant is created or destroyed, Loveless gains increased Elemental Damage."
+  },
+  "kernelpanic": {
+    "name": "Kernel Panic",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless consumes Contagion, her Executable gains increased Damage and increased Radius."
+  },
+  "itssupereffective": {
+    "name": "It's Super Effective",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless' Status Effects gain Critical Hit Chanceagainst enemies."
+  },
+  "conservationofmalice": {
+    "name": "Conservation of Malice",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless damages an enemy with an Action Skill, she gains a chance to spawn a Contaminant.Whenever Loveless creates or destroys a Contaminant, she gains increase Gun Damage and increased Fire Rate."
+  },
+  "whenitrains": {
+    "name": "When it Rains",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains increased Critical Hit Damage. Loveless gains Critical Hit Chance against enemies for every Status Effect applied to them. Contagion doubles this chance."
+  },
+  "blackhat": {
+    "name": "Blackhat",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains Lifesteal from Status Effect Damage."
+  },
+  "itpours": {
+    "name": "It Pours",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless Critically Hits enemies with Contagion, she gains a Chance to apply an additional Stack of Contagion."
+  },
+  "memoryleak": {
+    "name": "Memory Leak",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless deals increased Gun Damage to enemies for every Stack of Contagion."
+  },
+  "feedback": {
+    "name": "Feedback",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless deals Melee Damage to an enemy, she gains increased Status Effect Damage."
+  },
+  "disdain": {
+    "name": "Disdain",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": "Loveless gains increased Critical Hit Damage."
+  },
+  "gottagofast": {
+    "name": "Gotta Go Fast",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "flurry": {
+    "name": "Flurry",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "pluggedin": {
+    "name": "Plugged In",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "ratiotechnique": {
+    "name": "Ratio Technique",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "odium": {
+    "name": "Odium",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "deathbegetsdeath": {
+    "name": "Death Begets Death",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "goingghost": {
+    "name": "Going Ghost",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "initialize": {
+    "name": "Initialize",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "neutralspecial": {
+    "name": "Neutral Special",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": "Loveless' Empowered Melee deals more damage in a larger area."
+  },
+  "footwork": {
+    "name": "Footwork",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "targetpractice": {
+    "name": "Target Practice",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "methodical": {
+    "name": "Methodical",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "marathon": {
+    "name": "Marathon",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "retribution": {
+    "name": "Retribution",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "infinitemurderhack": {
+    "name": "Infinite Murder Hack",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "killingmachine": {
+    "name": "Killing Machine",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "refactored": {
+    "name": "Refactored",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "thirdparty": {
+    "name": "Third Party",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "thesweetscience": {
+    "name": "The Sweet Science",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "chipsurplus": {
+    "name": "Chip Surplus",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "thegangsallhere": {
+    "name": "The Gang's All Here",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "overclocked": {
+    "name": "Overclocked",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "flowstate": {
+    "name": "Flow State",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "violentoutburst": {
+    "name": "Violent Outburst",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "watchyourstep": {
+    "name": "Watch Your Step",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "assaultvest": {
+    "name": "Assault Vest",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "upload": {
+    "name": "Upload",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": "Loveless' Melee Critical Hits now apply Contagion."
+  },
+  "sharingtactics": {
+    "name": "Sharing Tactics",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "irradiated": {
+    "name": "Irradiated",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "antivirus": {
+    "name": "Antivirus",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "hidingthepain": {
+    "name": "Hiding the Pain",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "overclocking": {
+    "name": "Overclocking",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "peakperformance": {
+    "name": "Peak Performance",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "sharingthepain": {
+    "name": "Sharing the Pain",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "purefusion": {
+    "name": "Pure Fusion",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "optimization": {
+    "name": "Optimization",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "criticallyacclaimed": {
+    "name": "Critically Acclaimed",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "storageupgrade": {
+    "name": "Storage Upgrade",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "notimetothink": {
+    "name": "No Time to Think",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "poweroverwhelming": {
+    "name": "Power Overwhelming",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "manipulatingrng": {
+    "name": "Manipulating RNG",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "everchanging": {
+    "name": "Everchanging",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "deeperconnection": {
+    "name": "Deeper Connection",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "empoweredwyrm": {
+    "name": "Empowered Wyrm",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "inmemoriam": {
+    "name": "In Memoriam",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "symbiosisoverflow": {
+    "name": "Symbiosis Overflow",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "fnxbat": {
+    "name": "FNX.bat",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "whatsyourstatus": {
+    "name": "What's Your Status",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "explosivemindset": {
+    "name": "Explosive Mindset",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "ihateyou": {
+    "name": "I HATE YOU",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "irradiateemall": {
+    "name": "Irradiate 'Em All",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "secondimpact": {
+    "name": "Second Impact",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
   }
 };
   window.__CLASSMOD_PERK_META_BY_NAME = {
@@ -6823,6 +7321,504 @@
     "name": "Legerdamain",
     "vaultHunter": "C4sh",
     "tree": "Class Mod",
+    "description": ""
+  },
+  "High Data Rate": {
+    "name": "High Data Rate",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains increased Status Effect Chance. The more full her RAM is, the greater the Bonus.Whenever Loveless uses Empowered Melee, her next Elemental Attack always applies its Elemental Effects."
+  },
+  "Established Gameplay Loop": {
+    "name": "Established Gameplay Loop",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenevever Loveless applies an Elemental Effect or Contagion, she gains increased Gun Damage and Reload Speed."
+  },
+  "Heat Sink": {
+    "name": "Heat Sink",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless applies an Elemental Effect or Contagion she gains increased Action Skill Cooldown Rate."
+  },
+  "Toxic Chat": {
+    "name": "Toxic Chat",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless deals increased Corrosive Damage.Kill Skill. Loveless' Guns gain Bonus Corrosive Damage for a Duration."
+  },
+  "Nootropic Energy Drink": {
+    "name": "Nootropic Energy Drink",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenenver Loveless uses a Repkit she gains increased Elemental Damage.150 grams of caffeine! Chew the power!"
+  },
+  "Contaminant": {
+    "name": "Contaminant",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Enemies infected by Loveless' Contagion gain a chance to drop a Contaminant when they die. Contaminants may be thrown and Explode on contact, infecting all damaged enemies with Contagion."
+  },
+  "Central Processing Unit": {
+    "name": "Central Processing Unit",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless applies an Elemental Effect to an enemy that does not already have one, she gains a Chance to apply an Additional Random Elemental Effect or Contagion. Whenever she inflicts Contagion, she Doubles this Chance."
+  },
+  "Cat 5": {
+    "name": "Cat 5",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains increased Elemental Damage and increased Status Effect Chance."
+  },
+  "Transmission Vector": {
+    "name": "Transmission Vector",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless Critically Hits an enemy with a Gun, she gains a Chance to inflict that enemy with Contagion."
+  },
+  "Kaleidoscontaminant": {
+    "name": "Kaleidoscontaminant",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless' Contaminants may now drop from enemies killed with any Elemental Effect. Contaminants deal the corresponding Elemental Damage if thrown at enemies.Contaminant gains decreased Cooldown."
+  },
+  "E2 Pulse": {
+    "name": "E2 Pulse",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless deals Ordnance Damage she gains increased Action Skill Damage and Status Effect Damage."
+  },
+  "Immunoppressant": {
+    "name": "Immunoppressant",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless applies a Status Effect, she gains a Stack of Immunoppressant. Stacks provide Damage Reduction for a Duration."
+  },
+  "Depletion Load": {
+    "name": "Depletion Load",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless activates an Action Skill, Function, or Executable her Guns deal Bonus Radiation Damage."
+  },
+  "Conservation of Life": {
+    "name": "Conservation of Life",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless damages an enemy with an Action Skill, she gains a chance to spawn a Contaminant. Whenever Loveless creates or destroys a Contaminant, she immediately gains Health, Shields, and Shield Recharge Rate."
+  },
+  "Turbo Button": {
+    "name": "Turbo Button",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains increased Action Skill Cooldown Rate based on her RAM. The more full her RAM is, the greater the Bonus Whenever Loveless consumes RAM, she restores a portion of her Action Skill Cooldown."
+  },
+  "Circular Logic": {
+    "name": "Circular Logic",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless deals Status Damage she gains a Circular Logic Stack. Whenever Loveless activates her Action Skill consume all Circular Logic Stacks and deal increased Action Skill Damage based on the Stacks consumed."
+  },
+  "Unsupported Peripheral": {
+    "name": "Unsupported Peripheral",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless activates an Action Skill, Function, Executable she throws a free Grenade. If she has a Grenade Mod equipped, throw a free Grenade based on that."
+  },
+  "System Restore": {
+    "name": "System Restore",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains Lifesteal from Splash Damage. Excess Healing is converted into Overshield."
+  },
+  "Wide Net": {
+    "name": "Wide Net",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains increased Splash Damage and Splash Radius."
+  },
+  "Viral Payload": {
+    "name": "Viral Payload",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless' deals Bonus Corrosive Damage with Grenades. Additionally, Loveless gains a chance to infect enemies with Contagion whenever she damages them with Grenades."
+  },
+  "Malware": {
+    "name": "Malware",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless uses her Empowered Melee Attack, she creates a Corrosive Explosion that deals Ordnance Damage to enemies. Additionally, Loveless gains increased RAM whenever she applies a Status Effect."
+  },
+  "Conservation of Volatility": {
+    "name": "Conservation of Volatility",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless damages an enemy with an Action Skill, she gains a chance to spawn a Contaminant.Loveless' Contaminants gain increased Splash Radius. Whenever a Contanimant is created or destroyed, Loveless gains increased Elemental Damage."
+  },
+  "Kernel Panic": {
+    "name": "Kernel Panic",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless consumes Contagion, her Executable gains increased Damage and increased Radius."
+  },
+  "It's Super Effective": {
+    "name": "It's Super Effective",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless' Status Effects gain Critical Hit Chanceagainst enemies."
+  },
+  "Conservation of Malice": {
+    "name": "Conservation of Malice",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless damages an enemy with an Action Skill, she gains a chance to spawn a Contaminant.Whenever Loveless creates or destroys a Contaminant, she gains increase Gun Damage and increased Fire Rate."
+  },
+  "When it Rains": {
+    "name": "When it Rains",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains increased Critical Hit Damage. Loveless gains Critical Hit Chance against enemies for every Status Effect applied to them. Contagion doubles this chance."
+  },
+  "Blackhat": {
+    "name": "Blackhat",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless gains Lifesteal from Status Effect Damage."
+  },
+  "It Pours": {
+    "name": "It Pours",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless Critically Hits enemies with Contagion, she gains a Chance to apply an additional Stack of Contagion."
+  },
+  "Memory Leak": {
+    "name": "Memory Leak",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Loveless deals increased Gun Damage to enemies for every Stack of Contagion."
+  },
+  "Feedback": {
+    "name": "Feedback",
+    "vaultHunter": "Loveless",
+    "tree": "Virology",
+    "description": "Whenever Loveless deals Melee Damage to an enemy, she gains increased Status Effect Damage."
+  },
+  "Disdain": {
+    "name": "Disdain",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": "Loveless gains increased Critical Hit Damage."
+  },
+  "Gotta Go Fast": {
+    "name": "Gotta Go Fast",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Flurry": {
+    "name": "Flurry",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Plugged In": {
+    "name": "Plugged In",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Ratio Technique": {
+    "name": "Ratio Technique",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Odium": {
+    "name": "Odium",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Death Begets Death": {
+    "name": "Death Begets Death",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Going Ghost": {
+    "name": "Going Ghost",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Initialize": {
+    "name": "Initialize",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Neutral Special": {
+    "name": "Neutral Special",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": "Loveless' Empowered Melee deals more damage in a larger area."
+  },
+  "Footwork": {
+    "name": "Footwork",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Target Practice": {
+    "name": "Target Practice",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Methodical": {
+    "name": "Methodical",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Marathon": {
+    "name": "Marathon",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Retribution": {
+    "name": "Retribution",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Infinite Murder Hack": {
+    "name": "Infinite Murder Hack",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Killing Machine": {
+    "name": "Killing Machine",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Refactored": {
+    "name": "Refactored",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Third Party": {
+    "name": "Third Party",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "The Sweet Science": {
+    "name": "The Sweet Science",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Chip Surplus": {
+    "name": "Chip Surplus",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "The Gang's All Here": {
+    "name": "The Gang's All Here",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Overclocked": {
+    "name": "Overclocked",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Flow State": {
+    "name": "Flow State",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Violent Outburst": {
+    "name": "Violent Outburst",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Watch Your Step": {
+    "name": "Watch Your Step",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Assault Vest": {
+    "name": "Assault Vest",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": ""
+  },
+  "Upload": {
+    "name": "Upload",
+    "vaultHunter": "Loveless",
+    "tree": "Hack / Slash",
+    "description": "Loveless' Melee Critical Hits now apply Contagion."
+  },
+  "Sharing Tactics": {
+    "name": "Sharing Tactics",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Irradiated": {
+    "name": "Irradiated",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Antivirus": {
+    "name": "Antivirus",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Hiding the Pain": {
+    "name": "Hiding the Pain",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Overclocking": {
+    "name": "Overclocking",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Peak Performance": {
+    "name": "Peak Performance",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Sharing the Pain": {
+    "name": "Sharing the Pain",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Pure Fusion": {
+    "name": "Pure Fusion",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Optimization": {
+    "name": "Optimization",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Critically Acclaimed": {
+    "name": "Critically Acclaimed",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Storage Upgrade": {
+    "name": "Storage Upgrade",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "No Time to Think": {
+    "name": "No Time to Think",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Power Overwhelming": {
+    "name": "Power Overwhelming",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Manipulating RNG": {
+    "name": "Manipulating RNG",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Everchanging": {
+    "name": "Everchanging",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Deeper Connection": {
+    "name": "Deeper Connection",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Empowered Wyrm": {
+    "name": "Empowered Wyrm",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "In Memoriam": {
+    "name": "In Memoriam",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Symbiosis Overflow": {
+    "name": "Symbiosis Overflow",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "FNX.bat": {
+    "name": "FNX.bat",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "What's Your Status": {
+    "name": "What's Your Status",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Explosive Mindset": {
+    "name": "Explosive Mindset",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "I HATE YOU": {
+    "name": "I HATE YOU",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Irradiate 'Em All": {
+    "name": "Irradiate 'Em All",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
+    "description": ""
+  },
+  "Second Impact": {
+    "name": "Second Impact",
+    "vaultHunter": "Loveless",
+    "tree": "Manifestation",
     "description": ""
   }
 };

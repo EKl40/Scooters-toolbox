@@ -17,6 +17,8 @@
   function isAllowedToolboxHost(hostname) {
     var h = String(hostname || '').toLowerCase();
     return (
+      h === 'scooterstoolbox.com' ||
+      h === 'www.scooterstoolbox.com' ||
       h === 'scooters-toolbox.netlify.app' ||
       h === 'save-editor.be' ||
       h === 'www.save-editor.be' ||

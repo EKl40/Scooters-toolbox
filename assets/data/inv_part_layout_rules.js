@@ -500,7 +500,9 @@ const PART_SELECTION_DATA = {
         "leg_body_raid2",
         "leg_body_raid1",
         "leg_body_dlc1",
-        "leg_body_tuba"
+        "leg_body_tuba",
+        "leg_body_dlc2",
+        "leg_body_harmonica"
       ],
       "min": 0,
       "max": 1

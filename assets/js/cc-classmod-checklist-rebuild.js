@@ -12,7 +12,7 @@
   var cmSkillQtyState = {};
   /** >0 while mutating many checklist rows — skips per-row refreshOutputs for responsiveness */
   var cmBulkSuppressDepth = 0;
-  var FAMILY_BY_KEY = { vex: 254, amon: 255, rafa: 256, harlowe: 259, c4sh: 404, robodealer: 404, universal: 234, firmware: 234 };
+  var FAMILY_BY_KEY = { vex: 254, amon: 255, rafa: 256, harlowe: 259, c4sh: 404, robodealer: 404, loveless: 402, corpohacker: 402, universal: 234, firmware: 234 };
   /** Must match #classmodChecklistSection / #classmodQuickChecklistSection `.cm-checklist--resize-master` CSS. */
   var CM_CHECKLIST_PAIR_MIN_PX = 240;
   var CM_CHECKLIST_PAIR_MAX_PX = 800;
@@ -328,6 +328,10 @@
         }
         if (vh === 'c4sh' || vh === 'robodealer') {
           img.src = './assets/img/vault-hunters/player_robodealer.png';
+          return;
+        }
+        if (vh === 'loveless' || vh === 'corpohacker') {
+          img.src = './assets/img/vault-hunters/player_corpohacker.png';
           return;
         }
         img.remove();
@@ -900,10 +904,10 @@
     return /class\s*mod|classmod/i.test(String(itemType || ''));
   }
 
-  var CHAR_ALIAS = { vex: 'vex', siren: 'vex', 'dark siren': 'vex', darksiren: 'vex', amon: 'amon', paladin: 'amon', rafa: 'rafa', 'exo soldier': 'rafa', 'exo-soldier': 'rafa', exosoldier: 'rafa', harlowe: 'harlowe', gravitar: 'harlowe', c4sh: 'c4sh', robodealer: 'c4sh', universal: 'universal' };
-  var KEY_TO_DISPLAY = { vex: 'Vex', amon: 'Amon', rafa: 'Rafa', harlowe: 'Harlowe', c4sh: 'C4sh', universal: 'Universal' };
-  var DISPLAY_TO_MAN = { Vex: 'Siren', Amon: 'Paladin', Rafa: 'Exo Soldier', Harlowe: 'Gravitar', C4sh: 'Robodealer', Universal: 'Universal' };
-  var MAN_TO_DISPLAY = { 'Siren': 'Vex', 'Dark Siren': 'Vex', 'Paladin': 'Amon', 'Exo Soldier': 'Rafa', 'Gravitar': 'Harlowe', 'Robodealer': 'C4sh', 'C4sh': 'C4sh', 'Universal': 'Universal' };
+  var CHAR_ALIAS = { vex: 'vex', siren: 'vex', 'dark siren': 'vex', darksiren: 'vex', amon: 'amon', paladin: 'amon', rafa: 'rafa', 'exo soldier': 'rafa', 'exo-soldier': 'rafa', exosoldier: 'rafa', harlowe: 'harlowe', gravitar: 'harlowe', c4sh: 'c4sh', robodealer: 'c4sh', loveless: 'loveless', corpohacker: 'loveless', 'corpo hacker': 'loveless', hacker: 'loveless', 'the hacker': 'loveless', universal: 'universal' };
+  var KEY_TO_DISPLAY = { vex: 'Vex', amon: 'Amon', rafa: 'Rafa', harlowe: 'Harlowe', c4sh: 'C4sh', loveless: 'Loveless', universal: 'Universal' };
+  var DISPLAY_TO_MAN = { Vex: 'Siren', Amon: 'Paladin', Rafa: 'Exo Soldier', Harlowe: 'Gravitar', C4sh: 'Robodealer', Loveless: 'Corpohacker', Universal: 'Universal' };
+  var MAN_TO_DISPLAY = { 'Siren': 'Vex', 'Dark Siren': 'Vex', 'Paladin': 'Amon', 'Exo Soldier': 'Rafa', 'Gravitar': 'Harlowe', 'Robodealer': 'C4sh', 'C4sh': 'C4sh', 'Corpohacker': 'Loveless', 'Loveless': 'Loveless', 'Universal': 'Universal' };
 
   /** Per-class rarity IDs (family:rarityId). Non-legendary tiers only. */
   var RARITY_BY_CLASS = {
@@ -911,7 +915,8 @@
     Amon: { common: 70, uncommon: 69, rare: 68, epic: 67 },
     Rafa: { common: 66, uncommon: 67, rare: 68, epic: 69 },
     Harlowe: { common: 224, uncommon: 223, rare: 222, epic: 221 },
-    C4sh: { common: 52, uncommon: 53, rare: 54, epic: 55, legendary: 56 }
+    C4sh: { common: 52, uncommon: 53, rare: 54, epic: 55, legendary: 56 },
+    Loveless: { common: 221, uncommon: 220, rare: 219, epic: 218 }
   };
   var RARITY_TIER_ORDER = { common: 1, uncommon: 2, rare: 3, epic: 4, legendary: 5 };
 
@@ -924,7 +929,9 @@
     Vex: { 10: 56, 11: 55, 12: 54, 13: 53, 14: 52, 15: 51 },
     Amon: { 10: 25, 11: 24, 12: 23, 13: 22, 14: 21, 15: 20 },
     Rafa: { 10: 26, 11: 25, 12: 24, 13: 23, 14: 22, 15: 21 },
-    Harlowe: { 10: 26, 11: 25, 12: 24, 13: 23, 14: 22, 15: 21 }
+    Harlowe: { 10: 26, 11: 25, 12: 24, 13: 23, 14: 22, 15: 21 },
+    /* Loveless base legendaries use low body ids 1–6 (not 10–15 like launch VHs). */
+    Loveless: { 6: 52, 5: 53, 4: 54, 3: 55, 2: 56, 1: 217 }
   };
 
   /** DLC / post-base legendary name body → rarity comp itemId (same vault-hunter family). */
@@ -932,7 +939,8 @@
     Vex: { 538: 539 /* cowbell */, 544: 545 /* raid2 */, 546: 547 /* tuba */ },
     Amon: { 538: 539, 544: 545, 546: 547 },
     Rafa: { 540: 541 /* raid1 */, 542: 543 /* cowbell */, 546: 547 /* raid2 */, 548: 549 /* tuba */ },
-    Harlowe: { 540: 541 /* raid1 */, 542: 543 /* cowbell */, 546: 547 /* raid2 */, 548: 549 /* tuba */ }
+    Harlowe: { 540: 541 /* raid1 */, 542: 543 /* cowbell */, 546: 547 /* raid2 */, 548: 549 /* tuba */ },
+    Loveless: { 540: 544 /* dlc1 Martyr */, 545: 546 /* dlc2 Programmer */, 539: 543 /* raid1 Boomer */, 538: 542 /* raid2 Plague Engineer */, 222: 541 /* tuba Puppetmaster */ }
   };
 
   var MAN_TO_CLASSMOD_SLUG = {
@@ -941,39 +949,74 @@
     'Exo Soldier': 'classmod_exo_soldier',
     Gravitar: 'classmod_gravitar',
     Robodealer: 'classmod_robodealer',
-    C4sh: 'classmod_robodealer'
+    C4sh: 'classmod_robodealer',
+    Corpohacker: 'classmod_corpohacker',
+    Loveless: 'classmod_corpohacker',
+    Hacker: 'classmod_corpohacker'
   };
 
   /** Cowbell / Mandolin / raid DLC display names when extract still ships the internal slug. */
   var CLASSMOD_DLC_DISPLAY_BY_SPAWN = {
     'classmod_dark_siren.leg_body_cowbell': 'Configuration',
     'classmod_dark_siren.comp_05_legendary_cowbell': 'Configuration',
+    'classmod_dark_siren.leg_body_raid1': 'Misericorde',
+    'classmod_dark_siren.comp_05_legendary_raid1': 'Misericorde',
     'classmod_dark_siren.leg_body_raid2': 'Grim Sister',
     'classmod_dark_siren.comp_05_legendary_raid2': 'Grim Sister',
     'classmod_dark_siren.leg_body_tuba': 'Living Weapon',
     'classmod_dark_siren.comp_05_legendary_tuba': 'Living Weapon',
     'classmod_exo_soldier.leg_body_cowbell': 'Reaparición',
     'classmod_exo_soldier.comp_05_legendary_cowbell': 'Reaparición',
+    'classmod_exo_soldier.leg_body_raid1': 'Overdriver',
+    'classmod_exo_soldier.comp_05_legendary_raid1': 'Overdriver',
     'classmod_exo_soldier.leg_body_raid2': 'Bombastic',
     'classmod_exo_soldier.comp_05_legendary_raid2': 'Bombastic',
     'classmod_exo_soldier.leg_body_tuba': 'Power-Puncher',
     'classmod_exo_soldier.comp_05_legendary_tuba': 'Power-Puncher',
     'classmod_gravitar.leg_body_cowbell': 'Phlebotomist',
     'classmod_gravitar.comp_05_legendary_cowbell': 'Phlebotomist',
+    'classmod_gravitar.leg_body_raid1': 'Trooper',
+    'classmod_gravitar.comp_05_legendary_raid1': 'Trooper',
     'classmod_gravitar.leg_body_raid2': 'Plasmaphile',
     'classmod_gravitar.comp_05_legendary_raid2': 'Plasmaphile',
     'classmod_gravitar.leg_body_tuba': 'Chirurgeon',
     'classmod_gravitar.comp_05_legendary_tuba': 'Chirurgeon',
     'classmod_paladin.leg_body_cowbell': 'Tempest',
     'classmod_paladin.comp_05_legendary_cowbell': 'Tempest',
+    'classmod_paladin.leg_body_raid1': 'Lamplighter',
+    'classmod_paladin.comp_05_legendary_raid1': 'Lamplighter',
     'classmod_paladin.leg_body_raid2': 'Artificer',
     'classmod_paladin.comp_05_legendary_raid2': 'Artificer',
     'classmod_paladin.leg_body_tuba': 'Damned',
     'classmod_paladin.comp_05_legendary_tuba': 'Damned',
+    'classmod_robodealer.leg_body_raid1': 'Hooligan',
+    'classmod_robodealer.comp_05_legendary_raid1': 'Hooligan',
     'classmod_robodealer.leg_body_raid2': 'Prestidigitator',
     'classmod_robodealer.comp_05_legendary_raid2': 'Prestidigitator',
     'classmod_robodealer.leg_body_tuba': 'Trainer',
-    'classmod_robodealer.comp_05_legendary_tuba': 'Trainer'
+    'classmod_robodealer.comp_05_legendary_tuba': 'Trainer',
+    'classmod_corpohacker.leg_body_01': 'Devourer',
+    'classmod_corpohacker.comp_05_legendary_01': 'Devourer',
+    'classmod_corpohacker.leg_body_02': 'Virophile',
+    'classmod_corpohacker.comp_05_legendary_02': 'Virophile',
+    'classmod_corpohacker.leg_body_03': 'Montage Maker',
+    'classmod_corpohacker.comp_05_legendary_03': 'Montage Maker',
+    'classmod_corpohacker.leg_body_04': 'Memory Hoarder',
+    'classmod_corpohacker.comp_05_legendary_04': 'Memory Hoarder',
+    'classmod_corpohacker.leg_body_05': 'Trackstar',
+    'classmod_corpohacker.comp_05_legendary_05': 'Trackstar',
+    'classmod_corpohacker.leg_body_06': 'Functional Human',
+    'classmod_corpohacker.comp_05_legendary_06': 'Functional Human',
+    'classmod_corpohacker.leg_body_dlc1': 'Martyr',
+    'classmod_corpohacker.comp_05_legendary_dlc1': 'Martyr',
+    'classmod_corpohacker.leg_body_dlc2': 'Programmer',
+    'classmod_corpohacker.comp_05_legendary_dlc2': 'Programmer',
+    'classmod_corpohacker.leg_body_raid1': 'Boomer',
+    'classmod_corpohacker.comp_05_legendary_raid1': 'Boomer',
+    'classmod_corpohacker.leg_body_raid2': 'Plague Engineer',
+    'classmod_corpohacker.comp_05_legendary_raid2': 'Plague Engineer',
+    'classmod_corpohacker.leg_body_tuba': 'Puppetmaster',
+    'classmod_corpohacker.comp_05_legendary_tuba': 'Puppetmaster'
   };
 
   /** Comp_Rarity display names for C4sh (Robodealer) when STX/name parts omit them. Source: community reference list (item id within family 404). */
@@ -1034,7 +1077,9 @@
     if (/^cowbell$/i.test(nm) && /classmod_dark_siren/.test(code)) return 'Configuration';
     if (/^cowbell$/i.test(nm) && /classmod_exo_soldier/.test(code)) return 'Reaparición';
     if (/^cowbell$/i.test(nm) && /classmod_paladin/.test(code)) return 'Tempest';
-    if (/^(raid\s*\d+|raid\d+|harmonica)$/i.test(nm.replace(/[\s_-]+/g, ' ').trim())) return '';
+    /* Unreleased stubs only — raid1 resolves via DLC map / dataset names. */
+    if (/^(raid\s*[34]|raid[34]|harmonica)$/i.test(nm.replace(/[\s_-]+/g, ' ').trim())) return '';
+    if (/^(raid\s*\d+|raid\d+)$/i.test(nm.replace(/[\s_-]+/g, ' ').trim()) && !CLASSMOD_DLC_DISPLAY_BY_SPAWN[code]) return '';
     return nm;
   }
   try { window.stxClassModDisplayNameForPart = displayNameForClassModPart; } catch (_) {}
@@ -1438,7 +1483,8 @@
     if (/^capstone\b/i.test(nm) && /\btier\s*\d+/i.test(nm)) return true;
     if (/(^|[._])passive_(blue|green|red|white|purple)(_|\d)/i.test(code)) return true;
     if (/\.(?:leg_body_|comp_05_legendary_)(raid3|raid4|harmonica)(?:["']|$)/i.test(code)) return true;
-    if (/^(raid\s*\d+|raid\d+|harmonica)$/i.test(nm.replace(/[\s_-]+/g, ' ').trim())) return true;
+    /* Only unreleased stubs by name — raid1 has real names (Misericorde / …). */
+    if (/^(raid\s*[34]|raid[34]|harmonica)$/i.test(nm.replace(/[\s_-]+/g, ' ').trim())) return true;
     return false;
   }
 
@@ -1474,17 +1520,28 @@
     var code = normPartSpawnCode(p);
     if (/\.leg_body_/i.test(code) || /^leg_body_/i.test(code)) return true;
     var id = p && (p.id != null ? Number(p.id) : null);
+    var raw = String((p && (p.idRaw || p.idraw)) || '').trim();
+    var fam = null;
+    var idFromRaw = null;
+    var famM = raw.match(/^(\d+)\s*:\s*(\d+)/);
+    if (famM) {
+      fam = Number(famM[1]);
+      idFromRaw = Number(famM[2]);
+    }
+    if (!Number.isFinite(id) && Number.isFinite(idFromRaw)) id = idFromRaw;
+    /* Loveless (family 402): base legendaries are ids 1–6; Puppetmaster is 222; DLC uses 5xx.
+       Ids 7–15 / 51 are normal bodies — do not use the launch-VH 10–15 heuristic. */
+    if (fam === 402 || /classmod_corpohacker/i.test(code)) {
+      if (Number.isFinite(id) && ((id >= 1 && id <= 6) || id === 222 || id >= 500)) return true;
+      return false;
+    }
     if (Number.isFinite(id)) {
       if (id >= 10 && id <= 15) return true;
-      /* DLC / raid legendary name bodies use high serial ids (5xx). */
       if (id >= 500) return true;
     }
-    var raw = String((p && (p.idRaw || p.idraw)) || '').trim();
-    var m = raw.match(/:\s*(\d+)$/);
-    if (m) {
-      var n = Number(m[1]);
-      if (n >= 10 && n <= 15) return true;
-      if (n >= 500) return true;
+    if (Number.isFinite(idFromRaw)) {
+      if (idFromRaw >= 10 && idFromRaw <= 15) return true;
+      if (idFromRaw >= 500) return true;
     }
     return false;
   }
@@ -1547,6 +1604,12 @@
       if (human && idTok) opt.textContent = human + ' · ' + idTok;
       else if (human) opt.textContent = human;
       else opt.textContent = tok || '—';
+      if (typeof window.stxMarkNewDropdownLabel === 'function') {
+        try { opt.textContent = window.stxMarkNewDropdownLabel(opt.textContent, p); } catch (_) {}
+      }
+      if (typeof window.stxIsNewEditorItem === 'function' && window.stxIsNewEditorItem(p)) {
+        opt.setAttribute('data-stx-new', '1');
+      }
       if (typeof window.partTooltipText === 'function') { var t = window.partTooltipText(p); if (t) opt.title = t; }
       sel.appendChild(opt);
     });
@@ -1782,10 +1845,20 @@
         var cls = btn.getAttribute('data-cm-class');
         var state = getState();
         state.classmodClass = cls;
-        var manVal = DISPLAY_TO_MAN[cls] || cls;
+        var manVal = DISPLAY_TO_MAN[cls] || DISPLAY_TO_MAN[getDisplayClassName(cls)] || cls;
         var guidedMan = byId('ccGuidedManufacturer');
         function setSelVal(sel, v) { if (!sel) return false; var ok = Array.prototype.some.call(sel.options || [], function(o){ return String(o.value||'').trim()===String(v||'').trim(); }); if (ok) sel.value = v; return ok; }
-        if (!setSelVal(guidedMan, manVal)) setSelVal(guidedMan, cls);
+        if (!setSelVal(guidedMan, manVal)) {
+          /* Try canonical internal manufacturer (Corpohacker / Robodealer / …). */
+          var canon = manVal;
+          try {
+            if (typeof window.stxCanonicalizeManufacturerDisplayName === 'function') {
+              canon = window.stxCanonicalizeManufacturerDisplayName(manVal) || manVal;
+            }
+          } catch (_) {}
+          if (!setSelVal(guidedMan, canon)) setSelVal(guidedMan, cls);
+          manVal = (guidedMan && guidedMan.value) || manVal;
+        }
         // Keep Simple Builder's #stx_manufacturer independent — guided classmod uses ccGuidedManufacturer + checklist only.
         state.manufacturer = manVal;
         setListPage('cmPrimaryList', 0);
