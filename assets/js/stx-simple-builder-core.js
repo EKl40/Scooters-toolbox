@@ -1000,6 +1000,7 @@
   {key:'secondary', label:'Secondary Parts', partType:'Secondary', multi:true},
   {key:'element', label:'Element Override', partType:'Element', customType:'classModElement'},
   {key:'firmware', label:'Firmware', partType:'Firmware'},
+  {key:'enhancementGunStats', label:'Enhancement stats (modded)', partType:'', multi:true, customType:'enhancementGunStats'},
   {key:'otherParts', label:'Other parts (stack)', partType:'', multi:true, customType:'otherParts'}
 ]
   };
@@ -4674,8 +4675,12 @@ function getAllParts(){
     'classmod_corpohacker.comp_05_legendary_06': 'Functional Human',
     'classmod_corpohacker.leg_body_dlc1': 'Martyr',
     'classmod_corpohacker.comp_05_legendary_dlc1': 'Martyr',
+    'classmod_corpohacker.leg_body_cowbell': 'Martyr',
+    'classmod_corpohacker.comp_05_legendary_cowbell': 'Martyr',
     'classmod_corpohacker.leg_body_dlc2': 'Programmer',
     'classmod_corpohacker.comp_05_legendary_dlc2': 'Programmer',
+    'classmod_corpohacker.leg_body_harmonica': 'Programmer',
+    'classmod_corpohacker.comp_05_legendary_harmonica': 'Programmer',
     'classmod_corpohacker.leg_body_raid1': 'Boomer',
     'classmod_corpohacker.comp_05_legendary_raid1': 'Boomer',
     'classmod_corpohacker.leg_body_raid2': 'Plague Engineer',
@@ -7102,6 +7107,34 @@ if (cat === 'Class Mod' && !isAllPartsEnabled()){
         if (isAllPartsEnabled()) return true;
         return String(p.category || '').trim() === 'Repkit';
       }).sort((a,b)=>displayForPart(a).localeCompare(displayForPart(b), undefined, {numeric:true, sensitivity:'base'}));
+    } else if (schemaItem && schemaItem.customType === 'enhancementGunStats') {
+      // Enhancement secondary/universal-style stats for modded classmods (exclude firmware + rarity comps).
+      rawOpts = getAllParts().filter(p=>{
+        if (!p) return false;
+        if (String(p.category || '').trim() !== 'Enhancement') return false;
+        if (stxIsBrokenClassmodDatasetPlaceholderPart(p)) return false;
+        const codeL = String(normCode(p.code || p.spawnCode || p.importCode || '') || '').toLowerCase();
+        const ptL = String((p.partType || p.kind || '') || '').toLowerCase();
+        if (ptL === 'firmware' || codeL.indexOf('part_firmware') !== -1) return false;
+        if (ptL === 'core' || codeL.indexOf('part_core') !== -1) return false;
+        if (/\.comp_\d+_/.test(codeL) || ptL === 'rarity' || ptL === 'item card') return false;
+        const isStats = ptL === 'stats' || ptL === 'stat' || /^stats?\s*[23]$/.test(ptL) || codeL.indexOf('part_stat') !== -1;
+        if (!isStats) return false;
+        const id = Number(p.id != null ? p.id : NaN);
+        return Number.isFinite(id);
+      }).map(p=>{
+        const id = Number(p.id);
+        const codeL = String(normCode(p.code || p.spawnCode || p.importCode || '') || '').toLowerCase();
+        let fam = Number(p.familyId != null ? p.familyId : p.family);
+        if (!Number.isFinite(fam)) {
+          if (codeL.indexOf('enhancement.') === 0) fam = 247;
+          else {
+            const inferred = stxEnhancementTypeFamilyIdFromSpawnCode(codeL);
+            fam = Number.isFinite(inferred) ? inferred : 247;
+          }
+        }
+        return Object.assign({}, p, { familyId: fam, family: fam, idRaw: fam + ':' + id, id });
+      }).sort((a,b)=>displayForPart(a).localeCompare(displayForPart(b), undefined, {numeric:true, sensitivity:'base'}));
     } else if (schemaItem && schemaItem.customType === 'otherParts') {
       // Category-wide stackable pool (cross-manufacturer + cross weapon-type within the item category).
       rawOpts = filterParts({
@@ -8048,7 +8081,8 @@ if (cat === 'Class Mod' && !isAllPartsEnabled()){
         schemaItem.partType === 'Universal' ||
         schemaItem.partType === 'Secondary' ||
         schemaItem.partType === 'Firmware' ||
-        schemaItem.partType === 'Perk'
+        schemaItem.partType === 'Perk' ||
+        schemaItem.customType === 'enhancementGunStats'
       )) ||
       ((category === 'Weapon') && schemaItem.customType === 'weaponAdditionalParts') ||
       (schemaItem.customType === 'otherParts' && category !== 'Class Mod') ||
@@ -8067,6 +8101,13 @@ if (cat === 'Class Mod' && !isAllPartsEnabled()){
       ubHint.style.lineHeight = '1.4';
       ubHint.textContent = STX_UNDERBARREL_SLOT_HINT;
       slot.appendChild(ubHint);
+    } else if (category === 'Class Mod' && schemaItem.customType === 'enhancementGunStats') {
+      const egHint = document.createElement('div');
+      egHint.className = 'muted small';
+      egHint.style.margin = '-4px 0 8px';
+      egHint.style.lineHeight = '1.4';
+      egHint.textContent = 'Enhancement Stat / Stat2 rows only (no firmware or cores). Modded cross-stuff for classmods.';
+      slot.appendChild(egHint);
     } else if ((category === 'Weapon' || category === 'Gadget') && schemaItem.key === 'underbarrelAccVis') {
       const ubvHint = document.createElement('div');
       ubvHint.className = 'muted small';
@@ -8100,7 +8141,8 @@ if (cat === 'Class Mod' && !isAllPartsEnabled()){
         (schemaItem.partType === 'Skill' ||
           schemaItem.partType === 'Secondary' ||
           schemaItem.partType === 'Universal' ||
-          schemaItem.partType === 'Perk')
+          schemaItem.partType === 'Perk' ||
+          schemaItem.customType === 'enhancementGunStats')
       );
 
       const list = document.createElement('div');
@@ -9703,7 +9745,7 @@ if (cat === 'Class Mod' && !isAllPartsEnabled()){
       seen.add(state.mainPart);
       /* After rarity/name: Element → Universal → Secondary → Perks (skills) → Firmware.
          Keeping element before the 234-family perks lets firmware stay last but still pack with the other 234 tokens. */
-      const cmEmitOrder = ['namePart', 'element', 'universal', 'secondary', 'perk', 'firmware', 'otherParts'];
+      const cmEmitOrder = ['namePart', 'element', 'universal', 'secondary', 'perk', 'firmware', 'enhancementGunStats', 'otherParts'];
       const cmEmitted = new Set();
       for (const k of cmEmitOrder){
         cmEmitted.add(k);

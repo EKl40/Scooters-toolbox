@@ -8,7 +8,7 @@
   'use strict';
 
   var CM_ROWS_PER_PAGE = 10;
-  var cmListPageState = { cmPrimaryList: 0, cmSecondaryList: 0, cmUniversalList: 0, cmFirmwareList: 0 };
+  var cmListPageState = { cmPrimaryList: 0, cmSecondaryList: 0, cmUniversalList: 0, cmFirmwareList: 0, cmEnhancementGunStatsList: 0 };
   var cmSkillQtyState = {};
   /** >0 while mutating many checklist rows — skips per-row refreshOutputs for responsiveness */
   var cmBulkSuppressDepth = 0;
@@ -88,6 +88,96 @@
       _cmSource: source || '',
       part: p
     };
+  }
+
+  /** Enhancement parts (any type) for modded classmod stuffing — tokens keep Enhancement family ids. */
+  function enhancementFamilyIdForPart(p) {
+    if (!p) return 247;
+    var f = Number(p.familyId != null ? p.familyId : p.family);
+    if (Number.isFinite(f)) return f;
+    var codeL = String((p.code || p.spawnCode || p.importCode || '') || '')
+      .toLowerCase()
+      .replace(/^["']|["']$/g, '');
+    if (codeL.indexOf('enhancement.') === 0) return 247;
+    var em = codeL.match(/^([a-z]{3})_enhancement\./);
+    if (em && em[1]) {
+      var m3 = em[1];
+      var mfr =
+        (m3 === 'atl') ? 'Atlas' :
+        (m3 === 'cov') ? 'COV' :
+        (m3 === 'dad') ? 'Daedalus' :
+        (m3 === 'hyp') ? 'Hyperion' :
+        (m3 === 'jak') ? 'Jakobs' :
+        (m3 === 'mal') ? 'Maliwan' :
+        (m3 === 'ord') ? 'Order' :
+        (m3 === 'bor') ? 'Ripper' :
+        (m3 === 'ted') ? 'Tediore' :
+        (m3 === 'tor') ? 'Torgue' :
+        (m3 === 'vla') ? 'Vladof' :
+        '';
+      if (mfr) {
+        try {
+          var rr = Array.isArray(window.STX_RARITIES) ? window.STX_RARITIES : [];
+          for (var i = 0; i < rr.length; i++) {
+            var row = rr[i];
+            if (!row) continue;
+            if (String(row.itemType || '').trim() !== 'Enhancement') continue;
+            if (String(row.manufacturer || '').trim() !== mfr) continue;
+            var fam = Number(row.familyId);
+            if (Number.isFinite(fam)) return fam;
+          }
+        } catch (_) {}
+      }
+    }
+    return 247;
+  }
+
+  function getEnhancementGunStatItems() {
+    var ds = window.STX_DATASET;
+    var ap = (ds && Array.isArray(ds.ALL_PARTS)) ? ds.ALL_PARTS : [];
+    var seen = new Set();
+    var out = [];
+    for (var i = 0; i < ap.length; i++) {
+      var p = ap[i];
+      if (!p) continue;
+      if (String(p.category || '').trim() !== 'Enhancement') continue;
+      if (isBrokenClassmodPlaceholderPart(p)) continue;
+      var codeL = String((p.code || p.spawnCode || p.importCode || '') || '')
+        .toLowerCase()
+        .replace(/^["']|["']$/g, '');
+      var ptL = String((p.partType || p.kind || '') || '').toLowerCase();
+      /* Enhancement secondary/universal-style stats only (Stat / Stat2) — not firmware, cores, or rarity. */
+      if (ptL === 'firmware' || codeL.indexOf('part_firmware') !== -1) continue;
+      if (ptL === 'core' || codeL.indexOf('part_core') !== -1) continue;
+      if (/\.comp_\d+_/.test(codeL) || ptL === 'rarity' || ptL === 'item card') continue;
+      var isStats = ptL === 'stats' || ptL === 'stat' || /^stats?\s*[23]$/.test(ptL) || codeL.indexOf('part_stat') !== -1;
+      if (!isStats) continue;
+      var id = Number(p.id != null ? p.id : NaN);
+      if (!Number.isFinite(id)) {
+        var raw = String((p.idRaw || p.idraw || '') || '').trim();
+        id = Number((raw.match(/(\d+)\s*$/) || [])[1]);
+      }
+      if (!Number.isFinite(id)) continue;
+      var fam = enhancementFamilyIdForPart(p);
+      var tok = '{' + fam + ':' + id + '}';
+      if (seen.has(tok)) continue;
+      seen.add(tok);
+      var part = Object.assign({}, p, {
+        familyId: fam,
+        family: fam,
+        id: id,
+        idRaw: fam + ':' + id
+      });
+      out.push({
+        name: String((p.name || p.legendaryName || tok) || '').trim() || tok,
+        code: tok,
+        partType: String((p.partType || p.kind || 'Enhancement') || '').trim() || 'Enhancement',
+        category: 'Enhancement',
+        _cmSource: 'enhancementGunStats',
+        part: part
+      });
+    }
+    return out.sort(alphaByName);
   }
 
   function getDisplayClassName(charName) {
@@ -452,7 +542,8 @@
       Array.isArray(window.__cmChecklistPrimaryItems) ? window.__cmChecklistPrimaryItems : [],
       Array.isArray(window.__cmChecklistSecondaryItems) ? window.__cmChecklistSecondaryItems : [],
       Array.isArray(window.__cmChecklistUniversalItems) ? window.__cmChecklistUniversalItems : [],
-      Array.isArray(window.__cmChecklistFirmwareItems) ? window.__cmChecklistFirmwareItems : []
+      Array.isArray(window.__cmChecklistFirmwareItems) ? window.__cmChecklistFirmwareItems : [],
+      Array.isArray(window.__cmChecklistEnhancementGunStatsItems) ? window.__cmChecklistEnhancementGunStatsItems : []
     ];
     for (var g = 0; g < groups.length; g++) {
       for (var i = 0; i < groups[g].length; i++) {
@@ -606,7 +697,7 @@
     var state = getState();
     var slots = state.slots || {};
     var codeStr = String(code || '').trim();
-    var arrs = [slots.perk, slots.universal, slots.secondary, slots.firmware];
+    var arrs = [slots.perk, slots.universal, slots.secondary, slots.firmware, slots.enhancementGunStats];
     for (var a = 0; a < arrs.length; a++) {
       var arr = Array.isArray(arrs[a]) ? arrs[a] : [];
       for (var i = 0; i < arr.length; i++) {
@@ -623,6 +714,7 @@
     if (src.indexOf('firmware') !== -1) return 'firmware';
     if (src === 'secondary') return 'secondary';
     if (src === 'universal') return 'universal';
+    if (src === 'enhancementgunstats' || src.indexOf('enhancementgun') !== -1) return 'enhancementGunStats';
     return 'universal';
   }
 
@@ -658,7 +750,7 @@
         arr.push(part);
       }
     } else {
-      ['perk', 'universal', 'secondary', 'firmware'].forEach(function (k) {
+      ['perk', 'universal', 'secondary', 'firmware', 'enhancementGunStats'].forEach(function (k) {
         var arr = ensureArr(k);
         var idx = findIdx(arr);
         if (idx !== -1) arr.splice(idx, 1);
@@ -877,6 +969,7 @@
     if (id === 'cmSecondaryList') return window.__cmChecklistSecondaryItems;
     if (id === 'cmUniversalList') return window.__cmChecklistUniversalItems;
     if (id === 'cmFirmwareList') return window.__cmChecklistFirmwareItems;
+    if (id === 'cmEnhancementGunStatsList') return window.__cmChecklistEnhancementGunStatsItems;
     return null;
   }
 
@@ -1009,8 +1102,12 @@
     'classmod_corpohacker.comp_05_legendary_06': 'Functional Human',
     'classmod_corpohacker.leg_body_dlc1': 'Martyr',
     'classmod_corpohacker.comp_05_legendary_dlc1': 'Martyr',
+    'classmod_corpohacker.leg_body_cowbell': 'Martyr',
+    'classmod_corpohacker.comp_05_legendary_cowbell': 'Martyr',
     'classmod_corpohacker.leg_body_dlc2': 'Programmer',
     'classmod_corpohacker.comp_05_legendary_dlc2': 'Programmer',
+    'classmod_corpohacker.leg_body_harmonica': 'Programmer',
+    'classmod_corpohacker.comp_05_legendary_harmonica': 'Programmer',
     'classmod_corpohacker.leg_body_raid1': 'Boomer',
     'classmod_corpohacker.comp_05_legendary_raid1': 'Boomer',
     'classmod_corpohacker.leg_body_raid2': 'Plague Engineer',
@@ -1333,7 +1430,7 @@
       if (rarityNameToken) tokens.push(rarityNameToken);
     }
 
-    ['universal', 'secondary', 'perk', 'firmware'].forEach(function (slotKey) {
+    ['universal', 'secondary', 'perk', 'firmware', 'enhancementGunStats'].forEach(function (slotKey) {
       var arr = Array.isArray(state && state.slots && state.slots[slotKey]) ? state.slots[slotKey] : [];
       for (var i = 0; i < arr.length; i++) {
         var tok = partTokenForChecklist(arr[i]);
@@ -1779,6 +1876,7 @@
     var secondaryItems = sortClassmodChecklistByTreeThenName(dedupeList(getFilteredClassModItems(cls, 'Secondary', 'secondary')));
     var universalItems = sortClassmodChecklistByTreeThenName(dedupeList(getFilteredClassModItems(cls, 'Universal', 'universal')));
     var firmwareItems = dedupeList(getFilteredClassModItems(cls, 'Firmware', 'firmware')).sort(alphaByName);
+    var enhancementGunStatsItems = dedupeList(getEnhancementGunStatItems());
 
     function dedupeList(items) {
       var seenCodes = new Set();
@@ -1798,11 +1896,13 @@
     window.__cmChecklistSecondaryItems = secondaryItems;
     window.__cmChecklistUniversalItems = universalItems;
     window.__cmChecklistFirmwareItems = firmwareItems;
+    window.__cmChecklistEnhancementGunStatsItems = enhancementGunStatsItems;
 
     renderChecklist(byId('cmPrimaryList'), primaryItems);
     renderChecklist(byId('cmSecondaryList'), secondaryItems);
     renderChecklist(byId('cmUniversalList'), universalItems);
     renderChecklist(byId('cmFirmwareList'), firmwareItems);
+    renderChecklist(byId('cmEnhancementGunStatsList'), enhancementGunStatsItems);
 
     /* Emit checklist serial first so Simple `refreshOutputs` sees rarity/name slots (spawn mode used to drop names). */
     syncChecklistClassModOutputs();
@@ -1865,6 +1965,7 @@
         setListPage('cmSecondaryList', 0);
         setListPage('cmUniversalList', 0);
         setListPage('cmFirmwareList', 0);
+        setListPage('cmEnhancementGunStatsList', 0);
         renderUI();
         try { if (typeof window.refreshOutputs === 'function') window.refreshOutputs(); } catch (_) {}
         syncChecklistClassModOutputs();
@@ -1985,6 +2086,19 @@
         var anyUnchecked = raw.some(function (it) { return !isChecked(it.code); });
         setCheckedBulk(raw, anyUnchecked);
         renderChecklistByListId('cmFirmwareList');
+        refreshChecklistSerialOutputs();
+      });
+    }
+
+    var toggleEnhGun = byId('cmToggleAllEnhancementGunStatsBtn');
+    if (toggleEnhGun && !toggleEnhGun.__bound) {
+      toggleEnhGun.__bound = true;
+      toggleEnhGun.addEventListener('click', function () {
+        var raw = Array.isArray(window.__cmChecklistEnhancementGunStatsItems) ? window.__cmChecklistEnhancementGunStatsItems : [];
+        if (!raw.length) return;
+        var anyUnchecked = raw.some(function (it) { return !isChecked(it.code); });
+        setCheckedBulk(raw, anyUnchecked);
+        renderChecklistByListId('cmEnhancementGunStatsList');
         refreshChecklistSerialOutputs();
       });
     }

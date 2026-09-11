@@ -3532,7 +3532,7 @@
   var GUIDED_STACK_SLOT_KEYS = {
     bodyAcc: 1, barrelAcc: 1, magazineAcc: 1, scopeAcc: 1, licensed: 1, statMod: 1,
     additionalParts: 1, legendary: 1, augment: 1, perk: 1, universal: 1, secondary: 1,
-    other: 1, grenadeKitStats: 1, stats: 1, perkResist: 1, perkImmunity: 1, perkNova: 1,
+    other: 1, enhancementGunStats: 1, grenadeKitStats: 1, stats: 1, perkResist: 1, perkImmunity: 1, perkNova: 1,
     perkSplat: 1, specialPlaceholder: 1, primary246: 1, secondary246: 1, armor237: 1, energy248: 1,
     special: 1
   };
@@ -4666,7 +4666,9 @@
       { key: 'universal', label: 'Universal Parts', partType: 'Universal', selectId: 'ccClassModUniversalSelect', btnId: 'ccClassModUniversalAdd' },
       { key: 'secondary', label: 'Secondary Parts', partType: 'Secondary', selectId: 'ccClassModSecondarySelect', btnId: 'ccClassModSecondaryAdd' },
       { key: 'element', label: 'Element Override', partType: 'Element', selectId: 'ccClassModElementSelect', btnId: 'ccClassModElementAdd' },
-      { key: 'firmware', label: 'Firmware', partType: 'Firmware', selectId: 'ccClassModFirmwareSelect', btnId: 'ccClassModFirmwareAdd' }
+      { key: 'firmware', label: 'Firmware', partType: 'Firmware', selectId: 'ccClassModFirmwareSelect', btnId: 'ccClassModFirmwareAdd' },
+      { key: 'enhancementGunStats', label: 'Enhancement stats (modded)', partType: '', selectId: 'ccClassModEnhancementGunStatsSelect', btnId: 'ccClassModEnhancementGunStatsAdd', customType: 'enhancementGunStats' },
+      { key: 'other', label: 'Other parts (stack)', partType: '', selectId: 'ccClassModOtherSelect', btnId: 'ccClassModOtherAdd', customType: 'otherParts' }
     ],
     'Heavy Weapon': [
       { key: 'rarity', label: 'Rarity ID', partType: 'Rarity', selectId: 'ccHeavyRaritySelect', btnId: 'ccHeavyRarityAdd' },
@@ -4778,6 +4780,39 @@
         for (var psi = 0; psi < allPs.length; psi++) {
           var psp = allPs[psi];
           if (psp && matchPs && matchPs(psp)) filtered.push(psp);
+        }
+        filtered = sortGuidedPartsByCode(filtered);
+      } else if (category === 'Class Mod' && (slot.key === 'enhancementGunStats' || slot.customType === 'enhancementGunStats')) {
+        filtered = [];
+        var allEg = getAllParts();
+        var seenEg = {};
+        for (var egi = 0; egi < allEg.length; egi++) {
+          var egp = allEg[egi];
+          if (!egp) continue;
+          if (String(egp.category || '').trim() !== 'Enhancement') continue;
+          var egc = String((egp.code || egp.spawnCode || egp.importCode || '') || '')
+            .toLowerCase()
+            .replace(/^["']|["']$/g, '');
+          var egPt = String((egp.partType || egp.kind || '') || '').toLowerCase();
+          if (egPt === 'firmware' || egc.indexOf('part_firmware') !== -1) continue;
+          if (egPt === 'core' || egc.indexOf('part_core') !== -1) continue;
+          if (/\.comp_\d+_/.test(egc) || egPt === 'rarity' || egPt === 'item card') continue;
+          var egIsStats = egPt === 'stats' || egPt === 'stat' || /^stats?\s*[23]$/.test(egPt) || egc.indexOf('part_stat') !== -1;
+          if (!egIsStats) continue;
+          var egid = Number(egp.id != null ? egp.id : NaN);
+          if (!Number.isFinite(egid)) continue;
+          var egFam = Number(egp.familyId != null ? egp.familyId : egp.family);
+          if (!Number.isFinite(egFam)) {
+            if (egc.indexOf('enhancement.') === 0) egFam = 247;
+            else if (typeof window.stxEnhancementTypeFamilyIdFromSpawnCode === 'function') {
+              try { egFam = Number(window.stxEnhancementTypeFamilyIdFromSpawnCode(egc)); } catch (_) { egFam = NaN; }
+            }
+            if (!Number.isFinite(egFam)) egFam = 247;
+          }
+          var egTok = egFam + ':' + egid;
+          if (seenEg[egTok]) continue;
+          seenEg[egTok] = 1;
+          filtered.push(Object.assign({}, egp, { familyId: egFam, family: egFam, idRaw: egTok, id: egid }));
         }
         filtered = sortGuidedPartsByCode(filtered);
       } else if (useSimpleFilter) {

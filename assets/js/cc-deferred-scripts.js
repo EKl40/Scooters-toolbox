@@ -13,7 +13,7 @@
     './assets/data/stx_editor_extract.js',
     './assets/data/legacy_classmod_names.js',
     './assets/data/stx_new_item_codes.js',
-    './assets/js/stx-simple-builder-core.js?v=77o',
+    './assets/js/stx-simple-builder-core.js?v=77r',
     './assets/js/cc-custom-select-rebuild.js'
   ];
 
@@ -46,12 +46,12 @@
   var GUIDED_SCRIPTS = [
     './legacy/ncs_slot_map.js',
     './assets/js/cc-item-slug.js?v=77j',
-    './assets/js/cc-guided-builder-rebuild.js?v=77o',
+    './assets/js/cc-guided-builder-rebuild.js?v=77r',
     './assets/js/stx-editor-smoke-guards.js'
   ];
 
   var FULL_SCRIPTS = [
-    './assets/js/cc-classmod-checklist-rebuild.js',
+    './assets/js/cc-classmod-checklist-rebuild.js?v=77r',
     './assets/js/cc-enhancement-checklist-rebuild.js',
     './assets/js/cc-adv-search-stable.js',
     './assets/js/cc-build-stats-rebuild.js?v=77j',
