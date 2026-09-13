@@ -20,7 +20,7 @@ Do not commit the `.pfx` file or password. Keep both outside the repo.
 To verify a finished EXE:
 
 ```powershell
-Get-AuthenticodeSignature ".\dist\Scooters Toolbox-2.5.11-win-x64.exe" | Format-List
+Get-AuthenticodeSignature ".\dist\Scooters Toolbox-2.5.12-win-x64.exe" | Format-List
 ```
 
 ## Nexus-friendly build notes
