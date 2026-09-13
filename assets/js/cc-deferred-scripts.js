@@ -13,7 +13,7 @@
     './assets/data/stx_editor_extract.js',
     './assets/data/legacy_classmod_names.js',
     './assets/data/stx_new_item_codes.js',
-    './assets/js/stx-simple-builder-core.js?v=77r',
+    './assets/js/stx-simple-builder-core.js?v=77t',
     './assets/js/cc-custom-select-rebuild.js'
   ];
 

@@ -6220,7 +6220,46 @@ function getAllParts(){
     try { stxSyncCustomSelectIfWrapped(sel); } catch (_e) {}
   }
 
-function refreshMainPartSync(){
+  function stxEnsureMainPartSelectOption(part){
+    if (!part) return '';
+    const sel = $('mainPart');
+    let key = '';
+    try { key = String(part.__mainOptKey || '').trim(); } catch (_) { key = ''; }
+    if (!key && part.__idx != null && Number.isFinite(Number(part.__idx))) key = `idx:${Number(part.__idx)}`;
+    if (!key) {
+      const tok = tokenForPart(part) || normCode(part.code) || '';
+      key = tok ? `import:${tok}` : 'import:main';
+    }
+    try { part.__mainOptKey = key; } catch (_) {}
+    try {
+      if (!state.__mainPartByOptionKey || typeof state.__mainPartByOptionKey.set !== 'function') {
+        state.__mainPartByOptionKey = new Map();
+      }
+      state.__mainPartByOptionKey.set(key, part);
+    } catch (_) {}
+    if (sel) {
+      let found = false;
+      try {
+        for (let i = 0; i < (sel.options || []).length; i++) {
+          if (String(sel.options[i].value || '') === key) { found = true; break; }
+        }
+      } catch (_) {}
+      if (!found) {
+        let label = key;
+        try { label = String(displayForPart(part) || dropdownLabelForPart(part) || key).trim() || key; } catch (_) {}
+        try {
+          const opt = new Option(label, key);
+          try { opt.setAttribute('data-base-label', label); } catch (_) {}
+          sel.appendChild(opt);
+        } catch (_) {}
+      }
+      try { sel.value = key; } catch (_) {}
+      try { stxSyncCustomSelectIfWrapped(sel); } catch (_) {}
+    }
+    return key;
+  }
+
+  function refreshMainPartSync(){
     const catUi = stxNormalizeSimpleBuilderItemTypeUi(state.itemType);
     if (state.itemType !== catUi) state.itemType = catUi;
     const cat   = stxSimpleBuilderItemTypeIsHeavyUi(catUi) ? 'Weapon' : catUi;
@@ -6291,7 +6330,7 @@ function refreshMainPartSync(){
         const prev = state.mainPart.__fullDeserialized ? String(state.mainPart.__fullDeserialized).trim() : '';
         const match = prev ? aicarList.find(p => String(p.__fullDeserialized || '').trim() === prev) : null;
         if (match && match.__mainOptKey) $('mainPart').value = String(match.__mainOptKey);
-        else { state.mainPart = null; $('mainPart').value = ''; }
+        else stxEnsureMainPartSelectOption(state.mainPart);
       } else {
         $('mainPart').value = '';
       }
@@ -6665,7 +6704,11 @@ if (cat === 'Class Mod' && !isAllPartsEnabled()){
           return tokenForPart(p) === prevTok;
         });
         if (match) $('mainPart').value = String((match && match.__mainOptKey) ? match.__mainOptKey : '');
-        else { state.mainPart = null; $('mainPart').value=''; }
+        else {
+          /* Never drop an imported/current body just because filters or the lite option-cap
+             omitted it from the rebuilt list — that used to wipe Simple down to skin-only. */
+          stxEnsureMainPartSelectOption(state.mainPart);
+        }
       } else {
         $('mainPart').value = '';
       }
@@ -9060,28 +9103,35 @@ if (cat === 'Class Mod' && !isAllPartsEnabled()){
           refreshOutputs();
           return;
         }
-        state.mainPart = null;
-        state.detectedCategory = null;
-        $('detectedCat').textContent = '-';
-        $('builderEmpty').style.display = '';
-        refreshOutputs();
-        return;
+        /* Keep a live imported/manual body even if the <select> value briefly blanked. */
+        if (directMain) {
+          try { stxEnsureMainPartSelectOption(directMain); } catch (_) {}
+        } else {
+          state.mainPart = null;
+          state.detectedCategory = null;
+          $('detectedCat').textContent = '-';
+          $('builderEmpty').style.display = '';
+          refreshOutputs();
+          return;
+        }
       }
 
       let main = null;
+      const mainKey2 = String($('mainPart').value || '').trim() || mainKey;
       try{
         const map = state && state.__mainPartByOptionKey;
-        if (map && typeof map.get === 'function') main = map.get(mainKey) || null;
+        if (map && typeof map.get === 'function') main = map.get(mainKey2) || null;
       }catch(_e){}
-      if (!main && /^idx:\s*-?\d+$/i.test(mainKey)){
-        const idx = Number(mainKey.replace(/^idx:\s*/i, ''));
+      if (!main && /^idx:\s*-?\d+$/i.test(mainKey2)){
+        const idx = Number(mainKey2.replace(/^idx:\s*/i, ''));
         if (Number.isFinite(idx)) main = getAllParts()[idx] || null;
       }
       // Backward compatibility for old numeric-only values.
-      if (!main && /^-?\d+$/.test(mainKey)){
-        const idx = Number(mainKey);
+      if (!main && /^-?\d+$/.test(mainKey2)){
+        const idx = Number(mainKey2);
         if (Number.isFinite(idx)) main = getAllParts()[idx] || null;
       }
+      if (!main && state.mainPart) main = state.mainPart;
       if (!main){
         state.mainPart = null;
         state.detectedCategory = null;
@@ -12406,6 +12456,12 @@ function resetAll(){
 
       if (targetBuilder === 'guided') {
         window.__CC_LAST_CODE_TARGET = 'guided';
+        /* Simple/Guided are mutually hidden — switch UI so Import to Guided is actually visible. */
+        try {
+          if (typeof window.__ccSetBuilderUiMode === 'function') {
+            window.__ccSetBuilderUiMode('guided', { scroll: !window.__CC_IMPORT_HEAVY, handoff: false });
+          }
+        } catch (_modeG) {}
         var anchor = document.getElementById('rebuildGuidedBuilderSection');
         if (anchor && !window.__CC_IMPORT_HEAVY) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
         try{
@@ -12420,6 +12476,12 @@ function resetAll(){
         }catch(_e3){}
       } else if (targetBuilder === 'simple') {
         window.__CC_LAST_CODE_TARGET = 'simple';
+        /* Simple/Guided are mutually hidden — switch UI so Import to Simple is actually visible. */
+        try {
+          if (typeof window.__ccSetBuilderUiMode === 'function') {
+            window.__ccSetBuilderUiMode('simple', { scroll: !window.__CC_IMPORT_HEAVY, handoff: false });
+          }
+        } catch (_modeS) {}
         /* Mirror into Guided so mode-switch handoff / shared panel stay consistent. */
         if (guidedDeserEl && deser && deser.indexOf('||') >= 0) {
           guidedDeserEl.value = deser;
@@ -13311,6 +13373,7 @@ function resetAll(){
       if (doSimpleUI) {
         if (mainOptKey) $('mainPart').value = String(mainOptKey);
         else if (main && main.__idx != null && Number.isFinite(Number(main.__idx))) $('mainPart').value = `idx:${Number(main.__idx)}`;
+        try { stxEnsureMainPartSelectOption(main); } catch (_) {}
       }
       state.mainPart = main;
       state.detectedCategory = detectedCat0 || main.category || state.itemType;
