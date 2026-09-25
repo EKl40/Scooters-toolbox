@@ -1138,6 +1138,33 @@
     return arr;
   }
 
+  function stxGrenadeBodyVariantKey(p){
+    const c = String(normCode((p && (p.code || p.spawnCode || p.importCode)) || '') || '').toLowerCase();
+    const m = c.match(/grenade_gadget\.part_([a-z0-9_]+)/);
+    return m ? m[1] : '';
+  }
+
+  /** Same grenade body even when one row is a spawn code and the other is `{family:id}`. */
+  function stxGrenadeBodiesMatch(a, b){
+    if (!a || !b) return false;
+    if (a === b) return true;
+    const codeOf = (p)=> String(normCode(p.code || p.spawnCode || p.importCode || '') || '').trim().toLowerCase();
+    const ca = codeOf(a);
+    const cb = codeOf(b);
+    if (ca && cb && ca === cb) return true;
+    const ka = stxGrenadeBodyVariantKey(a);
+    const kb = stxGrenadeBodyVariantKey(b);
+    if (ka && kb && ka === kb) return true;
+    try {
+      const na = numericTokenFromPart(a);
+      const nb = numericTokenFromPart(b);
+      if (na && nb && String(na) === String(nb)) return true;
+    } catch (_eGrenSame) {}
+    const ta = String(tokenForPart(a) || '').trim().toLowerCase();
+    const tb = String(tokenForPart(b) || '').trim().toLowerCase();
+    return !!(ta && tb && ta === tb);
+  }
+
   /** 3-letter enhancement prefix (`atl`, `jak`, …) for `*_enhancement.` spawn paths. */
   function stxEnhancementCodePrefixForUiManufacturer(wantMan){
     const m = String(wantMan || '').trim().toLowerCase();
@@ -9541,9 +9568,13 @@ if (cat === 'Class Mod' && !isAllPartsEnabled()){
           }
         }
         const hasIdentity = list.some(p => stxIsGrenadeManufacturerIdentityBodyCode(String(normCode(p && p.code || '') || '').toLowerCase()));
-        if (idPick && !hasIdentity && !list.some(p => tokEq(p, idPick))) list.push(idPick);
-        if (varPick && !list.some(p => tokEq(p, varPick))) list.push(varPick);
-        list = stxSortGrenadeBodySelections(list);
+        if (idPick && !hasIdentity && !list.some(p => stxGrenadeBodiesMatch(p, idPick))) list.push(idPick);
+        if (varPick && !list.some(p => stxGrenadeBodiesMatch(p, varPick))) list.push(varPick);
+        const uniq = [];
+        for (const p of list){
+          if (!uniq.some(u => stxGrenadeBodiesMatch(u, p))) uniq.push(p);
+        }
+        list = stxSortGrenadeBodySelections(uniq);
         if (list.length === 1) state.slots.body = list[0];
         else if (list.length > 1) state.slots.body = list;
       })();
@@ -9557,11 +9588,19 @@ if (cat === 'Class Mod' && !isAllPartsEnabled()){
 
       const pushVal = (val)=>{
         if (!val) return;
+        const emitOne = (p)=>{
+          if (!p) return;
+          const c = String(normCode(p.code || p.spawnCode || p.importCode || '') || '').toLowerCase();
+          if (stxIsGrenadeBodyPoolRowCode(c) && out.some(prev => stxGrenadeBodiesMatch(prev, p))) return;
+          if (seen.has(p)) return;
+          out.push(p);
+          seen.add(p);
+        };
         if (Array.isArray(val)) {
           const arr = val.filter(Boolean).slice().sort((a,b)=>(a.__importOrder ?? Infinity) - (b.__importOrder ?? Infinity));
-          for (const p of arr) if (p) out.push(p);
+          for (const p of arr) emitOne(p);
         } else {
-          if (!seen.has(val)) { out.push(val); seen.add(val); }
+          emitOne(val);
         }
       };
 
@@ -9569,7 +9608,9 @@ if (cat === 'Class Mod' && !isAllPartsEnabled()){
       if (gb){
         const sorted = stxSortGrenadeBodySelections(gb);
         for (const p of sorted){
-          if (p && !seen.has(p)) { out.push(p); seen.add(p); }
+          if (!p) continue;
+          if (out.some(prev => stxGrenadeBodiesMatch(prev, p))) continue;
+          if (!seen.has(p)) { out.push(p); seen.add(p); }
         }
       }
       const grenadeEmitOrder = ['element', 'payload', 'augment', 'grenadeKitStats', 'firmware', 'special', 'pearlElem', 'pearlStat', 'otherParts'];
